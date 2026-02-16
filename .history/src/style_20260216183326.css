@@ -1,0 +1,13 @@
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*
+    Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
+    Design:oundation.github.io/material-theme-builder/
+    Fonts: Playfair Display (titoli), Montserrat (testo normale)
+*/

@@ -1,0 +1,48 @@
+/* -------------------------------------------------------------------------- */
+/*                                    BASE                                    */
+/* -------------------------------------------------------------------------- */
+/* corpo dell'TML */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top:    ;
+    background-color: var(--colors-background);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--colors-primary);
+}
+.icone {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+button.btn-menu {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+/* TODO: apertuta menu, rotazione di 90° quando il menù è aperto */
+
+.btn-menu:hover {
+    transform: scale(1.1);
+}
+
+/*
+    Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
+    Design: foundation.github.io/material-theme-builder/
+    Fonts: Playfair Display (titoli), Montserrat (testo normale)
+*/

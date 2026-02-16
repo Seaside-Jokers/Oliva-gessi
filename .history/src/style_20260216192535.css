@@ -1,0 +1,38 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    background-color: var(--colors-background);
+}
+.navbar {
+    display: flex;
+    overflow: hidden;
+    background-color: var(--colors-surface);
+    outline: 3px solid var(--colors-outline);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+a.nav-button {
+    color: var(--colors-onSurface);
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+}
+a.nav-button.change-language {
+    background-color: var(--colors-primary);
+    color: var(--colors-onPrimary);
+    border: none;
+    padding: 0px, 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+/*
+    Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
+    Design: foundation.github.io/material-theme-builder/
+    Fonts: Playfair Display (titoli), Montserrat (testo normale)
+*/
