@@ -10,9 +10,10 @@ function toggleMenu() {
     menu.classList.toggle('aperta');
 
     const clicker = document.querySelector(".clicker");
-    clicker.classList.toggle('show');
+    clicker.classList.toggle('hidden');
 }
 function closeMenu() {
     if(!menuAperto) return;
+    menuAperto = false;
     toggleMenu();
 }

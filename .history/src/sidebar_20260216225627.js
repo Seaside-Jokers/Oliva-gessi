@@ -1,7 +1,7 @@
-var menuAperto = false;
+var menuApert = false;
 
 function toggleMenu() {
-    menuAperto = !menuAperto;
+    state = !state;
 
     const icon = document.getElementById("navbar-button");
     icon.classList.toggle('ruotata');
@@ -10,9 +10,10 @@ function toggleMenu() {
     menu.classList.toggle('aperta');
 
     const clicker = document.querySelector(".clicker");
-    clicker.classList.toggle('show');
+    clicker.classList.toggle('hidden');
 }
 function closeMenu() {
-    if(!menuAperto) return;
+    if(!state) return;
+    state = false;
     toggleMenu();
 }

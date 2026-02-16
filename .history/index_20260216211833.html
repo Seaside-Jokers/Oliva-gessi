@@ -9,8 +9,8 @@
     <nav class="navbar">
         <!-- TODO: implementare (vedi CSS) -->
         <!--? magari possiamo aggiungere un piccolo testo sotto le icone -->
-        <button class="btn-navbar" type="button" onclick="toggleMenu()">
-            <img src="assets/menu_icon.png" data-key="home" alt="Home" class="icone" id="navbar-button">
+        <button class="btn-navbar" type="button">
+            <img src="assets/menu_icon.png" data-key="home" alt="Home" class="icone">
             <span data-key="home" class="navData">Menu</span>
         </button>
         <button class="btn-navbar" type="button">
@@ -19,16 +19,13 @@
         </button>
         <button class="btn-navbar lang-button" type="button">
             <img src="assets/language.png" data-key="language" alt="Cambia lingua" class="icone"
-             onclick="changeLang()">
+             onclick="changeState()">
             <span data-key="current_language" class="navData">IT</span>
         </button>
     </nav>
-    <div class="clicker" onclick="closeMenu()"></div>
-    <div class="sidebar" id="sidebar">
-        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <!--                                 SIDEBAR                               -->
-        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    </div>
+    <nav class="sidebar" id="sidebar">
+        <li
+    </nav>
 
     <h2 data-key="titolo">Vieni a conoscere Oliva Gessi!</h2>
 
@@ -37,7 +34,6 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <script src="src/database_testo.js"></script>
     <script src="src/color_scheme.js"></script>
-    <script src="src/sidebar.js"></script>
 </body>
 
 <!-- TODO: leggi questo commento e poi eliminalo per favore: quando vuoi aggiungere un nuovo testo modificalo in src/database_testo.js -->

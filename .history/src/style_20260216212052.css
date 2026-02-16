@@ -45,9 +45,6 @@ button.btn-navbar.lang-button {
     margin-left: auto;
     margin-right: 10px;
 }
-button.btn-navbar.ruotata {
-    transform: rotate(90deg);
-}
 
 span.navData {
     font-size: 12px;
@@ -67,26 +64,11 @@ span.navData {
     position: fixed;
     z-index: infinite;
     top: 0;
-    left: -250px;
+    left: -250px; /* Nascosta a sinistra */
     background-color: var(--colors-primary);
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.sidebar.aperta {
-    left: 0;
-}
-.clicker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 0%;
-    z-index: 1;
-}
-.clicker.show {
-    width: 100%;
-    height: 100%;
+    transition: 0.5s; /* Effetto scivolamento */
+    padding-top: 60px; /* Spazio per non coprire la navbar */
 }
 
 /*

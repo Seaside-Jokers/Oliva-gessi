@@ -60,7 +60,7 @@ function defaultLang() {
 }
 function changeLangTo(_state) {
     if(_state !== "it" && _state !== "en") {
-        defaultLang();
+        defaultState();
         return;
     }
     state = _state;

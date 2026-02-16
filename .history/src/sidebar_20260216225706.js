@@ -14,5 +14,6 @@ function toggleMenu() {
 }
 function closeMenu() {
     if(!menuAperto) return;
+    menuAperto = false;
     toggleMenu();
 }

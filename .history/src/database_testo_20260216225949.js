@@ -53,14 +53,14 @@ function getDefaultLang() {
 
     return "it";
 }
-function defaultLang() {
+function defaultState() {
     state = getDefaultLang();
     aggiornaInterfaccia();
     return true;
 }
 function changeLangTo(_state) {
     if(_state !== "it" && _state !== "en") {
-        defaultLang();
+        defaultState();
         return;
     }
     state = _state;
