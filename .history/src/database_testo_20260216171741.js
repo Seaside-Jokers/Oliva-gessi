@@ -12,7 +12,9 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 /*                                DO NOT TOUCH                                */
 /* -------------------------------------------------------------------------- */
-var state =  getDefaultLang();
+var state = navigator.language.substring(0, 2) === "en" 
+    ? "en" 
+    : "it"; // Fallback a italiano se la lingua del browser non è inglese o non è riconosciuta
 
 function aggiornaInterfaccia() {
     const elementi = document.querySelectorAll('[data-key]');
@@ -30,21 +32,12 @@ function aggiornaInterfaccia() {
 /* -------------------------------------------------------------------------- */
 /*                            Cambiamenti di stato                            */
 /* -------------------------------------------------------------------------- */
-function getDefaultLang() {
-    if(navigator.language.substring(0, 2) === "en")
-        return "en";
-
-    return "it";
-}
-function defaultState() {
-    state = getDefaultLang();
-    aggiornaInterfaccia();
-    return true;
-}
 function changeStateTo(_state) {
+    if(state === )
     if(_state !== "it" && _state !== "en") {
-        defaultState();
-        return;
+        navigator.language.substring(0, 2) === "en" 
+            ? _state = "en" 
+            : _state = "it"; // Fallback a italiano se la lingua del browser non è inglese o non è riconosciuta
     }
     state = _state;
     aggiornaInterfaccia();
@@ -55,5 +48,3 @@ function changeState() {
     else
         changeStateTo("it");
 }
-
-document.addEventListener("DOMContentLoaded", aggiornaInterfaccia);

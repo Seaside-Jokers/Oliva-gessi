@@ -14,7 +14,7 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 var state =  getDefaultLang();
 
-function aggiornaInterfaccia() {
+function aggiornaInterfaccia() /*q*/ {
     const elementi = document.querySelectorAll('[data-key]');
     
     elementi.forEach(el => {

@@ -15,6 +15,7 @@ const traduzioni = {
 var state =  getDefaultLang();
 
 function aggiornaInterfaccia() {
+    // Funzione che aggiorna tutti i testi dell'interfaccia in base allo stato attuale
     const elementi = document.querySelectorAll('[data-key]');
     
     elementi.forEach(el => {

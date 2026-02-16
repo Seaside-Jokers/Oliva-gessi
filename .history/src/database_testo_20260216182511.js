@@ -14,6 +14,7 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 var state =  getDefaultLang();
 
+// @aggiornaInterfaccia: aggiorna il testo di tutti gli elementi con l'attributo "data-key" in base alla lingua attuale
 function aggiornaInterfaccia() {
     const elementi = document.querySelectorAll('[data-key]');
     

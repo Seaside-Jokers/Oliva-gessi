@@ -14,6 +14,7 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 var state =  getDefaultLang();
 
+// @
 function aggiornaInterfaccia() {
     const elementi = document.querySelectorAll('[data-key]');
     

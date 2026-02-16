@@ -1,0 +1,5 @@
+const colorScheme = {
+    "light": {
+        "nav"
+    }
+}

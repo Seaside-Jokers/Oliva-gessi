@@ -12,7 +12,7 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 /*                                DO NOT TOUCH                                */
 /* -------------------------------------------------------------------------- */
-var state =  getDefaultLang();
+var state =  {};
 
 function aggiornaInterfaccia() {
     const elementi = document.querySelectorAll('[data-key]');
@@ -30,14 +30,10 @@ function aggiornaInterfaccia() {
 /* -------------------------------------------------------------------------- */
 /*                            Cambiamenti di stato                            */
 /* -------------------------------------------------------------------------- */
-function getDefaultLang() {
-    if(navigator.language.substring(0, 2) === "en")
-        return "en";
-
-    return "it";
-}
 function defaultState() {
-    state = getDefaultLang();
+    navigator.language.substring(0, 2) === "en" 
+        ? state = "en" 
+        : state = "it"; // Fallback a italiano se la lingua del browser non è inglese o non è riconosciuta
     aggiornaInterfaccia();
     return true;
 }
@@ -55,5 +51,3 @@ function changeState() {
     else
         changeStateTo("it");
 }
-
-document.addEventListener("DOMContentLoaded", aggiornaInterfaccia);

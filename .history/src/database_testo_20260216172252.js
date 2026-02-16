@@ -12,7 +12,7 @@ const traduzioni = {
 /* -------------------------------------------------------------------------- */
 /*                                DO NOT TOUCH                                */
 /* -------------------------------------------------------------------------- */
-var state =  getDefaultLang();
+var state =  defaultState();
 
 function aggiornaInterfaccia() {
     const elementi = document.querySelectorAll('[data-key]');
@@ -37,7 +37,6 @@ function getDefaultLang() {
     return "it";
 }
 function defaultState() {
-    state = getDefaultLang();
     aggiornaInterfaccia();
     return true;
 }
@@ -55,5 +54,3 @@ function changeState() {
     else
         changeStateTo("it");
 }
-
-document.addEventListener("DOMContentLoaded", aggiornaInterfaccia);
