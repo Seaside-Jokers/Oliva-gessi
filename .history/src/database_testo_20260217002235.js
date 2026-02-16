@@ -15,7 +15,7 @@ const traduzioni = {
         language: "Change language",
         current_language: "EN",
         close_menu: "Close menu",
-        cerca_pagina: "Search the page",
+        
     }
 }
 

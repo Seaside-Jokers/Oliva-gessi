@@ -114,13 +114,16 @@ span.nav-data {
     font-size: 14px;
 }
 details {
+  list-style: none;
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 15px;
   margin-left: 15px;
 }
-sidebar-button
+details summary::after {
+    content: "▼";
+}
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/

@@ -6,7 +6,7 @@ const traduzioni = {
         language: "Cambia lingua",
         current_language: "IT",
         close_menu: "Chiudi",
-        cerca_pagina: "Cerca la pagina",
+        cerca-pagina: "Cerca la pagina"
     },
     "en": {
         titolo: "Get to know Oliva Gessi!",
@@ -15,7 +15,6 @@ const traduzioni = {
         language: "Change language",
         current_language: "EN",
         close_menu: "Close menu",
-        cerca_pagina: "Search the page",
     }
 }
 
