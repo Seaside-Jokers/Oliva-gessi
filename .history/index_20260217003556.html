@@ -8,9 +8,10 @@
     <link rel="alternate" hreflang="it" href="index.html">
 </head>
 <body>
-    <!-- ======================================================================= -->
-    <!--                                 NAVBAR                                  -->
-    <!-- ======================================================================= -->
+    <div class="spacer"></div> <!-- Spazio per la navbar -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!--                                 NAVBAR                                -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <nav class="navbar">
         <!-- Home -->
         <button class="btn-navbar" type="button" onclick="toggleMenu()">
@@ -29,9 +30,9 @@
             <span data-key="current_language" class="nav-data">IT</span>
         </button>
     </nav>
-    <!-- ======================================================================= -->
-    <!--                                 SIDEBAR                                 -->
-    <!-- ======================================================================= -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!--                                 SIDEBAR                               -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- Strato trasparente che permette di chiudere il menu cliccando fuori -->
     <div class="clicker" onclick="closeMenu()"></div>
     <!-- Menu laterale vero e proprio -->
@@ -47,26 +48,16 @@
             <span data-key="about" class="side-data">Chi siamo</span>
         </button>
         <details>
-            <!-- Le varie pagine del file -->
             <summary data-key="cerca_pagina"></summary>
+            <
         </details>
     </div>
 
-    <!-- ======================================================================= -->
-    <!--                                CONTENUTO                                -->
-    <!-- ======================================================================= -->
-    <div class="container spaced">
-        <!-- Foto dettagliata (prova) -->
-        <img src="assets/prova_dettagliata.jpg" data-key="titolo_img" alt="Logo Oliva Gessi" class="immagine">
-        <h2 data-key="titolo" id="titolotxt" class="blurry">Vieni a conoscere Oliva Gessi!</h2>
-    </div>
-    <p data-key="testo_introduzione" class="text"></p>
-    <div class="container spaced">
-    </div>
+    <h2 data-key="titolo">Vieni a conoscere Oliva Gessi!</h2>
 
-    <!-- ======================================================================= -->
-    <!--                              DO NOT TOUCH                               -->
-    <!-- ======================================================================= -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!--                              DO NOT TOUCH                             -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <script src="src/database_testo.js"></script>
     <script src="src/color_scheme.js"></script>
     <script src="src/sidebar.js"></script>
