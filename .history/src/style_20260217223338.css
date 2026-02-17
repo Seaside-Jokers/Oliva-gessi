@@ -1,0 +1,419 @@
+/* -------------------------------------------------------------------------- */
+/*                                   COLORI                                   */
+/* -------------------------------------------------------------------------- */
+:root,
+[data-theme="light"] {
+    /** BACKGROUND */
+    --bg-dark:      hsl(30 58% 88%);
+    --bg:           hsl(30 100% 94%);
+    --bg-light:     hsl(30 100% 99%);
+
+    /** TESTO */
+    --text:         hsl(17 100% 4%);
+    --text-muted:   hsl(32 47% 25%);
+    --highlight:    hsl(31 100% 97%);
+
+    /** BORDI */
+    --border:       hsl(31 26% 47%);
+    --border-muted: hsl(31 31% 59%);
+
+    /** COLORI INTERFACCIA */
+    --primary:      hsl(37 100% 17%);
+    --secondary:    hsl(206 82% 26%);
+    --danger:       hsl(9 25% 41%);
+    --warning:      hsl(51 29% 33%);
+    --success:      hsl(148 24% 35%);
+    --info:         hsl(217 26% 42%);
+}
+
+[data-theme="dark"] {
+    /** BACKGROUND */
+    --bg-dark:      hsl(18 100% 1%);
+    --bg:           hsl(25 93% 4%);
+    --bg-light:     hsl(31 65% 7%);
+
+    /** TESTO */
+    --text:         hsl(31 100% 92%);
+    --text-muted:   hsl(31 39% 67%);
+    --highlight:    hsl(31 33% 36%);
+
+    /** BORDI */
+    --border:       hsl(32 47% 25%);
+    --border-muted: hsl(34 84% 14%);
+
+    /** COLORI INTERFACCIA */
+    --primary:      hsl(31 62% 64%);
+    --secondary:    hsl(209 77% 71%);
+    --danger:       hsl(9 31% 65%);
+    --warning:      hsl(52 22% 56%);
+    --success:      hsl(147 21% 58%);
+    --info:         hsl(217 34% 65%);
+}
+
+/* Fallback per chi non ha JavaScript: segue la preferenza di sistema */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        /** BACKGROUND */
+        --bg-dark:      hsl(18 100% 1%);
+        --bg:           hsl(25 93% 4%);
+        --bg-light:     hsl(31 65% 7%);
+
+        /** TESTO */
+        --text:         hsl(31 100% 92%);
+        --text-muted:   hsl(31 39% 67%);
+        --highlight:    hsl(31 33% 36%);
+
+        /** BORDI */
+        --border:       hsl(32 47% 25%);
+        --border-muted: hsl(34 84% 14%);
+
+        /** COLORI INTERFACCIA */
+        --primary:      hsl(31 62% 64%);
+        --secondary:    hsl(209 77% 71%);
+        --danger:       hsl(9 31% 65%);
+        --warning:      hsl(52 22% 56%);
+        --success:      hsl(147 21% 58%);
+        --info:         hsl(217 34% 65%);
+    }
+}
+
+:root {
+    /* --- VALORI PER DESKTOP (Default) --- */
+
+    /* -------------------------------------------------------------------------- */
+    /*                                   NAVBAR                                   */
+    /* -------------------------------------------------------------------------- */
+    --nav-height: 60px;
+    --nav-img-size: 50px;
+    --nav-font-size: 1.2rem;
+    --sidebar-width: 300px;
+    /* -------------------------------------------------------------------------- */
+    /*                                  HOMEPAGE                                  */
+    /* -------------------------------------------------------------------------- */
+    --block-dist: 30px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    :root {
+        /* --- VALORI PER MOBILE (Telefoni e Tablet piccoli) --- */
+
+        /* -------------------------------------------------------------------------- */
+        /*                                   NAVBAR                                   */
+        /* -------------------------------------------------------------------------- */
+        --nav-height: 80px; 
+        --nav-img-size: 65px;
+        --nav-font-size: 2.1rem; 
+        --sidebar-width: 450px;
+        /* -------------------------------------------------------------------------- */
+        /*                                  HOMEPAGE                                  */
+        /* -------------------------------------------------------------------------- */
+        --block-dist: 30px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    BASE                                    */
+/* -------------------------------------------------------------------------- */
+/* corpo dell'HTML */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    padding-top: var(--nav-height);
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+}
+.title {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.l {
+    margin-left: 0px;
+    margin-right: auto;
+}
+.r {
+    margin-left: auto;
+    margin-right: 0px;
+    align-items: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-dark);
+    padding: 5px;
+}
+.icone {
+    width: var(--nav-img-size);
+    height: auto;
+    display: block;
+    margin: 0px 5px;
+}
+
+button.btn-navbar {
+    padding: 4px;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-navbar:hover {
+    transform: scale(1.1);
+}
+button.btn-navbar.lang-button {
+    margin-left: auto;
+    margin-right: 5vw;
+}
+button.btn-navbar.ruotata {
+    transform: rotate(90deg);
+}
+
+span.nav-data {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--nav-font-size);
+    font-weight: 600;
+}
+/* TODO: apertuta menu, rotazione di 90° quando il menù è aperto */
+
+.btn-menu:hover {
+    transform: scale(1.1);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               SIDEBAR (HOME)                               */
+/* -------------------------------------------------------------------------- */
+.clicker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    z-index: 1;
+}
+.clicker.show {
+    width: 100%;
+    height: 100%;
+}
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: var(--sidebar-width);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    background-color: var(--bg-dark);
+    overflow-x: hidden;
+    transition: 0.5s;
+    flex-direction: column;
+}
+.sidebar.aperta {
+    left: 0;
+}
+.sidebar-button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--nav-height);
+    flex: 1;
+    margin: 8px 3px;
+}
+.side-data {
+    font-size: var(--nav-font-size);
+}
+details {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-size: var(--nav-font-size);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTENUTO                                 */
+/* -------------------------------------------------------------------------- */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.blurry {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Valori per computer */
+.blocco {
+    margin-bottom: var(--block-dist);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.blocco-r {
+    margin-bottom: var(--block-dist);
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+.container-testo-blocco {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    min-height: 0;
+    flex: 1;
+}
+.titolo-blocco {
+    font-size: 3rem;
+    margin: 20px;
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+}
+.testo-blocco {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1;
+    display: block;
+    font-size: var(--nav-font-size);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 200;
+    line-clamp: 200;
+}
+.foto-blocco {
+    width: 60%;
+    aspect-ratio: 4/3;
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.foto-blocco.landscape {
+    aspect-ratio: 16/9;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    /* Valori per telefono */
+    .blocco {
+        margin-bottom: var(--block-dist);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .blocco-r {
+        margin-bottom: var(--block-dist);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .titolo-blocco {
+        font-size: 5rem;
+    }
+    .foto-blocco {
+        width: 100%;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              IMG (ABOUT US)                               */
+/* -------------------------------------------------------------------------- */
+
+
+
+#jacopo {
+
+    margin: 100px 100px;
+}
+
+/*
+    Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
+    Design: foundation.github.io/material-theme-builder/
+    Fonts: Playfair Display (titoli), Montserrat (testo normale)
+*/

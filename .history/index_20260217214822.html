@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Oliva Gessi</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="alternate" hreflang="en" href="index.html">
+    <link rel="alternate" hreflang="it" href="index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ======================================================================= -->
+    <!--                                 NAVBAR                                  -->
+    <!-- ======================================================================= -->
+    <nav class="navbar">
+        <!-- Home -->
+        <button class="btn-navbar" type="button" onclick="toggleMenu()">
+            <img src="assets/menu_icon.png" data-key="home" alt="Home" class="icone" id="navbar-button">
+            <span data-key="home" class="nav-data">Menu</span>
+        </button>
+        <!-- About us-->
+        <button class="btn-navbar" type="button" onclick="location.href='about-us.html'">
+            <img src="assets/about_us.png" data-key="about" alt="Chi siamo" class="icone">
+            <span data-key="about" class="nav-data">Chi siamo</span>
+        </button>
+        <!-- Cambio lingua (a destra) -->
+        <button class="btn-navbar lang-button" type="button" onclick="changeLang()">
+            <img src="assets/language.png" data-key="language" alt="Cambia lingua" class="icone">
+            <span data-key="current_language" class="nav-data">IT</span>
+        </button>
+    </nav>
+    <!-- ======================================================================= -->
+    <!--                                 SIDEBAR                                 -->
+    <!-- ======================================================================= -->
+    <!-- Strato trasparente che permette di chiudere il menu cliccando fuori -->
+    <div class="clicker" onclick="closeMenu()"></div>
+    <!-- Menu laterale vero e proprio -->
+    <div class="sidebar" id="sidebar">
+        <!-- Chiudi il menu -->
+        <button class="sidebar-button" type="button" onclick="closeMenu()">
+            <img src="assets/close.png" alt="Chiudi menu" class="icone large">
+            <span data-key="close_menu" class="side-data">Chiudi</span>
+        </button>
+        <!-- About us -->
+        <button class="sidebar-button" type="button" onclick="location.href='about-us.html'">
+            <img src="assets/about_us.png" alt="Chiudi menu" class="icone large">
+            <span data-key="about" class="side-data">Chi siamo</span>
+        </button>
+        <details>
+            <!-- Le varie pagine del file -->
+            <summary data-key="cerca_pagina"></summary>
+        </details>
+    </div>
+
+    <!-- ======================================================================= -->
+    <!--                                CONTENUTO                                -->
+    <!-- ======================================================================= -->
+    <div>
+        <img src="assets/immagine_16x9.jpg" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco l">
+        <h1 class="titolo-blocco">Oliva Gessi</h1>
+    </div>
+
+    <!--=======================================================================-->
+    <!--                      DO NOT TOUCH BELOW THIS LINE                     -->
+    <!--=======================================================================-->
+    <script src="src/database_testo.js"></script>
+    <script src="src/color_scheme.js"></script>
+    <script src="src/sidebar.js"></script>
+</body>
+
+<!-- TODO: leggi questo commento e poi eliminalo per favore: quando vuoi aggiungere un nuovo testo modificalo in src/database_testo.js -->
+</html>
