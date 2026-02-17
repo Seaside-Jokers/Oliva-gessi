@@ -14,27 +14,6 @@ body {
 .on_top {
     margin-top: 25px;
 }
-.title {
-    font-family: 'Playfair Display', serif;
-}
-h1 {
-    font-family: 'Playfair Display', serif;
-}
-h2 {
-    font-family: 'Playfair Display', serif;
-}
-h3 {
-    font-family: 'Playfair Display', serif;
-}
-h4 {
-    font-family: 'Playfair Display', serif;
-}
-h5 {
-    font-family: 'Playfair Display', serif;
-}
-h6 {
-    font-family: 'Playfair Display', serif;
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                   NAVBAR                                   */
@@ -152,23 +131,16 @@ details {
     width: 100%;
 }
 .immagine {
-    width: 100%;
-    aspect-ratio: 4/3;
-    margin-left: auto;
-    margin-right: 0;
-}
-.blurry {
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(8px);
+    width: 100;
+    height: auto;
+    margin-right: 20px;
 }
 
 #titolotxt {
     z-index: 200;
     position: absolute;
-    left: 60%;
 }
 
-/* TODO far sì che scali tutto bene con le dimensioni dello schermo */
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/

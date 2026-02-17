@@ -7,8 +7,7 @@ const traduzioni = {
         current_language: "IT",
         close_menu: "Chiudi",
         cerca_pagina: "Cerca la pagina",
-        titolo_img: "Foto di Oliva Gessi",
-        testo_introduzione: "Qualcosa di interessante su Oliva Gessi!", // TODO! completare
+        testo_introduzione: 
     },
     "en": {
         titolo: "Get to know Oliva Gessi!",
@@ -18,8 +17,6 @@ const traduzioni = {
         current_language: "EN",
         close_menu: "Close menu",
         cerca_pagina: "Search the page",
-        titolo_img: "Oliva Gessi's image",
-        testo_introduzione: "Something interesting about Oliva Gessi!", // TODO! completare
     }
 }
 
