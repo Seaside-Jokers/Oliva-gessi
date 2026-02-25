@@ -255,6 +255,7 @@ nav.navbar {
     height: auto;
     display: block;
     margin: 0px 5px;
+    color: var(--text);
 }
 
 button.btn-navbar {
@@ -270,6 +271,7 @@ button.btn-navbar {
     align-items: center;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    color: var(--text);
 }
 .btn-navbar:hover {
     transform: scale(1.1);
@@ -283,6 +285,7 @@ span.nav-data {
     font-family: 'Montserrat', sans-serif;
     font-size: var(--nav-font-size);
     font-weight: 600;
+    color: var(--text);
 }
 .btn-menu:hover {
     transform: scale(1.1);
@@ -365,6 +368,8 @@ span.nav-data {
 }
 .side-data {
     font-size: var(--nav-font-size);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
 }
 .side-data:hover {
     cursor: pointer;
@@ -373,8 +378,8 @@ span.nav-data {
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 15px;
+  margin-bottom: calc(var(--default-size) * 2);
+  margin-left: calc(var(--default-size) * 2);
   font-size: var(--nav-font-size);
 }
 .lang-toggle-data {
@@ -441,6 +446,7 @@ summary.side-data {
     min-height: 0;
     flex: 1;
     overflow: hidden;
+    color: var(--text);
 }
 .titolo-blocco {
     font-size: 3rem;
@@ -541,6 +547,9 @@ summary.side-data {
 #jacopo {
     margin: 100px 100px;
 }
+
+/* TODO! Mettere le icone come SVG per cambio colore */
+/* TODO! Correggere il cambio del color scheme */
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
