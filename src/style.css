@@ -12,6 +12,7 @@
     --text:         hsl(17 100% 4%);
     --text-muted:   hsl(32 47% 25%);
     --highlight:    hsl(31 100% 97%);
+    --text-light:   hsl(31 30% 95%);
 
     /** BORDI */
     --border:       hsl(31 26% 47%);
@@ -36,6 +37,7 @@
     --text:         hsl(31 100% 92%);
     --text-muted:   hsl(31 39% 67%);
     --highlight:    hsl(31 33% 36%);
+    --text-light:   hsl(31 50% 80%);
 
     /** BORDI */
     --border:       hsl(32 47% 25%);
@@ -51,29 +53,30 @@
 }
 
 /* Fallback per chi non ha JavaScript: segue la preferenza di sistema */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root:not([data-theme]) {
         /** BACKGROUND */
-        --bg-dark:      hsl(18 100% 1%);
-        --bg:           hsl(25 93% 4%);
-        --bg-light:     hsl(31 65% 7%);
+        --bg-dark:      hsl(30 58% 88%);
+        --bg:           hsl(30 100% 94%);
+        --bg-light:     hsl(30 100% 99%);
 
         /** TESTO */
-        --text:         hsl(31 100% 92%);
-        --text-muted:   hsl(31 39% 67%);
-        --highlight:    hsl(31 33% 36%);
+        --text:         hsl(17 100% 4%);
+        --text-muted:   hsl(32 47% 25%);
+        --highlight:    hsl(31 100% 97%);
+        --text-light:   hsl(31 50% 80%);
 
         /** BORDI */
-        --border:       hsl(32 47% 25%);
-        --border-muted: hsl(34 84% 14%);
+        --border:       hsl(31 26% 47%);
+        --border-muted: hsl(31 31% 59%);
 
         /** COLORI INTERFACCIA */
-        --primary:      hsl(31 62% 64%);
-        --secondary:    hsl(209 77% 71%);
-        --danger:       hsl(9 31% 65%);
-        --warning:      hsl(52 22% 56%);
-        --success:      hsl(147 21% 58%);
-        --info:         hsl(217 34% 65%);
+        --primary:      hsl(37 100% 17%);
+        --secondary:    hsl(206 82% 26%);
+        --danger:       hsl(9 25% 41%);
+        --warning:      hsl(51 29% 33%);
+        --success:      hsl(148 24% 35%);
+        --info:         hsl(217 26% 42%);
     }
 }
 
@@ -87,12 +90,7 @@
     --nav-height: calc(var(--default-size) * 8);
     --nav-img-size: calc(var(--default-size) * 6);
     --nav-font-size: calc(var(--default-size) * 3);
-    --sidebar-width: calc(var(--default-size) * 38);
-    --default-size: 8px;
-    --nav-height: calc(var(--default-size) * 8);
-    --nav-img-size: calc(var(--default-size) * 6);
-    --nav-font-size: calc(var(--default-size) * 3);
-    --sidebar-width: calc(var(--default-size) * 38);
+    --sidebar-width: calc(var(--default-size) * 42);
     /* -------------------------------------------------------------------------- */
     /*                                 LANG TOGGLE                                */
     /* -------------------------------------------------------------------------- */
@@ -118,10 +116,6 @@
         /* -------------------------------------------------------------------------- */
         /*                                   NAVBAR                                   */
         /* -------------------------------------------------------------------------- */
-        --nav-height: calc(var(--default-size) * 13); 
-        --nav-img-size: calc(var(--default-size) * 11);
-        --nav-font-size: calc(var(--default-size) * 5); 
-        --sidebar-width: calc(var(--default-size) * 60);
         --nav-height: calc(var(--default-size) * 13); 
         --nav-img-size: calc(var(--default-size) * 11);
         --nav-font-size: calc(var(--default-size) * 5); 
@@ -250,12 +244,11 @@ nav.navbar {
     padding: 5px;
     border-bottom: 2px solid var(--border);
 }
-.icone {
+.icone-svg {
     width: var(--nav-img-size);
-    height: auto;
-    display: block;
-    margin: 0px 5px;
-    color: var(--text);
+    height: var(--nav-img-size);
+    fill: var(--text);
+    transition: fill 0.2s;
 }
 
 button.btn-navbar {
@@ -276,12 +269,16 @@ button.btn-navbar {
 .btn-navbar:hover {
     transform: scale(1.1);
 }
+.btn-navbar * {
+    pointer-events: none;
+}
 button.btn-navbar.lang-button {
     margin-left: auto;
     margin-right: calc(var(--default-size) * 3);
     margin-right: calc(var(--default-size) * 3);
 }
 span.nav-data {
+    margin-left: var(--default-size);
     font-family: 'Montserrat', sans-serif;
     font-size: var(--nav-font-size);
     font-weight: 600;
@@ -367,6 +364,7 @@ span.nav-data {
     margin: calc(var(--default-size)) calc(var(--default-size) * 0.5);
 }
 .side-data {
+    margin-left: calc(var(--default-size) * 2);
     font-size: var(--nav-font-size);
     font-family: 'Montserrat', sans-serif;
     color: var(--text);
@@ -391,7 +389,7 @@ summary.side-data {
     font-weight: 600;
     padding-top: 20px;
     border-top: 2px solid var(--border-muted);
-    /* TODO transizione */
+    /* TODO: transizioni */
 }
 @media (max-aspect-ratio: 1/1), (max-width: 1000px) {
     summary.side-data {
@@ -447,6 +445,7 @@ summary.side-data {
     flex: 1;
     overflow: hidden;
     color: var(--text);
+    align-items: center;
 }
 .titolo-blocco {
     font-size: 3rem;
@@ -476,24 +475,21 @@ summary.side-data {
     flex-shrink: 0;
 }
 .read-more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--btn-width);
     height: var(--btn-height);
     margin-top: calc(var(--default-size));
     margin-bottom: calc(var(--default-size) * 2);
-    margin-left: calc(50% - var(--btn-width) * 0.5);
-    margin-top: calc(var(--default-size));
-    margin-bottom: calc(var(--default-size) * 2);
-    margin-left: calc(50% - var(--btn-width) * 0.5);
-    background-color: var(--info);
+    color: var(--text-light);
+    background-color: var(--border);
     border: none;
-    color: var(--highlight);
     font-size: var(--nav-font-size);
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     font-weight: 700;
     border-radius: calc(var(--btn-height) * 0.5);
-    border-radius: calc(var(--btn-height) * 0.5);
-    border: none;
     box-shadow: 
         0 0 0 2px var(--border),
         inset 0 -4px 8px hsl(0 0% 0% / 0.2),
@@ -548,8 +544,6 @@ summary.side-data {
     margin: 100px 100px;
 }
 
-/* TODO! Mettere le icone come SVG per cambio colore */
-/* TODO! Correggere il cambio del color scheme */
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
