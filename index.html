@@ -17,12 +17,12 @@
     <nav class="navbar">
         <!-- Home -->
         <button class="btn-navbar" type="button" onclick="toggleMenu()">
-            <img src="assets/menu_icon.png" data-key="home" alt="Home" class="icone" id="navbar-button">
+            <icon-el src="assets/menu.svg"></icon-el>
             <span data-key="home" class="nav-data">Menu</span>
         </button>
         <!-- About us-->
         <button class="btn-navbar" type="button" onclick="location.href='about-us.html'">
-            <img src="assets/about_us.png" data-key="about" alt="Chi siamo" class="icone">
+            <icon-el src="assets/about-us.svg"></icon-el>
             <span data-key="about" class="nav-data">Il team</span>
         </button>
         <!-- Cambio lingua (a destra) -->
@@ -43,17 +43,17 @@
     <div class="sidebar" id="sidebar">
         <!-- Chiudi il menu -->
         <button class="sidebar-button" type="button" onclick="closeMenu()">
-            <img src="assets/close.png" data-key="close_menu" alt="Chiudi menu" class="icone large">
+            <icon-el src="assets/close.svg" class="large"></icon-el>
             <span data-key="close_menu" class="side-data">Chiudi</span>
         </button>
         <!-- Impostazioni -->
         <button class="sidebar-button" type="button" onclick="location.href='settings.html'">
-            <img src="assets/settings.png" data-key="settings" alt="Impostazioni" class="icone large">
-            <span data-key="settings" class="side-data">Chiudi</span>
+            <icon-el src="assets/settings.svg" class="large"></icon-el>
+            <span data-key="settings" class="side-data">Impostazioni</span>
         </button>
         <!-- About us -->
         <button class="sidebar-button" type="button" onclick="location.href='about-us.html'">
-            <img src="assets/about_us.png" alt="Chiudi menu" class="icone large">
+            <icon-el src="assets/about-us.svg" class="large"></icon-el>
             <span data-key="about" class="side-data">Il team</span>
         </button>
         <details>
@@ -89,7 +89,7 @@
             <button class="read-more-button" type="button" onclick="" data-key="read_more">Leggi di più</button>
         </div>
     </div>
-    <button class="read-more-button" type="button" onclick="changeColorScheme('light')">Cambio tema</button>
+    <button id="theme-toggle-btn" class="read-more-button" type="button">Cambio tema</button>
     <!--=======================================================================-->
     <!--                      DO NOT TOUCH BELOW THIS LINE                     -->
     <!--=======================================================================-->
@@ -97,6 +97,7 @@
     <script src="src/color_scheme.js"></script>
     <script src="src/sidebar.js"></script>
     <script src="src/homepage.js"></script>
+    <script src="src/icon_manager.js"></script>
 </body>
 
 <!-- FIXME: I titoli quando faccio zoom salgono es escono dai relativi blocchi -->
