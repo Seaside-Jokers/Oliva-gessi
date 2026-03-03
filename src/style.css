@@ -458,15 +458,26 @@ summary.side-data {
 .testo-blocco {
     margin: 0 calc(var(--default-size));
     flex: 1;
-    overflow: hidden;
+    overflogitw: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 13;
-    line-clamp: 13;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
     text-align: justify;
     /* line-clamp aggiornato dinamicamente dal JS */
+}
+.testo-blocco-about{
+    margin: 0 calc(var(--default-size));
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 30;
+    line-clamp: 30;
+    text-align: justify;
 }
 .foto-blocco {
     width: 60%;
@@ -539,15 +550,19 @@ summary.side-data {
 
 
 /* -------------------------------------------------------------------------- */
-/*                              IMG (ABOUT US)                               */
+/*                              IMG (ABOUT US)                                */
 /* -------------------------------------------------------------------------- */
 
 
 
-#jacopo {
-    margin: 100px 100px;
+.immagine-cornice {
+  border: 8px solid #ffffff;
+  padding: 5px; 
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
 }
-
 /* TODO! Mettere le icone come SVG per cambio colore */
 /* TODO! Correggere il cambio del color scheme */
 
