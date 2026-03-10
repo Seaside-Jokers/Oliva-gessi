@@ -559,9 +559,10 @@ summary.side-data {
   max-width: 100%;
   height: auto;
 }
-
-/* TODO! Mettere le icone come SVG per cambio colore */
-/* TODO! Correggere il cambio del color scheme */
+.orizzontale {
+    width: 100%;
+    display: flex;
+}
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
