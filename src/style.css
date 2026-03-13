@@ -492,16 +492,16 @@ summary.side-data {
     border-radius: calc(var(--btn-height) * 0.5);
     box-shadow: 
         0 0 0 2px var(--border),
-        inset 0 -4px 8px hsl(0 0% 0% / 0.2),
-        0 4px 12px hsl(217 26% 42% / 0.3);
+        inset 0 -2px 4px hsl(0 0% 0% / 0.2),
+        0 4px 12px hsl(31 100% 97% / 0.4);
     transition: all 0.2s ease;
     flex-shrink: 0;
 }
 .read-more-button:hover {
     box-shadow: 
         0 0 0 3px var(--border-muted),
-        inset 0 -2px 4px hsl(0 0% 0% / 0.15),
-        0 6px 16px hsl(209 77% 71% / 0.4);
+        inset 0 -1px 2px hsl(0 0% 0% / 0.15),
+        0 6px 16px hsl(31 100% 97% / 0.2);
     transform: translateY(-2px);
 }
 
@@ -544,6 +544,7 @@ summary.side-data {
     margin: 100px 100px;
 }
 
+/* TODO! fix read-more shadow */
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
