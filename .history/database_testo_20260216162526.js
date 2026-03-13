@@ -1,5 +1,0 @@
-const traduzioni = {
-    title: {
-        it: ""
-    }
-}
