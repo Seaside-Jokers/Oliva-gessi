@@ -466,18 +466,7 @@ summary.side-data {
     text-align: justify;
     /* line-clamp aggiornato dinamicamente dal JS */
 }
-.testo-blocco-about{
-    margin: 0 calc(var(--default-size));
-    flex: 1;
-    overflow: hidden;
-    min-height: 0;
-    font-size: 18px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 30;
-    line-clamp: 30;
-    text-align: justify;
-}
+
 .foto-blocco {
     width: 60%;
     height: 100%;
@@ -549,7 +538,25 @@ summary.side-data {
 /*                              IMG (ABOUT US)                                */
 /* -------------------------------------------------------------------------- */
 
+.testo-blocco-about{
+    margin: 0 calc(var(--default-size));
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+    font-size: var(--nav-font-size);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: justify;
+}
 
+.titolo-blocco-about {
+    font-size: 3rem;
+    margin: calc(var(--default-size) * 2);
+    margin: calc(var(--default-size) * 2);
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+}
 
 .immagine-cornice {
   border: 8px solid #ffffff;
@@ -560,10 +567,17 @@ summary.side-data {
   height: auto;
 }
 .orizzontale {
+    gap: 15px;
+    padding: 10px 10px;
+    box-sizing: border-box;
     width: 100%;
     display: flex;
 }
-
+.orizzontale:nth-child(even){
+    flex-direction: row-reverse;
+    background: none;
+    text-align: right;
+}
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
     Design: foundation.github.io/material-theme-builder/
