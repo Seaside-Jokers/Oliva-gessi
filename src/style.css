@@ -457,7 +457,7 @@ summary.side-data {
 .testo-blocco {
     margin: 0 calc(var(--default-size));
     flex: 1;
-    overflogitw: hidden;
+    overflow: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
     display: flex;
