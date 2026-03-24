@@ -16,6 +16,11 @@ const traduzioni = {
         testo_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
         title_2: "Nome e cognome",
         testo_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+        /* Impostazioni */
+        cambio_colore: "Cambia tema",
+        sys_default: "Default",
+        light_mode: "Chiaro",
+        dark_mode: "Scuro",
 
     },
     "en": {
@@ -35,6 +40,11 @@ const traduzioni = {
         testo_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
         title_2: "Name And Surname",
         testo_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+        /* Impostazioni */
+        cambio_colore: "Change theme",
+        sys_default: "Default",
+        light_mode: "Light",
+        dark_mode: "Dark",
     }
 }
 

@@ -447,10 +447,12 @@ summary.side-data {
     color: var(--text);
     align-items: center;
 }
+
 .titolo-blocco {
     font-size: 3rem;
     margin: calc(var(--default-size) * 2);
     margin: calc(var(--default-size) * 2);
+    color: var(--text);
     font-family: 'Playfair Display', serif;
     flex-shrink: 0;
 }
@@ -544,6 +546,7 @@ summary.side-data {
     overflow: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
+    color: var(--text);
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -578,6 +581,47 @@ summary.side-data {
     background: none;
     text-align: right;
 }
+
+
+/* -------------------------------------------------------------------- */
+/*                              SETTINGS                                */
+/* -------------------------------------------------------------------- */
+.settings-block {
+    width: 100%;
+    align-items: center;
+    padding: calc(var(--default-size)) calc(var(--default-size) * 4);
+    display: flex;
+    flex: row;
+}
+.settings-title {
+    font-weight: bold;
+    font-size: var(--nav-font-size);
+    margin-right: calc(var(--default-size) * 6);
+}
+.settings-container {
+    align-items: center;
+    display: flex;
+    flex: row;
+}
+.settings-item {
+    background-color: var(--bg);
+    padding: var(--default-size) calc(var(--default-size) * 2);
+    margin-right: var(--default-size);
+    font-size: var(--nav-font-size);
+    border-radius: var(--default-size);
+    border: 1px solid var(--border-muted)
+}
+.settings-item.selected {
+    background-color: var(--border-muted);
+}
+.settings-item:hover {
+    cursor: pointer;
+}
+
+
+
+
+
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/
     Design: foundation.github.io/material-theme-builder/

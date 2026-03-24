@@ -16,7 +16,7 @@
     <!-- ======================================================================= -->
     <nav class="navbar">
         <!-- Home -->
-        <button class="btn-navbar" type="button" onclick="console.log('Click ricevuto!'); toggleMenu()">
+        <button class="btn-navbar" type="button" onclick="toggleMenu()">
             <icon-el src="assets/menu.svg"></icon-el>
             <span data-key="home" class="nav-data">Menu</span>
         </button>
@@ -46,15 +46,20 @@
             <icon-el src="assets/close.svg" class="large"></icon-el>
             <span data-key="close_menu" class="side-data">Chiudi</span>
         </button>
-        <!-- Impostazioni -->
+        <!-- Homepage -->
         <button class="sidebar-button" type="button" onclick="location.href='index.html'">
             <icon-el src="assets/home.svg" class="large"></icon-el>
-            <span data-key="homepage" class="side-data">Home</span>
+            <span data-key="homepage" class="side-data">Pagina principale</span>
         </button>
         <!-- About us -->
         <button class="sidebar-button" type="button" onclick="location.href='about-us.html'">
             <icon-el src="assets/about-us.svg" class="large"></icon-el>
             <span data-key="about" class="side-data">Il team</span>
+        </button>
+        <!-- Impostazioni -->
+        <button class="sidebar-button" type="button" onclick="location.href='settings.html'">
+            <icon-el src="assets/settings.svg" class="large"></icon-el>
+            <span data-key="settings" class="side-data">Impostazioni</span>
         </button>
         <details>
             <!-- Le varie pagine del file -->
@@ -64,13 +69,22 @@
     <!-- ======================================================================= -->
     <!--                                CONTENUTO                                -->
     <!-- ======================================================================= -->
-    <!--=======================================================================-->
-    <!--                      DO NOT TOUCH BELOW THIS LINE                     -->
-    <!--=======================================================================-->
+    <div class="settings-block">
+        <p data-key="cambio_colore" class="settings-title">Ciao</p>
+        <span class="settings-container">
+            <button data-key="sys_default" class="settings-item selected tema" id="def_theme">Default</button>
+            <button data-key="light_mode" class="settings-item tema" id="light_theme">Chiaro</button>
+            <button data-key="dark_mode" class="settings-item tema" id="dark_theme">Scuro</button>
+        </span>
+    </div>
+    <!-- ======================================================================= -->
+    <!--                      DO NOT TOUCH BELOW THIS LINE                       -->
+    <!-- ======================================================================= -->
     <script src="src/database_testo.js"></script>
     <script src="src/color_scheme.js"></script>
     <script src="src/sidebar.js"></script>
     <script src="src/homepage.js"></script>
     <script src="src/icon_manager.js"></script>
+    <script src="src/settings.js"></script>
 </body>
 </html>
