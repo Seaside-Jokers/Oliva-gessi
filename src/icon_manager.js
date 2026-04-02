@@ -1,11 +1,21 @@
 class IconEl extends HTMLElement {
-    async connectedCallback() {
+    connectedCallback() {
         const src = this.getAttribute('src');
         if (!src) return;
-        const res  = await fetch(src);
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            if (!entries[0].isIntersecting) return;
+            obs.disconnect();
+            this.#load(src);
+        }, { rootMargin: '200px' }); // inizia a caricare 200px prima che sia visibile
+
+        observer.observe(this);
+    }
+
+    async #load(src) {
+        const res = await fetch(src);
         const text = await res.text();
         this.innerHTML = text;
-        // Propaga le classi all'SVG interno
         this.querySelector('svg')?.setAttribute('class', 'icone-svg');
     }
 }

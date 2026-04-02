@@ -188,46 +188,12 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
 }
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-h4 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-h5 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-}
-p {
+p, span {
     font-family: 'Montserrat', sans-serif;
-}
-span {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.l {
-    margin-left: 0px;
-    margin-right: auto;
-    align-items: left;
-}
-.r {
-    margin-left: auto;
-    margin-right: 0px;
-    align-items: right;
 }
 
 /* -------------------------------------------------------------------------- */
