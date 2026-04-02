@@ -52,71 +52,62 @@ function getTesto(key) {
     return traduzioni[state][key] ?? key;
 }
 
-
-
 /* -------------------------------------------------------------------------- */
-/*                                DO NOT TOUCH                                */
+/*                              GESTIONE LINGUA                               */
 /* -------------------------------------------------------------------------- */
+
+function getLangFromURL() {
+    const lang = new URLSearchParams(window.location.search).get('lang');
+    return (lang === 'it' || lang === 'en') ? lang : null;
+}
 
 function getDefaultLang() {
-    return navigator.language.substring(0, 2) === "it" ? "it" : "en";
+    return navigator.language.startsWith("it") ? "it" : "en";
 }
 
-let state = localStorage.getItem("lang") || getDefaultLang();
-
-function stateSet(newState) {
-    localStorage.setItem("lang", newState);
-    state = newState;
-}
-function stateGet() {
-    return localStorage.getItem("lang");
+function updateURLWithLang(lang) {
+    const params = new URLSearchParams(window.location.search);
+    params.set('lang', lang);
+    window.history.replaceState({ lang }, document.title, `${window.location.pathname}?${params}`);
 }
 
-function aggiornaIconaLingua() {
-    const knob = document.getElementById('lang-knob');
-    if (!knob) return;
-    knob.classList.toggle('en', state === 'en');
-}
+// Fonte unica di verità: URL, altrimenti browser
+let state = getLangFromURL() ?? getDefaultLang();
+
+/* -------------------------------------------------------------------------- */
+/*                           AGGIORNAMENTO UI                                 */
+/* -------------------------------------------------------------------------- */
 
 function aggiornaInterfaccia() {
-    state = stateGet() || getDefaultLang();
+    document.documentElement.lang = state;
+    document.title = getTesto("titolo");
 
-    if (!stateGet()) stateSet(state);
-
-    const elementi = document.querySelectorAll('[data-key]');
-    elementi.forEach(el => {
-        const chiave = el.getAttribute('data-key');
-        const testoTradotto = traduzioni[state][chiave];
-        
-        if (testoTradotto !== undefined) {
-            if (el.tagName === 'IMG') {
-                el.alt = testoTradotto;
-            } else {
-                el.textContent = testoTradotto;
-            }
+    document.querySelectorAll('[data-key]').forEach(el => {
+        const testo = getTesto(el.getAttribute('data-key'));
+        if (el.tagName === 'IMG') {
+            el.alt = testo;
+        } else {
+            el.textContent = testo;
         }
     });
-    aggiornaIconaLingua();
+
+    // Aggiorna visivamente il toggle
+    const knob = document.getElementById('lang-knob');
+    knob?.classList.toggle('en', state === 'en');
 }
 
 /* -------------------------------------------------------------------------- */
-/*                            Cambiamenti di stato                            */
+/*                              CAMBIO LINGUA                                 */
 /* -------------------------------------------------------------------------- */
-function defaultLang() {
-    stateSet(getDefaultLang());
-    aggiornaInterfaccia();
-    return true;
-}
-function changeLangTo(_state) {
-    if (_state !== "it" && _state !== "en") {
-        defaultLang();
-        return;
-    }
-    stateSet(_state);
-    aggiornaInterfaccia();
-}
+
 function changeLang() {
-    changeLangTo(state === "it" ? "en" : "it");
+    state = state === "it" ? "en" : "it";
+    updateURLWithLang(state);
+    aggiornaInterfaccia();
+}
+
+function navigateTo(page) {
+    location.href = `${page}?lang=${state}`;
 }
 
 document.addEventListener("DOMContentLoaded", aggiornaInterfaccia);
