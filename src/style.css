@@ -114,7 +114,7 @@
         /* -------------------------------------------------------------------------- */
         --nav-height: calc(var(--default-size) * 6);
         --nav-img-size: calc(var(--default-size) * 4);
-        --nav-font-size: calc(var(--default-size) * 3);
+        --nav-font-size: calc(var(--default-size) * 2);
         --sidebar-width: calc(var(--default-size) * 30);
         /* -------------------------------------------------------------------------- */
         /*                                 LANG TOGGLE                                */
@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
 }
-p, span {
+p, span, article, section {
     font-family: 'Montserrat', sans-serif;
 }
 
