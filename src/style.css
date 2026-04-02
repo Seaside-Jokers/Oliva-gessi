@@ -95,15 +95,11 @@
     /*                                 LANG TOGGLE                                */
     /* -------------------------------------------------------------------------- */
     --change-lang-height: calc(var(--default-size) * 5);
-    --change-lang-height: calc(var(--default-size) * 5);
     --change-lang-margin: 2px;
     --change-lang-width: calc(2 * var(--change-lang-height) + 4 * var(--change-lang-margin));
     /* -------------------------------------------------------------------------- */
     /*                                  HOMEPAGE                                  */
     /* -------------------------------------------------------------------------- */
-    --block-dist: calc(var(--default-size) * 4);
-    --btn-width: calc(var(--default-size) * 24);
-    --btn-height: calc(var(--default-size) * 5);
     --block-dist: calc(var(--default-size) * 4);
     --btn-width: calc(var(--default-size) * 24);
     --btn-height: calc(var(--default-size) * 5);
@@ -116,25 +112,21 @@
         /* -------------------------------------------------------------------------- */
         /*                                   NAVBAR                                   */
         /* -------------------------------------------------------------------------- */
-        --nav-height: calc(var(--default-size) * 13); 
-        --nav-img-size: calc(var(--default-size) * 11);
-        --nav-font-size: calc(var(--default-size) * 5); 
-        --sidebar-width: calc(var(--default-size) * 60);
+        --nav-height: calc(var(--default-size) * 6);
+        --nav-img-size: calc(var(--default-size) * 4);
+        --nav-font-size: calc(var(--default-size) * 3);
+        --sidebar-width: calc(var(--default-size) * 30);
         /* -------------------------------------------------------------------------- */
         /*                                 LANG TOGGLE                                */
         /* -------------------------------------------------------------------------- */
-        --change-lang-height: calc(var(--default-size) * 8);
-        --change-lang-height: calc(var(--default-size) * 8);
+        --change-lang-height: calc(var(--default-size) * 4);
         --change-lang-width: calc(2 * var(--change-lang-height) + 2 * var(--change-lang-margin));
         /* -------------------------------------------------------------------------- */
         /*                                  HOMEPAGE                                  */
         /* -------------------------------------------------------------------------- */
         --block-dist: calc(var(--default-size) * 4);
-        --btn-width: calc(var(--default-size) * 45);
-        --btn-height: calc(var(--default-size) * 10);
-        --block-dist: calc(var(--default-size) * 4);
-        --btn-width: calc(var(--default-size) * 45);
-        --btn-height: calc(var(--default-size) * 10);
+        --btn-width: calc(var(--default-size) * 30);
+        --btn-height: calc(var(--default-size) * 6);
     }
 }
 
@@ -220,7 +212,6 @@ nav.navbar {
 button.btn-navbar {
     padding: 4px;
     margin-right: calc(var(--default-size) * 2);
-    margin-right: calc(var(--default-size) * 2);
     background: none;
     border: none;
     cursor: pointer;
@@ -241,7 +232,6 @@ button.btn-navbar {
 button.btn-navbar.lang-button {
     margin-left: auto;
     margin-right: calc(var(--default-size) * 3);
-    margin-right: calc(var(--default-size) * 3);
 }
 span.nav-data {
     margin-left: var(--default-size);
@@ -253,15 +243,19 @@ span.nav-data {
 .btn-menu:hover {
     transform: scale(1.1);
 }
+
+@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+    button.btn-navbar {
+        margin-right: var(--default-size);
+    }
+}
 /* -------    Pulsante cambio lingua    ------- */
 .lang-toggle {
-    margin: 0 calc(var(--default-size) * 2);
     margin: 0 calc(var(--default-size) * 2);
     border: 2px solid var(--border);
     height: var(--change-lang-height);
     width: var(--change-lang-width);
     background-color: var(--bg-light);
-    border-radius: calc(var(--change-lang-height) * 0.5);
     border-radius: calc(var(--change-lang-height) * 0.5);
     vertical-align: middle;
     position: relative;
@@ -283,7 +277,6 @@ span.nav-data {
 .lang-knob.en {
     background-image: url('../assets/uk-flag.png');
     transform: translateX(calc(var(--change-lang-width) - var(--change-lang-height) - calc(var(--change-lang-margin) * 2)));
-    transform: translateX(calc(var(--change-lang-width) - var(--change-lang-height) - calc(var(--change-lang-margin) * 2)));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -293,8 +286,8 @@ span.nav-data {
     position: fixed;
     top: 0;
     left: 0;
-    width: 0%;
-    height: 0%;
+    width: 0;
+    height: 0;
     z-index: 1;
 }
 .clicker.show {
@@ -305,7 +298,6 @@ span.nav-data {
     position: fixed;
     height: 100%;
     width: var(--sidebar-width);
-    position: fixed;
     z-index: 1000;
     top: 0;
     left: calc(-1 * var(--sidebar-width));
@@ -326,7 +318,6 @@ span.nav-data {
     align-items: center;
     height: var(--nav-height);
     flex: 1;
-    margin: calc(var(--default-size)) calc(var(--default-size) * 0.5);
     margin: calc(var(--default-size)) calc(var(--default-size) * 0.5);
 }
 .side-data {
@@ -360,7 +351,9 @@ summary.side-data {
 @media (max-aspect-ratio: 1/1), (max-width: 1000px) {
     summary.side-data {
         padding-left: calc(var(--default-size) * 5);
-        padding-left: calc(var(--default-size) * 5);
+    }
+    .lang-toggle-data {
+        font-size: 0;
     }
 }
 
@@ -385,12 +378,9 @@ summary.side-data {
     height: auto;
     padding-bottom: calc(var(--default-size) * 8);
     padding-top: calc(var(--default-size) * 3);
-    padding-bottom: calc(var(--default-size) * 8);
-    padding-top: calc(var(--default-size) * 3);
     box-sizing: content-box;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     background: none;
     align-items: center;
     background: var(--bg-dark);
@@ -398,15 +388,13 @@ summary.side-data {
 }
 .blocco:nth-child(even) {
     flex-direction: row-reverse;
-    flex-direction: row-reverse;
     background: none;
 }
 .container-testo-blocco {
     width: auto;
     display: flex;
     flex-direction: column;
-    padding: 0px calc(var(--default-size) * 2);
-    padding: 0px calc(var(--default-size) * 2);
+    padding: 0 calc(var(--default-size) * 2);
     min-height: 0;
     flex: 1;
     overflow: hidden;
@@ -415,8 +403,7 @@ summary.side-data {
 }
 
 .titolo-blocco {
-    font-size: 3rem;
-    margin: calc(var(--default-size) * 2);
+    font-size: calc(var(--default-size) * 6);
     margin: calc(var(--default-size) * 2);
     color: var(--text);
     font-family: 'Playfair Display', serif;
@@ -478,7 +465,6 @@ summary.side-data {
     .blocco {
         height: auto;
         padding: calc(var(--default-size) * 5) calc(var(--default-size) * 3);
-        padding: calc(var(--default-size) * 5) calc(var(--default-size) * 3);
         flex-direction: column;
         border-bottom: 2px solid var(--highlight);
     }
@@ -486,8 +472,7 @@ summary.side-data {
         flex-direction: column;
     }
     .titolo-blocco {
-        font-size: calc(var(--default-size) * 10);
-        font-size: calc(var(--default-size) * 10);
+        font-size: calc(var(--default-size) * 4);
     }
     .foto-blocco {
         width: 100%;
@@ -520,8 +505,7 @@ summary.side-data {
 }
 
 .titolo-blocco-about {
-    font-size: 3rem;
-    margin: calc(var(--default-size) * 2);
+    font-size: calc(var(--default-size) * 6);
     margin: calc(var(--default-size) * 2);
     font-family: 'Playfair Display', serif;
     flex-shrink: 0;
@@ -555,33 +539,40 @@ summary.side-data {
 .settings-block {
     width: 100%;
     align-items: center;
+    background-color: var(--bg-light);
     padding: calc(var(--default-size)) calc(var(--default-size) * 4);
     display: flex;
-    flex: row;
+    flex-direction: row;
 }
 .settings-title {
     font-weight: bold;
     font-size: var(--nav-font-size);
+    color: var(--text);
     margin-right: calc(var(--default-size) * 6);
 }
-.settings-container {
-    align-items: center;
-    display: flex;
-    flex: row;
-}
 .settings-item {
+    color: var(--text);
     background-color: var(--bg);
     padding: var(--default-size) calc(var(--default-size) * 2);
     margin-right: var(--default-size);
     font-size: var(--nav-font-size);
     border-radius: var(--default-size);
-    border: 1px solid var(--border-muted)
+    border: 1px solid var(--border)
 }
 .settings-item.selected {
     background-color: var(--border-muted);
 }
 .settings-item:hover {
     cursor: pointer;
+}
+
+@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+    .settings-block {
+        flex-direction: column;
+    }
+    .settings-item {
+        margin-bottom: calc(var(--default-size) * 2);
+    }
 }
 
 

@@ -166,7 +166,9 @@ const ThemeManager = (() => {
         changeColorScheme,
         toggleLightDark,
         bindToggleButton,
-        getCurrentScheme: () => currentColorScheme,
+        getCurrentScheme: () => {
+            return currentColorScheme
+        },
         isDarkMode,
         addThemeChangeListener,
         resetToSystemPreference

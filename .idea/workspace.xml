@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="FIXME di efficintamento e miglioramento SEO">
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Correzione di un errore con CSS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icon_manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon_manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/color_scheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/color_scheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database_testo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database_testo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +118,7 @@
       <workItem from="1774422545771" duration="1698000" />
       <workItem from="1774426634948" duration="3959000" />
       <workItem from="1775129203331" duration="132000" />
-      <workItem from="1775129337328" duration="3166000" />
+      <workItem from="1775129337328" duration="16086000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -129,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775131294793</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Correzione di un errore con CSS">
+      <option name="closed" value="true" />
+      <created>1775132841280</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775132841280</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FIXME di efficintamento e miglioramento SEO" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIXME di efficintamento e miglioramento SEO" />
+    <MESSAGE value="Correzione di un errore con CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correzione di un errore con CSS" />
   </component>
 </project>
