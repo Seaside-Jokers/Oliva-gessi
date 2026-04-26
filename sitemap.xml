@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!--======================[ HOMEPAGE ]======================-->
+    <!-- Pagina Home in ITALIANO -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/index.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/index.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/index.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/preview.webp</image:loc>
+            <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina Home in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/index.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/index.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/index.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/preview.webp</image:loc>
+            <image:caption>Picture of Oliva Gessi's Olive Tree with the church of San Martino in the Background</image:caption>
+        </image:image>
+    </url>
+
+
+
+
+    <!--======================[ ABOUT-US ]======================-->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/about-us.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/about-us.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/about-us.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/team.webp</image:loc>
+            <image:caption>Foto del team Custodi del Tempo</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina About Us in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/about-us.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/about-us.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/about-us.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/team.webp</image:loc>
+            <image:caption>Picture of the Custodi del Tempo team</image:caption>
+        </image:image>
+    </url>
+
+
+
+    <!--======================[ STORIA ]======================-->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/storia.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/storia.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/storia.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
+            <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina Storia in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/storia.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/storia.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/storia.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
+            <image:caption>Picture of Oliva Gessi's Olive Tree with the church of San Martino in the Background</image:caption>
+        </image:image>
+    </url>
+
+
+
+    <!--======================[ CASTELLO ]======================-->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/castello.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/castello.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/castello.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
+            <image:caption>Foto di Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina Castello in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/castello.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/castello.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/castello.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
+            <image:caption>Picture of Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+
+
+
+    <!--======================[ LUOGHI ]======================-->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/luoghi.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/luoghi.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/luoghi.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Vulto.webp</image:loc>
+            <image:caption>Foto del Vultò, arco di Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina Luoghi in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/luoghi.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/luoghi.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/luoghi.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Vulto.webp</image:loc>
+            <image:caption>Picture of the Vultò, arch of Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+
+
+
+    <!--======================[ PERSONAGGI ]======================-->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/personaggi.html?lang=it</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/personaggi.html?lang=en"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/personaggi.html?lang=it"/>
+        
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/L-Versiglia.webp</image:loc>
+            <image:caption>Foto di San Luigi Versiglia, santo di Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Pagina Luoghi in INGLESE -->
+    <url>
+        <loc>https://oliva-gessi.vercel.app/personaggi.html?lang=en</loc>
+        <lastmod>2024-06-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        
+        <xhtml:link
+            rel="alternate"
+            hreflang="it"
+            href="https://oliva-gessi.vercel.app/personaggi.html?lang=it"/>
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://oliva-gessi.vercel.app/personaggi.html?lang=en"/>
+
+        <image:image>
+            <image:loc>https://oliva-gessi.vercel.app/assets/L-Versiglia.webp</image:loc>
+            <image:caption>Picture of Saint Luigi Versiglia, saint of Oliva Gessi</image:caption>
+        </image:image>
+    </url>
+</urlset>
