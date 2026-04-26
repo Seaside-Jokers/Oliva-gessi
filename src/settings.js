@@ -1,74 +1,86 @@
-const allDarkTheme = () => {
+/* -------------------------------------------------------------------------- */
+/*                                   TEMA                                     */
+/* -------------------------------------------------------------------------- */
+
+const clearTemaSelected = () => {
     document.querySelector('.settings-item.tema.selected')?.classList.remove('selected');
-}
+};
 
 const setDefault = () => {
-    allDarkTheme();
+    clearTemaSelected();
     document.querySelector('#def_theme')?.classList.add('selected');
     ThemeManager.resetToSystemPreference();
-}
+};
 
 const setLight = () => {
-    allDarkTheme();
+    clearTemaSelected();
     document.querySelector('#light_theme')?.classList.add('selected');
     ThemeManager.changeColorScheme("light");
-}
+};
 
 const setDark = () => {
-    allDarkTheme();
+    clearTemaSelected();
     document.querySelector('#dark_theme')?.classList.add('selected');
     ThemeManager.changeColorScheme("dark");
-}
+};
 
-const allDarkLang = () => {
+/* -------------------------------------------------------------------------- */
+/*                                  LINGUA                                    */
+/* -------------------------------------------------------------------------- */
+
+const clearLinguaSelected = () => {
     document.querySelector('.settings-item.lingua.selected')?.classList.remove('selected');
-}
+};
+
+/**
+ * Aggiorna visivamente il bottone selezionato in base alla lingua corrente.
+ * Chiamato anche quando il toggle della navbar cambia lingua dall'esterno.
+ */
+const syncLinguaButtons = () => {
+    clearLinguaSelected();
+    const lang = state;
+    const defaultLang = getDefaultLang();
+    if (lang === defaultLang) {
+        document.querySelector('#def-lang')?.classList.add('selected');
+    } else if (lang === 'it') {
+        document.querySelector('#ita-lang')?.classList.add('selected');
+    } else if (lang === 'en') {
+        document.querySelector('#eng-lang')?.classList.add('selected');
+    }
+};
 
 const setDefaultLang = () => {
-    allDarkLang();
-    document.querySelector('#def-lang')?.classList.add('selected');
-    if (state !== getDefaultLang())
-        changeLang();
-}
+    setLang(getDefaultLang());
+    syncLinguaButtons();
+};
 
 const setIta = () => {
-    allDarkLang();
-    document.querySelector('#ita-lang')?.classList.add('selected');
-    if (state !== 'it')
-        changeLang();
-}
+    setLang('it');
+    syncLinguaButtons();
+};
 
 const setEng = () => {
-    allDarkLang();
-    document.querySelector('#eng-lang')?.classList.add('selected');
-    if(state !== 'en')
-        changeLang();
-}
+    setLang('en');
+    syncLinguaButtons();
+};
 
-const set = (tema, lingua) => {
-    switch (tema) {
-        case 'dark':
-            setDark();
-            break;
-        case 'light':
-            setLight();
-            break;
-        default:
-            setDefault();
-    }
-    switch (lingua) {
-        case 'it':
-            setIta();
-            break;
-        case 'en':
-            setEng();
-            break;
-        default:
-            setDefaultLang();
-    }
-}
+/* -------------------------------------------------------------------------- */
+/*                                    INIT                                    */
+/* -------------------------------------------------------------------------- */
+
 const setInit = () => {
-    set(ThemeManager.getCurrentScheme(), getLangFromURL())
-}
+    // Tema
+    switch (ThemeManager.getCurrentScheme()) {
+        case 'dark':  setDark();    break;
+        case 'light': setLight();   break;
+        default:      setDefault(); break;
+    }
+    // Lingua: legge dall'URL, poi decide quale bottone evidenziare
+    syncLinguaButtons();
+
+    // Ascolta i cambi lingua dal toggle navbar, così i bottoni restano sincronizzati
+    document.getElementById('lang-knob')?.closest('button')
+        ?.addEventListener('click', syncLinguaButtons);
+};
 
 document.addEventListener("DOMContentLoaded", setInit);

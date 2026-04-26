@@ -145,14 +145,14 @@ body {
 
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('truetype');
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
@@ -160,14 +160,14 @@ body {
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('truetype');
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
@@ -320,8 +320,18 @@ span.nav-data {
     flex: 1;
     margin: calc(var(--default-size)) calc(var(--default-size) * 0.5);
 }
+.sidebar-button-small {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: calc(var(--nav-height) * 0.8);
+    flex: 1;
+    margin: calc(var(--default-size)) calc(var(--default-size) * 0.5);
+}
 .side-data {
-    margin-left: calc(var(--default-size) * 2);
+    padding-left: calc(var(--default-size) * 2);
     font-size: var(--nav-font-size);
     font-family: 'Montserrat', sans-serif;
     color: var(--text);
@@ -348,6 +358,16 @@ summary.side-data {
     border-top: 2px solid var(--border-muted);
     /* TODO: transizioni */
 }
+.side-detail {
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    font-size: var(--nav-font-size);
+    color: var(--text-muted);
+    padding-left: 40px;
+    text-align: left;
+}
+
 @media (max-aspect-ratio: 1/1), (max-width: 1000px) {
     summary.side-data {
         padding-left: calc(var(--default-size) * 5);
@@ -373,6 +393,18 @@ summary.side-data {
 }
 
 /* Valori per computer */
+.intestazione {
+    width: 100%;
+    height: auto;
+    padding: calc(var(--default-size) * 5) calc(var(--default-size) * 3);
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    background: var(--bg-light);
+    border-bottom: 2px solid var(--border)
+}
 .blocco {
     width: 100%;
     height: auto;
@@ -425,6 +457,7 @@ summary.side-data {
 .foto-blocco {
     width: 60%;
     height: 100%;
+    aspect-ratio: 16/9;
     display: block;
     object-fit: cover;
     flex-shrink: 0;
@@ -512,12 +545,15 @@ summary.side-data {
 }
 
 .immagine-cornice {
-  border: 8px solid #ffffff;
+  border: 5px solid #ffffff;
+  aspect-ratio: 16/9;
   padding: 5px; 
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   height: auto;
+  width: 35%;
+  object-fit: cover;
 }
 .orizzontale {
     gap: 15px;
@@ -530,6 +566,13 @@ summary.side-data {
     flex-direction: row-reverse;
     background: none;
     text-align: right;
+}
+
+@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+    .immagine-cornice {
+        width: 100%;
+        height: auto;
+    }
 }
 
 

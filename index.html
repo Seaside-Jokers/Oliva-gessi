@@ -64,14 +64,30 @@
         </button>
         <details>
             <!-- Le varie pagine del file -->
-            <summary data-key="cerca_pagina" class="side-data"></summary>
+            <summary data-key="cerca_pagina" class="side-data">Cerca la pagina</summary>
+            <button class="sidebar-button-small" type="button" onclick="navigateTo('storia.html')">
+                <span class="side-detail" data-key="storia_summary">Storia</span>
+            </button>
+            <button class="sidebar-button-small" type="button" onclick="navigateTo('castello.html')">
+                <span class="side-detail" data-key="castello_summary">Il castello</span>
+            </button>
+            <button class="sidebar-button-small" type="button" onclick="navigateTo('luoghi.html')">
+                <span class="side-detail" data-key="luoghi_summary">Luoghi storici</span>
+            </button>
+            <button class="sidebar-button-small" type="button" onclick="navigateTo('charachters.html')">
+                <span class="side-detail" data-key="personaggi_summary">Personaggi storici</span>
+            </button>
         </details>
     </div>
     <!-- ======================================================================= -->
     <!--                                CONTENUTO                                -->
     <!-- ======================================================================= -->
+    <article class="intestazione">
+        <h1 class="titolo-blocco" data-key="intestazione_titolo">Benvenuti a Oliva Gessi!</h1>
+        <p class="testo-blocco" data-key="intestazione_contenuto">Scoprite il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari</p>
+    </article>
     <article class="blocco">
-        <img src="assets/immagine_16x9.jpg" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco">
+        <img src="assets/Oliva-gessi.webp" alt="Oliva Gessi" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('storia.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_1">Storia del comune</h1>
             <p class="testo-blocco" data-key="testo_1">
@@ -79,19 +95,19 @@
                 Lo sviluppo stesso del borgo è molto particolare, per esempio il nome è l`unione di due parti: Oliva, probabilmente dall`olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.
                 La prima prova scritta dell`esistenza di Oliva è nel 972, quando l`imperatore Ottone I la donò alla nuora, che poi la cederà a un monastero. Nel periodo dei feudi Oliva farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi (vd. Marchesa Isimbardi).
             </p>
-            <button class="read-more-button" type="button" onclick="" data-key="read_more">Leggi di più</button>
+            <button class="read-more-button" type="button" onclick="navigateTo('storia.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
     <article class="blocco">
-        <img src="assets/immagine_16x9.jpg" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco">
+        <img src="assets/Oliva-gessi.webp" alt="Il castello" data-key="alt_img_castello" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('castello.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_2">Oliva Gessi</h1>
             <p class="testo-blocco" data-key="testo_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-            <button class="read-more-button" type="button" onclick="" data-key="read_more">Leggi di più</button>
+            <button class="read-more-button" type="button" onclick="navigateTo('castello.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
     <article class="blocco">
-        <img src="assets/immagine_16x9.jpg" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco">
+        <img src="assets/Vulto.webp" alt="Vultò" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_3">Luoghi storici</h1>
             <p class="testo-blocco" data-key="testo_3">Tra le colline dell`Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.
@@ -103,7 +119,7 @@
         </div>
     </article>
     <article class="blocco">
-        <img src="assets/immagine_16x9.jpg" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco">
+        <img src="assets/L-Versiglia.webp" alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_4">Personaggi storici</h1>
             <p class="testo-blocco" data-key="testo_4">Oliva Gessi affonda le sue origini nel X secolo con Ottone I di Sassonia, che dopo aver consolidato il potere imperiale e rafforzato il legame con la Chiesa, nel 972 donò il territorio alla nuora Teofano, segnandone la prima attestazione e l`ingresso nei beni ecclesiastici.
@@ -123,9 +139,5 @@
     <script src="src/icon_manager.js" defer></script>
 </body>
 
-<!-- FIXME: I titoli quando faccio zoom salgono es escono dai relativi blocchi -->
-<!-- FIXME: Trasformare i font in formato .woff2 e le immagini in .webp con loading="lazy"
-    eccetto per la prima (Largest Contentful Paint)-->
-<!-- FIXME: Togliere le duplicazioni dal CSS -->
-<!-- FIXME: Anzichè fare h1 {} h2{} fare h1, h2, ... h6 {} e lo stesso per p e span -->
+<!-- FIXME: Sembra che il sito appaia sempre traslato verso sinistra, mentre a destra c'è uno spazio vuoto -->
 </html>

@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Correzioni per mobile e progresso in index.html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database_testo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database_testo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Integrazione del nuovo testo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +107,7 @@
       <workItem from="1774422545771" duration="1698000" />
       <workItem from="1774426634948" duration="3959000" />
       <workItem from="1775129203331" duration="132000" />
-      <workItem from="1775129337328" duration="18429000" />
+      <workItem from="1775129337328" duration="18675000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -148,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775146546659</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Integrazione del nuovo testo">
+      <option name="closed" value="true" />
+      <created>1775149530543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775149530543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +170,7 @@
     <MESSAGE value="FIXME di efficintamento e miglioramento SEO" />
     <MESSAGE value="Correzione di un errore con CSS" />
     <MESSAGE value="Correzioni per mobile e progresso in index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correzioni per mobile e progresso in index.html" />
+    <MESSAGE value="Integrazione del nuovo testo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrazione del nuovo testo" />
   </component>
 </project>

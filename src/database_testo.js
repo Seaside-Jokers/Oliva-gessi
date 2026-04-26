@@ -11,13 +11,20 @@ const traduzioni = {
         settings: "Impostazioni",
         homepage: "Pagina principale",
         read_more: "Leggi di più...",
+        storia_summary: "Storia di Oliva",
+        castello_summary: "Il castello di Oliva Gessi",
+        luoghi_summary: "Luoghi storici",
+        personaggi_summary: "Personaggi storici",
         /* Homepage */
+        intestazione_titolo: "Benvenuti a Oliva Gessi!",
+        intestazione_contenuto: "Scoprite il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari",
         title_1: "Storia del comune",
         testo_1: "Oliva Gessi è un comune molto antico, che risale al periodo romano o secondo alcune testimonianza perfino preromano, così ha visto alcuni dei periodi storici più interessanti, dando vita a molte tradizioni proprie.<br>" +
             "Lo sviluppo stesso del borgo è molto particolare, per esempio il nome è l’unione di due parti: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>" +
             "La prima prova scritta dell’esistenza di Oliva è nel 972, quando l’imperatore Ottone I la donò alla nuora, che poi la cederà a un monastero. Nel periodo dei feudi Oliva farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.",
         title_2: "Il castello",
         testo_2: "",
+        alt_img_castello: "Il castello di Oliva Gessi",
         title_3: "Luoghi storici",
         testo_3: "Tra le colline dell’Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>" +
             "Tra il Seicento e l’Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso. " +
@@ -29,6 +36,7 @@ const traduzioni = {
             "In questo contesto nacque Luigi Versiglia nel 1873, poi missionario in Cina e martire nel 1930.<br>" +
             "Tra Otto e Novecento Abramo De Benedetti modernizzò la tenuta, ma la sua esperienza fu segnata dalla tragedia del figlio Ugo, deportato e ucciso ad Auschwitz nel 1943 durante la Seconda guerra mondiale.",
         /* About us */
+        team_about_us_img: "Foto del team",
         about_team_title: "Il team Custodi del Tempo",
         about_team: "Descrizione del team",
         title_1_about:"Jacopo Cicuti",
@@ -63,13 +71,20 @@ const traduzioni = {
         settings: "Settings",
         homepage: "Main page",
         read_more: "Read more...",
+        storia_summary: "History of Oliva",
+        castello_summary: "The castle of Oliva Gessi",
+        luoghi_summary: "Historical places",
+        personaggi_summary: "Historical characters",
         /* Homepage */
+        intestazione_titolo: "Welcome to Oliva Gessi!",
+        intestazione_contenuto: "Discover the beautiful village of Oliva, with its very rich history and very particular traditions",
         title_1: "History of the town",
         testo_1: "Oliva Gessi is  a very ancient town, dating back to the Roman age or, based on some records, even to the pre-Roman era, passing through some of the most interesting historical periods, giving birth to many traditions.<br>" +
             "The development of the village is unique, for instance the name is the union of two parts: Oliva, likely from the centuries-old olive tree situated in front of the church, and Gessi, from the gypsum quarries located close to the village.<br>" +
             "The first written testimony of the existence of Oliva is in 972, when emperor Otto I gifted the town to his daughter-in-law, who will donate it to a monastery. In the period of fiefs, Oliva was part of Montalto’s reign, switching under the control of different families, of which in particular we remember the Isimbardi family.",
         title_2: "The castle",
         testo_2: "",
+        alt_img_castello: "The castle of Oliva Gessi",
         title_3: "Historical landmarks",
         testo_3: "Among the hills of Oltrepò Pavese, Oliva Gessi is a village with a very rich history, built around a castle already attested in the Middle Ages and mentioned in the 13th-century inquisitorial registers.<br>" +
             "Between the seventeenth and nineteenth centuries the Isimbardi family turned the town into a harmonious rural centre. " +
@@ -81,6 +96,7 @@ const traduzioni = {
             "In this context, in 1873, another fundamental character was born: Luigi Versiglia, who became a missionary in China and eventually a martyr in 1930.<br>" +
             "Between the 19th and the 20th centuries Abramo De Benedetti modernized the estate, but his experience was marked by the tragedy of his son Ugo, deported and killed in Auschwitz in 1943 during the Second World War.",
         /* About us */
+        team_about_us_img: "Team photo",
         about_team_title: "The Custodi del Tempo team",
         about_team: "Team's description",
         title_1_about:"Jacopo Cicuti",
@@ -164,8 +180,21 @@ function changeLang() {
     aggiornaInterfaccia();
 }
 
+/**
+ * Imposta la lingua direttamente senza fare toggle.
+ * Usata da settings.js e da chiunque conosca già la lingua target.
+ * @param {'it'|'en'} lang
+ */
+function setLang(lang) {
+    if (lang !== 'it' && lang !== 'en') return;
+    if (state === lang) return;
+    state = lang;
+    updateURLWithLang(state);
+    aggiornaInterfaccia();
+}
+
 function navigateTo(page) {
     location.href = `${page}?lang=${state}`;
 }
 
-document.addEventListener("DOMContentLoaded", aggiornaInterfaccia);
+document.addEventListener("DOMContentLoaded", aggiornaInterfaccia)

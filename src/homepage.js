@@ -1,4 +1,5 @@
 function clampTesti() {
+    if (!document.querySelector('.foto-blocco')) return;
     document.querySelectorAll('.blocco').forEach(blocco => {
         const img    = blocco.querySelector('.foto-blocco');
         const testo  = blocco.querySelector('.testo-blocco');

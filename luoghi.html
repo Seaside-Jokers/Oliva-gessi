@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>The places of Oliva Gessi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scopri Oliva Gessi">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="alternate" hreflang="it" href="luoghi.html?lang=it">
+    <link rel="alternate" hreflang="en" href="luoghi.html?lang=en">
+    <link rel="alternate" hreflang="x-default" href="luoghi.html">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- ======================================================================= -->
+    <!--                                 NAVBAR                                  -->
+    <!-- ======================================================================= -->
+    <nav class="navbar">
+        <!-- Home -->
+        <button class="btn-navbar" type="button" onclick="toggleMenu()">
+            <icon-el src="assets/menu.svg"></icon-el>
+            <span data-key="home" class="nav-data">Menu</span>
+        </button>
+        <!-- Homepage -->
+        <button class="btn-navbar" type="button" onclick="navigateTo('index.html')">
+            <icon-el src="assets/home.svg"></icon-el>
+            <span data-key="homepage" class="nav-data">Pagina principale</span>
+        </button>
+        <!-- Cambio lingua (a destra) -->
+        <button class="btn-navbar lang-button" type="button" id="cambio-lingua" onclick="changeLang()">
+            <span class="lang-toggle-data">IT</span>
+            <span class="lang-toggle">
+                <span class="lang-knob" id="lang-knob"></span>
+            </span>
+            <span class="lang-toggle-data">EN</span>
+        </button>
+    </nav>
+    <!-- ======================================================================= -->
+    <!--                                 SIDEBAR                                 -->
+    <!-- ======================================================================= -->
+    <!-- Strato trasparente che permette di chiudere il menu cliccando fuori -->
+    <div class="clicker" onclick="closeMenu()"></div>
+    <!-- Menu laterale vero e proprio -->
+    <div class="sidebar" id="sidebar">
+        <!-- Chiudi il menu -->
+        <button class="sidebar-button" type="button" onclick="closeMenu()">
+            <icon-el src="assets/close.svg" class="large"></icon-el>
+            <span data-key="close_menu" class="side-data">Chiudi</span>
+        </button>
+        <!-- Homepage -->
+        <button class="sidebar-button" type="button" onclick="navigateTo('index.html')">
+            <icon-el src="assets/home.svg" class="large"></icon-el>
+            <span data-key="homepage" class="side-data">Pagina principale</span>
+        </button>
+        <!-- About us -->
+        <button class="sidebar-button" type="button" onclick="navigateTo('about-us.html')">
+            <icon-el src="assets/about-us.svg" class="large"></icon-el>
+            <span data-key="about" class="side-data">Il team</span>
+        </button>
+        <!-- Impostazioni -->
+        <button class="sidebar-button" type="button" onclick="navigateTo('settings.html')">
+            <icon-el src="assets/settings.svg" class="large"></icon-el>
+            <span data-key="settings" class="side-data">Impostazioni</span>
+        </button>
+        <details>
+            <!-- Le varie pagine del file -->
+            <summary data-key="cerca_pagina" class="side-data"></summary>
+        </details>
+    </div>
+    <!-- ======================================================================= -->
+    <!--                                CONTENUTO                                -->
+    <!-- ======================================================================= -->
+    <article class="intestazione">
+        <h1 class="titolo-blocco" data-key="intestazione_titolo">Benvenuti a Oliva Gessi!</h1>
+        <p class="testo-blocco" data-key="intestazione_contenuto">Scoprite il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari</p>
+    </article>
+    <!--=======================================================================-->
+    <!--                      DO NOT TOUCH BELOW THIS LINE                     -->
+    <!--=======================================================================-->
+    <script src="src/database_testo.js" defer></script>
+    <script src="src/color_scheme.js" defer></script>
+    <script src="src/sidebar.js" defer></script>
+    <script src="src/homepage.js" defer></script>
+    <script src="src/icon_manager.js" defer></script>
+</body>
+
+<!-- FIXME: I titoli quando faccio zoom salgono es escono dai relativi blocchi -->
+<!-- FIXME: Trasformare i font in formato .woff2 e le immagini in .webp con loading="lazy"
+    eccetto per la prima (Largest Contentful Paint)-->
+<!-- FIXME: Anzichè fare h1 {} h2{} fare h1, h2, ... h6 {} e lo stesso per p e span -->
+</html>
