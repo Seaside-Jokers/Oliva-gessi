@@ -8,7 +8,7 @@
     <!-- Pagina Home in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/index.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
@@ -30,7 +30,7 @@
     <!-- Pagina Home in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/index.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
@@ -53,9 +53,10 @@
 
 
     <!--======================[ ABOUT-US ]======================-->
+    <!-- Pagina About Us in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/about-us.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         
@@ -77,7 +78,7 @@
     <!-- Pagina About Us in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/about-us.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         
@@ -99,9 +100,10 @@
 
 
     <!--======================[ STORIA ]======================-->
+    <!-- Pagina Storia in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/storia.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -123,7 +125,7 @@
     <!-- Pagina Storia in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/storia.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -145,9 +147,10 @@
 
 
     <!--======================[ CASTELLO ]======================-->
+    <!-- Pagina Castello in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/castello.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -169,7 +172,7 @@
     <!-- Pagina Castello in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/castello.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -191,9 +194,10 @@
 
 
     <!--======================[ LUOGHI ]======================-->
+    <!-- Pagina Luoghi in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/luoghi.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -215,7 +219,7 @@
     <!-- Pagina Luoghi in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/luoghi.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -237,9 +241,10 @@
 
 
     <!--======================[ PERSONAGGI ]======================-->
+    <!-- Pagina Personaggi in ITALIANO -->
     <url>
         <loc>https://oliva-gessi.vercel.app/personaggi.html?lang=it</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
@@ -258,10 +263,10 @@
         </image:image>
     </url>
 
-    <!-- Pagina Luoghi in INGLESE -->
+    <!-- Pagina Personaggi in INGLESE -->
     <url>
         <loc>https://oliva-gessi.vercel.app/personaggi.html?lang=en</loc>
-        <lastmod>2024-06-01</lastmod>
+        <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         
