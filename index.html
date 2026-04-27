@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Oliva Gessi</title>
+    <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Scopri Oliva Gessi">
+    <meta name="description" content="Vieni a scoprire il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari">
+    <meta name="keywords" content="Oliva Gessi, Versiglia, Luigi Versiglia,
+            Oltrepò, San Martino, Vultò, borgo medievale Oltrepò, Luigi Versiglia martire,
+            Luigi Versiglia santo, Abramo De Benedetti, Marchesa Isimbardi, borghi storici Pavia,
+            cosa vedere Oltrepò Pavese, borghi Oltrepò Pavese, comune Oliva Gessi, Oliva Gessi Pavia,
+            gesso Oltrepò">
+    <!-- -->
+    <meta property="og:title" content="Oliva Gessi">
+    <meta property="og:description" content="Vieni a scoprire il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari">
+    <meta property="og:image" content="https://oliva-gessi.vercel.app/assets/preview.webp">
+    <meta property="og:url" content="https://oliva-gessi.vercel.app/assets/preview.webp">
+    <meta property="og:type" content="website">
+    <!-- -->
     <link rel="preload" href="fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="src/style.css">
+    <!-- -->
     <link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/index.html?lang=it">
     <link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/index.html?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://oliva-gessi.vercel.app/index.html">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- ======================================================================= -->
@@ -94,7 +108,7 @@
           src="assets/Oliva-gessi.webp"
           srcset="assets/Oliva-gessi-s.webp 721w, assets/Oliva-gessi.webp 1920w"
           sizes="(max-width: 721px) 100vw, (max-width: 1920px) 1200px, 1920px"
-          alt="Oliva Gessi" class="foto-blocco" onclick="navigateTo('storia.html')">
+          alt="Oliva Gessi" class="foto-blocco" onclick="navigateTo('storia.html')" fetchpriority="high">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_1">Storia del comune</h1>
             <p class="testo-blocco" data-key="testo_1">
@@ -162,5 +176,4 @@
 <!-- FIXME: Sembra che il sito appaia sempre traslato verso sinistra, mentre a destra c'è uno spazio vuoto -->
 <!-- FIXME: Aggiungere immagine preview.webp e thumbnail -->
 <!-- TODO: Aggiungere meta description e keywords per il SEO -->
-<!-- TODO: Ottimizzare le immagini caricando dinamicamente l'immagine con la risoluzione adatta -->
 </html>

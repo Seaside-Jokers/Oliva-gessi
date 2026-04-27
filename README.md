@@ -7,6 +7,7 @@ Descrizione di Oliva Gessi - versione bilingue (IT/EN)
 - CSS3
 - JavaScript (client-side)
 - Traduzione dinamica con `?lang=en`
+- Gestione eccezioni con pagina `404.html`
 
 ## Lingue supportate
 - 🇮🇹 Italiano (default)
@@ -16,10 +17,14 @@ Descrizione di Oliva Gessi - versione bilingue (IT/EN)
 - `index.html` - Homepage
 - `about-us.html` - Chi siamo
 - `settings.html` - Impostazioni
+- `storia.html` - Storia
+- `luoghi.html` - Luoghi
+- `personaggi.html` - Personaggi
+- `castello.html` - Castello
 
 ## URL con lingue
-- `index.html?lang=it` - Italiano
-- `index.html?lang=en` - Inglese
+- `?lang=it` - Italiano
+- `?lang=en` - Inglese
 
 ## Deploy
-Deployato su Vercel: [oliva-gessi.vercel.app](https://oliva-gessi.vercel.app)
+Deploy su Vercel: [oliva-gessi.vercel.app](https://oliva-gessi.vercel.app)
