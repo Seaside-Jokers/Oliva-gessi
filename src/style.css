@@ -195,6 +195,7 @@ nav.navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    box-sizing: border-box;
     height: var(--nav-height);
     display: flex;
     align-items: center;
@@ -397,7 +398,7 @@ summary.side-data {
     width: 100%;
     height: auto;
     padding: calc(var(--default-size) * 5) calc(var(--default-size) * 3);
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background: none;
@@ -410,7 +411,7 @@ summary.side-data {
     height: auto;
     padding-bottom: calc(var(--default-size) * 8);
     padding-top: calc(var(--default-size) * 3);
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     background: none;
@@ -581,6 +582,7 @@ summary.side-data {
 /* -------------------------------------------------------------------- */
 .settings-block {
     width: 100%;
+    box-sizing: border-box;
     align-items: center;
     background-color: var(--bg-light);
     padding: calc(var(--default-size)) calc(var(--default-size) * 4);
