@@ -467,8 +467,7 @@ summary.side-data {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--btn-width);
-    height: var(--btn-height);
+    padding: calc(var(--default-size) * 0.75) calc(var(--default-size) * 4);
     margin-top: calc(var(--default-size));
     margin-bottom: calc(var(--default-size) * 2);
     color: var(--text-light);
