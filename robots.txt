@@ -1,9 +1,5 @@
 User-agent: *
 Disallow: /src/
-Disallow: /castello.html
-Disallow: /luoghi.html
-Disallow: /personaggi.html
-Disallow: /storia.html
 
 # Indica la posizione del tuo sitemap
 Sitemap: https://oliva-gessi.vercel.app/sitemap.xml

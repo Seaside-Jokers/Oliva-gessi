@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Integrazione del nuovo testo" />
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Uniti i rami locale e remoto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Steel-Mastr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Seaside-Jokers/Oliva-gessi",
+    "accountId": "fc1b7199-a085-41ad-a8db-2a56e08b6522"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -108,6 +122,7 @@
       <workItem from="1774426634948" duration="3959000" />
       <workItem from="1775129203331" duration="132000" />
       <workItem from="1775129337328" duration="18675000" />
+      <workItem from="1777364158018" duration="361000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -149,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775149530543</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Uniti i rami locale e remoto">
+      <option name="closed" value="true" />
+      <created>1777364452282</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777364452282</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +194,7 @@
     <MESSAGE value="Correzione di un errore con CSS" />
     <MESSAGE value="Correzioni per mobile e progresso in index.html" />
     <MESSAGE value="Integrazione del nuovo testo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrazione del nuovo testo" />
+    <MESSAGE value="Uniti i rami locale e remoto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uniti i rami locale e remoto" />
   </component>
 </project>
