@@ -19,22 +19,19 @@ const traduzioni = {
         intestazione_titolo: "Benvenuti a Oliva Gessi!",
         intestazione_contenuto: "Scoprite il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari",
         title_1: "Storia del comune",
-        testo_1: "Oliva Gessi è un comune molto antico, che risale al periodo romano o secondo alcune testimonianza perfino preromano, così ha visto alcuni dei periodi storici più interessanti, dando vita a molte tradizioni proprie.<br>" +
-            "Lo sviluppo stesso del borgo è molto particolare, per esempio il nome è l’unione di due parti: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>" +
-            "La prima prova scritta dell’esistenza di Oliva è nel 972, quando l’imperatore Ottone I la donò alla nuora, che poi la cederà a un monastero. Nel periodo dei feudi Oliva farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.",
+        testo_1: "Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano, Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>" +
+            "Il suo nome unico è l’unione di due parti, ognuna delle quali racconta un pezzo di storia: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>" +
+            "La prima prova scritta proviene dal 972, quando l’imperatore Ottone I donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.",
         title_2: "Il castello",
         testo_2: "",
         alt_img_castello: "Il castello di Oliva Gessi",
         title_3: "Luoghi storici",
-        testo_3: "Tra le colline dell’Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>" +
-            "Tra il Seicento e l’Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso. " +
-            "Qui si intrecciano vicende come i casi inquisitoriali di Ottone Villano e il rogo di Benvenuta, accanto alla figura di Luigi Versiglia.<br>" +
-            "Il paese conserva simboli identitari come il Voltò, il giardino all’italiana, la chiesa di San Martino (riedificata nel 1682) e il teatro parrocchiale del 1926, cuore della vita comunitaria.<br>" +
-            "Intorno, le colline vitate e i terreni gessosi, sfruttati fin dall’età romana e valorizzati anche da Abramo De Benedetti, raccontano una tradizione millenaria.<br>",
+        testo_3: "Oliva Gessi è un borgo dalla storia straordinariamente ricca, nato attorno a un castello di epoca medievale già citato nei registri inquisitoriali del XIII secolo. Qui si intrecciano vicende affascinanti e oscure, come i processi a Ottone Villano e il rogo di Benvenuta.<br>" +
+            "Tra il Seicento e l’Ottocento, l'intervento della famiglia Isimbardi ha trasformato l'abitato in un centro rurale armonioso. Il paese custodisce oggi simboli preziosi: il suggestivo Voltò che accoglie i visitatori, la Chiesa di San Martino (riedificata nel 1682) o il teatro parrocchiale del 1926, da sempre cuore pulsante della comunità.<br>" +
+            "Tutt'intorno ci sono le colline coperte di viti (comuni nella zona) e un sedimento di gesso — da cui parte del nome — che raccontano l’eredità millenaria di questo territorio.",
         title_4: "Personaggi storici",
-        testo_4: "Tra i personaggi fondamentali di Oliva Gessi vi è la famiglia Isimbardi, che trasformò il castello in residenza signorile e sviluppò l’economia agricola fino alla sua estinzione nel Novecento.<br>" +
-            "In questo contesto nacque Luigi Versiglia nel 1873, poi missionario in Cina e martire nel 1930.<br>" +
-            "Tra Otto e Novecento Abramo De Benedetti modernizzò la tenuta, ma la sua esperienza fu segnata dalla tragedia del figlio Ugo, deportato e ucciso ad Auschwitz nel 1943 durante la Seconda guerra mondiale.",
+        testo_4: "La storia di Oliva Gessi è legata a figure illustri, a partire dalla famiglia Isimbardi, che trasformò l’antico castello in una raffinata residenza signorile e guidò l’economia agricola locale fino al Novecento.<br>" +
+            "In questo fervido contesto nacque nel 1873 Luigi Versiglia, che divenne missionario in Cina e fu martirizzato nel 1930 (oggi venerato come Santo). Tra l’Ottocento e il Novecento, la figura di Abramo De Benedetti portò una ventata di modernità nella gestione della tenuta; tuttavia, la sua storia familiare fu segnata dal dramma del figlio Ugo, deportato e ucciso nel campo di sterminio di Auschwitz nel 1943, durante gli anni bui della Seconda Guerra Mondiale.",
         /* About us */
         team_about_us_img: "Foto del team",
         about_team_title: "Il team Custodi del Tempo",
@@ -79,22 +76,19 @@ const traduzioni = {
         intestazione_titolo: "Welcome to Oliva Gessi!",
         intestazione_contenuto: "Discover the beautiful village of Oliva, with its very rich history and very particular traditions",
         title_1: "History of the town",
-        testo_1: "Oliva Gessi is  a very ancient town, dating back to the Roman age or, based on some records, even to the pre-Roman era, passing through some of the most interesting historical periods, giving birth to many traditions.<br>" +
-            "The development of the village is unique, for instance the name is the union of two parts: Oliva, likely from the centuries-old olive tree situated in front of the church, and Gessi, from the gypsum quarries located close to the village.<br>" +
-            "The first written testimony of the existence of Oliva is in 972, when emperor Otto I gifted the town to his daughter-in-law, who will donate it to a monastery. In the period of fiefs, Oliva was part of Montalto’s reign, switching under the control of different families, of which in particular we remember the Isimbardi family.",
+        testo_1: "Oliva Gessi, a small paradise nestled in the hills of Oltrepò Pavese, is a village with ancient roots dating back to the Roman era or, according to some records, even pre-Roman times. Throughout the centuries, the village has witnessed crucial historical periods, forging traditions that still live on today.<br>" +
+        "Its unique name is a blend of two parts, each telling a piece of its history: Oliva, likely named after the centuries-old olive tree standing before the parish church, and Gessi, from the gypsum (gesso) quarries located near the village.<br>" +
+        "The first written evidence dates back to 972, when Emperor Otto I gifted Oliva to his daughter-in-law, who later bequeathed it to a monastery. During the feudal era, the village became part of the Montalto domain, passing through the hands of various noble families, most notably the Isimbardi family.",
         title_2: "The castle",
         testo_2: "",
         alt_img_castello: "The castle of Oliva Gessi",
         title_3: "Historical landmarks",
-        testo_3: "Among the hills of Oltrepò Pavese, Oliva Gessi is a village with a very rich history, built around a castle already attested in the Middle Ages and mentioned in the 13th-century inquisitorial registers.<br>" +
-            "Between the seventeenth and nineteenth centuries the Isimbardi family turned the town into a harmonious rural centre. " +
-            "Here, events such as the inquisitorial cases of Otto Villano and the Benvenuta fire intertwine, alongside the figure of Luigi Versiglia.<br>" +
-            "The town preserves symbols of identity such as the Voltò, the Italian garden, the church of San Martino (rebuilt in 1682) and the parish theatre from 1926, the heart of community life.<br>" +
-            "Around it, the vineyard hills and chalky soils, exploited since Roman times and also enhanced by Abramo De Benedetti, tell of a thousand-year-old tradition.",
+        testo_3: "Oliva Gessi is a village with an extraordinarily rich history, developed around a medieval castle mentioned in inquisitorial records as early as the 13th century. It is a place where captivating and dark tales intertwine, such as the trials of Ottone Villano and the burning of Benvenuta.<br>" +
+            "Between the 17th and 19th centuries, the influence of the Isimbardi family transformed the settlement into a harmonious rural center. Today, the village preserves precious landmarks: the striking Voltò archway that welcomes visitors, the Church of San Martino (rebuilt in 1682), and the parish theater dating back to 1926, long the beating heart of the community.<br>" +
+            "All around, the vine-covered hills and a gypsum deposit — from which part of the village's name is derived — bear witness to the millenary heritage of this land.",
         title_4: "Historical characters",
-        testo_4: "One of the most important families of Oliva Gessi is the Isimbardi family, who transformed the castle into a noble residence and developed the agricultural economy of the village until the end of the family in the 1900s.<br>" +
-            "In this context, in 1873, another fundamental character was born: Luigi Versiglia, who became a missionary in China and eventually a martyr in 1930.<br>" +
-            "Between the 19th and the 20th centuries Abramo De Benedetti modernized the estate, but his experience was marked by the tragedy of his son Ugo, deported and killed in Auschwitz in 1943 during the Second World War.",
+        testo_4: "The history of Oliva Gessi is inextricably linked to prominent figures, beginning with the Isimbardi family, who transformed the ancient castle into a noble residence and led the local agricultural economy until the 20th century.<br>" +
+            "It was in this setting that Luigi Versiglia was born in 1873; he later became a missionary in China and was martyred in 1930 (now a canonized Saint). Between the 19th and 20th centuries, Abramo De Benedetti modernized the estate’s management. However, his family’s history was marked by the tragedy of his son, Ugo, who was deported and murdered in the Auschwitz concentration camp in 1943, during the darkest years of World War II." ,
         /* About us */
         team_about_us_img: "Team photo",
         about_team_title: "The Custodi del Tempo team",
