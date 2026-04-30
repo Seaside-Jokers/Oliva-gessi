@@ -6,7 +6,7 @@
 
     <!--======================[ HOMEPAGE ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/index.html</loc>
+        <loc>https://oliva-gessi.vercel.app/index</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -16,13 +16,13 @@
 
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/preview.webp</image:loc>
-            <image:caption>Immagine dell&apos;Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
+            <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
         </image:image>
     </url>
 
     <!--======================[ ABOUT-US ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/about-us.html</loc>
+        <loc>https://oliva-gessi.vercel.app/about-us</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -38,7 +38,7 @@
 
     <!--======================[ STORIA ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/storia.html</loc>
+        <loc>https://oliva-gessi.vercel.app/storia</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -48,13 +48,13 @@
 
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
-            <image:caption>Immagine dell&apos;Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
+            <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
         </image:image>
     </url>
 
     <!--======================[ CASTELLO ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/castello.html</loc>
+        <loc>https://oliva-gessi.vercel.app/castello</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -70,7 +70,7 @@
 
     <!--======================[ LUOGHI ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/luoghi.html</loc>
+        <loc>https://oliva-gessi.vercel.app/luoghi</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -86,7 +86,7 @@
 
     <!--======================[ PERSONAGGI ]======================-->
     <url>
-        <loc>https://oliva-gessi.vercel.app/personaggi.html</loc>
+        <loc>https://oliva-gessi.vercel.app/personaggi</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -99,5 +99,4 @@
             <image:caption>Foto di San Luigi Versiglia, santo di Oliva Gessi</image:caption>
         </image:image>
     </url>
-
 </urlset>

@@ -105,7 +105,7 @@
     --btn-height: calc(var(--default-size) * 5);
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     :root {
         /* --- VALORI PER MOBILE (Telefoni e Tablet piccoli) --- */
 
@@ -245,7 +245,7 @@ span.nav-data {
     transform: scale(1.1);
 }
 
-@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     button.btn-navbar {
         margin-right: var(--default-size);
     }
@@ -369,7 +369,7 @@ summary.side-data {
     text-align: left;
 }
 
-@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     summary.side-data {
         padding-left: calc(var(--default-size) * 5);
     }
@@ -493,7 +493,7 @@ summary.side-data {
     transform: translateY(-2px);
 }
 
-@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     /* Valori per telefono */
     .blocco {
         height: auto;
@@ -568,7 +568,7 @@ summary.side-data {
     text-align: right;
 }
 
-@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     .immagine-cornice {
         width: 100%;
         height: auto;
@@ -610,7 +610,7 @@ summary.side-data {
     cursor: pointer;
 }
 
-@media (max-aspect-ratio: 1/1), (max-width: 1000px) {
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     .settings-block {
         flex-direction: column;
     }
