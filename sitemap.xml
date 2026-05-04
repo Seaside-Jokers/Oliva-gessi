@@ -1,99 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!--======================[ HOMEPAGE ]======================-->
+    <!-- Comincio a pensare che siamo a caccia di fantasmi, il sitemap è giusto,
+        gli URL funzionano, tutto funziona, ma per qualche ragione mistica ancora
+        GSC non sembra capire niente...
+    -->
+    <!-- HOMEPAGE -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/index</loc>
-        <lastmod>2026-04-27</lastmod>
+        <loc>https://oliva-gessi.vercel.app/index.html</loc>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/index.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/index.html?lang=en"/>
-
         <image:image>
-            <image:loc>https://oliva-gessi.vercel.app/assets/preview.webp</image:loc>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-Gessi.webp</image:loc>
             <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
         </image:image>
     </url>
 
-    <!--======================[ ABOUT-US ]======================-->
+    <!-- ABOUT-US -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/about-us</loc>
-        <lastmod>2026-04-27</lastmod>
+        <loc>https://oliva-gessi.vercel.app/about-us.html</loc>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/about-us.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/about-us.html?lang=en"/>
-
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/team.webp</image:loc>
             <image:caption>Foto del team Custodi del Tempo</image:caption>
         </image:image>
     </url>
 
-    <!--======================[ STORIA ]======================-->
+    <!-- STORIA -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/storia</loc>
-        <lastmod>2026-04-27</lastmod>
+        <loc>https://oliva-gessi.vercel.app/storia.html</loc>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/storia.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/storia.html?lang=en"/>
-
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
             <image:caption>Immagine dell'Ulivo di Oliva Gessi con dietro la parrocchia di San Martino</image:caption>
         </image:image>
     </url>
 
-    <!--======================[ CASTELLO ]======================-->
+    <!-- CASTELLO -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/castello</loc>
-        <lastmod>2026-04-27</lastmod>
+        <loc>https://oliva-gessi.vercel.app/castello.html</loc>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/castello.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/castello.html?lang=en"/>
-
         <image:image>
-            <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
-            <image:caption>Foto di Oliva Gessi</image:caption>
+            <image:loc>https://oliva-gessi.vercel.app/assets/castello.webp</image:loc>
+            <image:caption>Foto del castello di Oliva</image:caption>
         </image:image>
     </url>
 
-    <!--======================[ LUOGHI ]======================-->
+    <!-- LUOGHI -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/luoghi</loc>
-        <lastmod>2026-04-27</lastmod>
+        <loc>https://oliva-gessi.vercel.app/luoghi.html</loc>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/luoghi.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/luoghi.html?lang=en"/>
-
         <image:image>
-            <image:loc>https://oliva-gessi.vercel.app/assets/Vulto.webp</image:loc>
+            <image:loc>https://oliva-gessi.vercel.app/Vulto.webp</image:loc>
             <image:caption>Foto del Vultò, arco di Oliva Gessi</image:caption>
         </image:image>
     </url>
 
-    <!--======================[ PERSONAGGI ]======================-->
+    <!-- PERSONAGGI -->
     <url>
-        <loc>https://oliva-gessi.vercel.app/personaggi</loc>
+        <loc>https://oliva-gessi.vercel.app/personaggi.html</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-
-        <xhtml:link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/personaggi.html?lang=it"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/personaggi.html?lang=en"/>
-
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/L-Versiglia.webp</image:loc>
             <image:caption>Foto di San Luigi Versiglia, santo di Oliva Gessi</image:caption>

@@ -7,7 +7,9 @@
     <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Uniti i rami locale e remoto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database_testo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database_testo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +129,7 @@
       <workItem from="1777364158018" duration="361000" />
       <workItem from="1777395936102" duration="42000" />
       <workItem from="1777443482783" duration="1263000" />
+      <workItem from="1777884932901" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />

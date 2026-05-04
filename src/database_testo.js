@@ -17,18 +17,18 @@ const traduzioni = {
         personaggi_summary: "Personaggi storici",
         /* Homepage */
         intestazione_titolo: "Benvenuti a Oliva Gessi!",
-        intestazione_contenuto: "Scoprite il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari",
+        intestazione_contenuto: "Scoprite con noi Oliva Gessi, borgo suggestivo dalla sua storia millenaria e tradizioni uniche",
         title_1: "Storia del comune",
-        testo_1: "Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano, Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>" +
+        testo_1: "Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano. Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>" +
             "Il suo nome unico è l’unione di due parti, ognuna delle quali racconta un pezzo di storia: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>" +
-            "La prima prova scritta proviene dal 972, quando l’imperatore Ottone I donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.",
+            "Il primo documento in cui appare il borgo risale al 972, quando l’imperatore Ottone I donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto il controllo di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.",
         title_2: "Il castello",
         testo_2: "",
         alt_img_castello: "Il castello di Oliva Gessi",
         title_3: "Luoghi storici",
         testo_3: "Oliva Gessi è un borgo dalla storia straordinariamente ricca, nato attorno a un castello di epoca medievale già citato nei registri inquisitoriali del XIII secolo. Qui si intrecciano vicende affascinanti e oscure, come i processi a Ottone Villano e il rogo di Benvenuta.<br>" +
             "Tra il Seicento e l’Ottocento, l'intervento della famiglia Isimbardi ha trasformato l'abitato in un centro rurale armonioso. Il paese custodisce oggi simboli preziosi: il suggestivo Voltò che accoglie i visitatori, la Chiesa di San Martino (riedificata nel 1682) o il teatro parrocchiale del 1926, da sempre cuore pulsante della comunità.<br>" +
-            "Tutt'intorno ci sono le colline coperte di viti (comuni nella zona) e un sedimento di gesso — da cui parte del nome — che raccontano l’eredità millenaria di questo territorio.",
+            "Tutt'intorno ci sono le colline coperte di vigneti (tipici della zona) e un sedimento di gesso — da cui parte del nome — che raccontano l’eredità millenaria di questo territorio.",
         title_4: "Personaggi storici",
         testo_4: "La storia di Oliva Gessi è legata a figure illustri, a partire dalla famiglia Isimbardi, che trasformò l’antico castello in una raffinata residenza signorile e guidò l’economia agricola locale fino al Novecento.<br>" +
             "In questo fervido contesto nacque nel 1873 Luigi Versiglia, che divenne missionario in Cina e fu martirizzato nel 1930 (oggi venerato come Santo). Tra l’Ottocento e il Novecento, la figura di Abramo De Benedetti portò una ventata di modernità nella gestione della tenuta; tuttavia, la sua storia familiare fu segnata dal dramma del figlio Ugo, deportato e ucciso nel campo di sterminio di Auschwitz nel 1943, durante gli anni bui della Seconda Guerra Mondiale.",
@@ -74,7 +74,7 @@ const traduzioni = {
         personaggi_summary: "Historical characters",
         /* Homepage */
         intestazione_titolo: "Welcome to Oliva Gessi!",
-        intestazione_contenuto: "Discover the beautiful village of Oliva, with its very rich history and very particular traditions",
+        intestazione_contenuto: "Discover with us the captivating village of Oliva Gessi, with its millenary history and unique traditions",
         title_1: "History of the town",
         testo_1: "Oliva Gessi, a small paradise nestled in the hills of Oltrepò Pavese, is a village with ancient roots dating back to the Roman era or, according to some records, even pre-Roman times. Throughout the centuries, the village has witnessed crucial historical periods, forging traditions that still live on today.<br>" +
         "Its unique name is a blend of two parts, each telling a piece of its history: Oliva, likely named after the centuries-old olive tree standing before the parish church, and Gessi, from the gypsum (gesso) quarries located near the village.<br>" +
