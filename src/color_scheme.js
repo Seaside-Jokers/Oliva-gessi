@@ -125,6 +125,19 @@ const ThemeManager = (() => {
     }
 
     /**
+     * Indica se l'utente ha salvato una preferenza esplicita (chiaro/scuro),
+     * a differenza di seguire semplicemente il tema di sistema ("Default").
+     * @returns {boolean}
+     */
+    function hasUserPreference() {
+        try {
+            return localStorage.getItem(STORAGE_KEY) !== null;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    /**
      * Inizializza il sistema di gestione temi
      */
     function init() {
@@ -171,7 +184,8 @@ const ThemeManager = (() => {
         },
         isDarkMode,
         addThemeChangeListener,
-        resetToSystemPreference
+        resetToSystemPreference,
+        hasUserPreference
     };
 })();
 

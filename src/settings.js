@@ -3,25 +3,32 @@
 /* -------------------------------------------------------------------------- */
 
 const clearTemaSelected = () => {
-    document.querySelector('.settings-item.tema.selected')?.classList.remove('selected');
+    document.querySelectorAll('.settings-item.tema').forEach(btn => {
+        btn.classList.remove('selected');
+        btn.setAttribute('aria-pressed', 'false');
+    });
+};
+
+const highlightTema = (id) => {
+    clearTemaSelected();
+    const btn = document.querySelector(id);
+    btn?.classList.add('selected');
+    btn?.setAttribute('aria-pressed', 'true');
 };
 
 const setDefault = () => {
-    clearTemaSelected();
-    document.querySelector('#def_theme')?.classList.add('selected');
     ThemeManager.resetToSystemPreference();
+    highlightTema('#def_theme');
 };
 
 const setLight = () => {
-    clearTemaSelected();
-    document.querySelector('#light_theme')?.classList.add('selected');
     ThemeManager.changeColorScheme("light");
+    highlightTema('#light_theme');
 };
 
 const setDark = () => {
-    clearTemaSelected();
-    document.querySelector('#dark_theme')?.classList.add('selected');
     ThemeManager.changeColorScheme("dark");
+    highlightTema('#dark_theme');
 };
 
 /* -------------------------------------------------------------------------- */
@@ -29,7 +36,10 @@ const setDark = () => {
 /* -------------------------------------------------------------------------- */
 
 const clearLinguaSelected = () => {
-    document.querySelector('.settings-item.lingua.selected')?.classList.remove('selected');
+    document.querySelectorAll('.settings-item.lingua').forEach(btn => {
+        btn.classList.remove('selected');
+        btn.setAttribute('aria-pressed', 'false');
+    });
 };
 
 /**
@@ -38,19 +48,17 @@ const clearLinguaSelected = () => {
  */
 const syncLinguaButtons = () => {
     clearLinguaSelected();
-    const lang = state;
-    const defaultLang = getDefaultLang();
-    if (lang === defaultLang) {
-        document.querySelector('#def-lang')?.classList.add('selected');
-    } else if (lang === 'it') {
-        document.querySelector('#ita-lang')?.classList.add('selected');
-    } else if (lang === 'en') {
-        document.querySelector('#eng-lang')?.classList.add('selected');
-    }
+    let id;
+    if (!hasExplicitLang()) id = '#def-lang';
+    else if (state === 'it') id = '#ita-lang';
+    else if (state === 'en') id = '#eng-lang';
+    const btn = document.querySelector(id);
+    btn?.classList.add('selected');
+    btn?.setAttribute('aria-pressed', 'true');
 };
 
 const setDefaultLang = () => {
-    setLang(getDefaultLang());
+    clearLangPreference();
     syncLinguaButtons();
 };
 
@@ -65,18 +73,75 @@ const setEng = () => {
 };
 
 /* -------------------------------------------------------------------------- */
+/*                              DIMENSIONE TESTO                              */
+/* -------------------------------------------------------------------------- */
+
+const clearDimensioneSelected = () => {
+    document.querySelectorAll('.settings-item.dimensione').forEach(btn => {
+        btn.classList.remove('selected');
+        btn.setAttribute('aria-pressed', 'false');
+    });
+};
+
+const highlightDimensione = (id) => {
+    clearDimensioneSelected();
+    const btn = document.querySelector(id);
+    btn?.classList.add('selected');
+    btn?.setAttribute('aria-pressed', 'true');
+};
+
+const sizeIds = { normal: '#size-normal', large: '#size-large', xlarge: '#size-xlarge' };
+
+const syncDimensioneButtons = () => {
+    highlightDimensione(sizeIds[TextSizeManager.getCurrentSize()] ?? sizeIds.normal);
+};
+
+const setSizeNormal = () => {
+    TextSizeManager.setSize('normal');
+    highlightDimensione(sizeIds.normal);
+};
+
+const setSizeLarge = () => {
+    TextSizeManager.setSize('large');
+    highlightDimensione(sizeIds.large);
+};
+
+const setSizeXLarge = () => {
+    TextSizeManager.setSize('xlarge');
+    highlightDimensione(sizeIds.xlarge);
+};
+
+/* -------------------------------------------------------------------------- */
+/*                            RIPRISTINA TUTTO                                */
+/* -------------------------------------------------------------------------- */
+
+const resetAllSettings = () => {
+    if (!window.confirm(getTesto('reset_settings_confirm'))) return;
+    setDefault();
+    clearLangPreference();
+    syncLinguaButtons();
+    TextSizeManager.resetToDefault();
+    syncDimensioneButtons();
+};
+
+/* -------------------------------------------------------------------------- */
 /*                                    INIT                                    */
 /* -------------------------------------------------------------------------- */
 
 const setInit = () => {
-    // Tema
-    switch (ThemeManager.getCurrentScheme()) {
-        case 'dark':  setDark();    break;
-        case 'light': setLight();   break;
-        default:      setDefault(); break;
+    // Tema: evidenzia solo il bottone corretto, senza toccare la preferenza
+    // salvata. Se l'utente non ha mai scelto esplicitamente chiaro/scuro,
+    // il tema segue il sistema ed è "Default" a prescindere dal colore
+    // effettivamente applicato in quel momento.
+    if (ThemeManager.hasUserPreference()) {
+        highlightTema(ThemeManager.getCurrentScheme() === 'dark' ? '#dark_theme' : '#light_theme');
+    } else {
+        highlightTema('#def_theme');
     }
     // Lingua: legge dall'URL, poi decide quale bottone evidenziare
     syncLinguaButtons();
+    // Dimensione testo: evidenzia in base alla preferenza salvata (o "Normale")
+    syncDimensioneButtons();
 
     // Ascolta i cambi lingua dal toggle navbar, così i bottoni restano sincronizzati
     document.getElementById('lang-knob')?.closest('button')

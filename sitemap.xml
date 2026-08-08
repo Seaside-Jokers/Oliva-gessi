@@ -62,7 +62,7 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://oliva-gessi.vercel.app/Vulto.webp</image:loc>
+            <image:loc>https://oliva-gessi.vercel.app/assets/Vulto.webp</image:loc>
             <image:caption>Foto del Vultò, arco di Oliva Gessi</image:caption>
         </image:image>
     </url>

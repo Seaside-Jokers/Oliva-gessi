@@ -47,14 +47,24 @@ const traduzioni = {
         title_5_about:"Mariem Bouajila",
         testo_5_about: "",
         /* Impostazioni */
+        settings_title: "Impostazioni · Oliva Gessi",
         cambio_colore: "Cambia tema:",
+        settings_theme_hint: "\"Default\" segue automaticamente il tema del tuo dispositivo.",
         sys_default: "Default",
         light_mode: "Chiaro",
         dark_mode: "Scuro",
         cambio_lingua: "Cambia lingua:",
+        settings_lang_hint: "\"Default\" usa la lingua del tuo browser.",
         lang_default: "Default",
         ita: "Italiano",
         eng: "Inglese",
+        cambio_dimensione: "Dimensione testo:",
+        settings_size_hint: "Regola la dimensione di testo e spaziature in tutto il sito.",
+        size_normal: "Normale",
+        size_large: "Grande",
+        size_xlarge: "Molto grande",
+        reset_settings: "Ripristina impostazioni predefinite",
+        reset_settings_confirm: "Ripristinare tema, lingua e dimensione del testo alle impostazioni predefinite?",
     },
     "en": {
         /* UI */
@@ -104,14 +114,24 @@ const traduzioni = {
         title_5_about:"Mariem Bouajila",
         testo_5_about: "",
         /* Impostazioni */
+        settings_title: "Settings · Oliva Gessi",
         cambio_colore: "Change theme:",
+        settings_theme_hint: "\"Default\" automatically follows your device's theme.",
         sys_default: "Default",
         light_mode: "Light",
         dark_mode: "Dark",
         cambio_lingua: "Change language:",
+        settings_lang_hint: "\"Default\" uses your browser's language.",
         lang_default: "Default",
         ita: "Italian",
         eng: "English",
+        cambio_dimensione: "Text size:",
+        settings_size_hint: "Adjusts text and spacing size across the whole site.",
+        size_normal: "Normal",
+        size_large: "Large",
+        size_xlarge: "Extra large",
+        reset_settings: "Reset to default settings",
+        reset_settings_confirm: "Reset theme, language and text size to their defaults?",
     }
 }
 
@@ -132,10 +152,32 @@ function getDefaultLang() {
     return navigator.language.startsWith("it") ? "it" : "en";
 }
 
+/**
+ * True se l'utente ha scelto esplicitamente una lingua (presente in URL),
+ * false se sta semplicemente seguendo la lingua del browser ("Default").
+ */
+function hasExplicitLang() {
+    const lang = new URLSearchParams(window.location.search).get('lang');
+    return lang === 'it' || lang === 'en';
+}
+
 function updateURLWithLang(lang) {
     const params = new URLSearchParams(window.location.search);
     params.set('lang', lang);
     window.history.replaceState({ lang }, document.title, `${window.location.pathname}?${params}`);
+    aggiornaInterfaccia();
+}
+
+/**
+ * Rimuove la preferenza esplicita dall'URL e torna a seguire la lingua
+ * del browser. Usata dal pulsante "Default" delle impostazioni.
+ */
+function clearLangPreference() {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('lang');
+    const query = params.toString();
+    window.history.replaceState({}, document.title, `${window.location.pathname}${query ? '?' + query : ''}`);
+    state = getDefaultLang();
     aggiornaInterfaccia();
 }
 
@@ -148,7 +190,10 @@ let state = getLangFromURL() ?? getDefaultLang();
 
 function aggiornaInterfaccia() {
     document.documentElement.lang = state;
-    document.title = getTesto("titolo");
+    // Usa un titolo dedicato per pagina se <title data-key="..."> è presente,
+    // altrimenti mantiene il comportamento esistente (titolo generico homepage).
+    const titleKey = document.querySelector('title')?.dataset.key || "titolo";
+    document.title = getTesto(titleKey);
 
     document.querySelectorAll('[data-key]').forEach(el => {
         const testo = getTesto(el.getAttribute('data-key'));
@@ -171,24 +216,25 @@ function aggiornaInterfaccia() {
 function changeLang() {
     state = state === "it" ? "en" : "it";
     updateURLWithLang(state);
-    aggiornaInterfaccia();
 }
 
 /**
  * Imposta la lingua direttamente senza fare toggle.
  * Usata da settings.js e da chiunque conosca già la lingua target.
+ * Fissa sempre una preferenza esplicita in URL, anche se il valore
+ * coincide con quello già mostrato (es. l'utente clicca "Italiano"
+ * mentre il sito sta già mostrando l'italiano perché è il default).
  * @param {'it'|'en'} lang
  */
 function setLang(lang) {
     if (lang !== 'it' && lang !== 'en') return;
-    if (state === lang) return;
+    if (state === lang && hasExplicitLang()) return;
     state = lang;
     updateURLWithLang(state);
-    aggiornaInterfaccia();
 }
 
 function navigateTo(page) {
-    location.href = `${page}?lang=${state}`;
+    location.href = hasExplicitLang() ? `${page}?lang=${state}` : page;
 }
 
 document.addEventListener("DOMContentLoaded", aggiornaInterfaccia)

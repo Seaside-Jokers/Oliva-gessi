@@ -589,6 +589,14 @@ summary.side-data {
     padding: calc(var(--default-size)) calc(var(--default-size) * 4);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: calc(var(--default-size));
+}
+.settings-hint {
+    width: 100%;
+    color: var(--text-muted);
+    font-size: calc(var(--nav-font-size) * 0.85);
+    margin: calc(var(--default-size) * -0.5) 0 var(--default-size) 0;
 }
 .settings-title {
     font-weight: bold;
@@ -610,6 +618,14 @@ summary.side-data {
 }
 .settings-item:hover {
     cursor: pointer;
+}
+.settings-item:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+#reset-settings {
+    color: var(--danger);
+    border-color: var(--danger);
 }
 
 @media (max-aspect-ratio: 1/1), (max-width: 1200px) {
