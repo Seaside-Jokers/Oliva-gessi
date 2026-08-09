@@ -1,74 +1,68 @@
 /* -------------------------------------------------------------------------- */
-/*                                   TEMA                                     */
+/*                                UTILITY                                     */
 /* -------------------------------------------------------------------------- */
 
-const clearTemaSelected = () => {
-    document.querySelectorAll('.settings-item.tema').forEach(btn => {
-        btn.classList.remove('selected');
-        btn.setAttribute('aria-pressed', 'false');
+/**
+ * Evidenzia un solo bottone tra quelli della stessa categoria.
+ * Sostituisce i vecchi pattern clear+highlight duplicati.
+ * @param {string} cssClass - classe delle .settings-item (es. "tema")
+ * @param {string} id - id del bottone da evidenziare (es. "#def_theme")
+ */
+const setSelected = (cssClass, id) => {
+    document.querySelectorAll(`.settings-item.${cssClass}`).forEach(btn => {
+        const selected = btn.id === id.slice(1);
+        btn.classList.toggle('selected', selected);
+        btn.setAttribute('aria-pressed', String(selected));
     });
 };
 
-const highlightTema = (id) => {
-    clearTemaSelected();
-    const btn = document.querySelector(id);
-    btn?.classList.add('selected');
-    btn?.setAttribute('aria-pressed', 'true');
-};
+/* -------------------------------------------------------------------------- */
+/*                                   TEMA                                     */
+/* -------------------------------------------------------------------------- */
 
 const setDefault = () => {
     ThemeManager.resetToSystemPreference();
-    highlightTema('#def_theme');
+    setSelected('tema', '#def_theme');
 };
 
 const setLight = () => {
     ThemeManager.changeColorScheme("light");
-    highlightTema('#light_theme');
+    setSelected('tema', '#light_theme');
 };
 
 const setDark = () => {
     ThemeManager.changeColorScheme("dark");
-    highlightTema('#dark_theme');
+    setSelected('tema', '#dark_theme');
 };
 
 /* -------------------------------------------------------------------------- */
 /*                                  LINGUA                                    */
 /* -------------------------------------------------------------------------- */
 
-const clearLinguaSelected = () => {
-    document.querySelectorAll('.settings-item.lingua').forEach(btn => {
-        btn.classList.remove('selected');
-        btn.setAttribute('aria-pressed', 'false');
-    });
-};
-
 /**
  * Aggiorna visivamente il bottone selezionato in base alla lingua corrente.
  * Chiamato anche quando il toggle della navbar cambia lingua dall'esterno.
  */
 const syncLinguaButtons = () => {
-    clearLinguaSelected();
     let id;
-    if (!hasExplicitLang()) id = '#def-lang';
-    else if (state === 'it') id = '#ita-lang';
-    else if (state === 'en') id = '#eng-lang';
-    const btn = document.querySelector(id);
-    btn?.classList.add('selected');
-    btn?.setAttribute('aria-pressed', 'true');
+    if (!LanguageManager.hasExplicitLang()) id = '#def-lang';
+    else if (LanguageManager.getCurrentLang() === 'it') id = '#ita-lang';
+    else id = '#eng-lang';
+    setSelected('lingua', id);
 };
 
 const setDefaultLang = () => {
-    clearLangPreference();
+    LanguageManager.clearLangPreference();
     syncLinguaButtons();
 };
 
 const setIta = () => {
-    setLang('it');
+    LanguageManager.setLang('it');
     syncLinguaButtons();
 };
 
 const setEng = () => {
-    setLang('en');
+    LanguageManager.setLang('en');
     syncLinguaButtons();
 };
 
@@ -76,39 +70,25 @@ const setEng = () => {
 /*                              DIMENSIONE TESTO                              */
 /* -------------------------------------------------------------------------- */
 
-const clearDimensioneSelected = () => {
-    document.querySelectorAll('.settings-item.dimensione').forEach(btn => {
-        btn.classList.remove('selected');
-        btn.setAttribute('aria-pressed', 'false');
-    });
-};
-
-const highlightDimensione = (id) => {
-    clearDimensioneSelected();
-    const btn = document.querySelector(id);
-    btn?.classList.add('selected');
-    btn?.setAttribute('aria-pressed', 'true');
-};
-
 const sizeIds = { normal: '#size-normal', large: '#size-large', xlarge: '#size-xlarge' };
 
 const syncDimensioneButtons = () => {
-    highlightDimensione(sizeIds[TextSizeManager.getCurrentSize()] ?? sizeIds.normal);
+    setSelected('dimensione', sizeIds[TextSizeManager.getCurrentSize()] ?? sizeIds.normal);
 };
 
 const setSizeNormal = () => {
     TextSizeManager.setSize('normal');
-    highlightDimensione(sizeIds.normal);
+    setSelected('dimensione', sizeIds.normal);
 };
 
 const setSizeLarge = () => {
     TextSizeManager.setSize('large');
-    highlightDimensione(sizeIds.large);
+    setSelected('dimensione', sizeIds.large);
 };
 
 const setSizeXLarge = () => {
     TextSizeManager.setSize('xlarge');
-    highlightDimensione(sizeIds.xlarge);
+    setSelected('dimensione', sizeIds.xlarge);
 };
 
 /* -------------------------------------------------------------------------- */
@@ -116,9 +96,9 @@ const setSizeXLarge = () => {
 /* -------------------------------------------------------------------------- */
 
 const resetAllSettings = () => {
-    if (!window.confirm(getTesto('reset_settings_confirm'))) return;
+    if (!window.confirm(LanguageManager.getTesto('reset_settings_confirm'))) return;
     setDefault();
-    clearLangPreference();
+    LanguageManager.clearLangPreference();
     syncLinguaButtons();
     TextSizeManager.resetToDefault();
     syncDimensioneButtons();
@@ -134,9 +114,9 @@ const setInit = () => {
     // il tema segue il sistema ed è "Default" a prescindere dal colore
     // effettivamente applicato in quel momento.
     if (ThemeManager.hasUserPreference()) {
-        highlightTema(ThemeManager.getCurrentScheme() === 'dark' ? '#dark_theme' : '#light_theme');
+        setSelected('tema', ThemeManager.getCurrentScheme() === 'dark' ? '#dark_theme' : '#light_theme');
     } else {
-        highlightTema('#def_theme');
+        setSelected('tema', '#def_theme');
     }
     // Lingua: legge dall'URL, poi decide quale bottone evidenziare
     syncLinguaButtons();

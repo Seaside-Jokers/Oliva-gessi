@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>I luoghi di Oliva Gessi</title>
+    <title data-key="title_luoghi">I luoghi di Oliva Gessi</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vieni a scoprire i luogi storici di Oliva Gessi">
@@ -23,6 +23,10 @@
     <link rel="alternate" hreflang="x-default" href="https://oliva-gessi.vercel.app/luoghi.html">
     <link rel="canonical" href="https://oliva-gessi.vercel.app/luoghi.html">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf5ec">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#150d03">
     <!-- Vercel Speed Insights -->
     <script>
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -35,69 +39,21 @@
     <!-- ======================================================================= -->
     <!--                                 NAVBAR                                  -->
     <!-- ======================================================================= -->
-    <nav class="navbar">
-        <!-- Home -->
-        <button class="btn-navbar" type="button" onclick="toggleMenu()">
-            <icon-el src="assets/menu.svg"></icon-el>
-            <span data-key="home" class="nav-data">Menu</span>
-        </button>
-        <!-- Homepage -->
-        <button class="btn-navbar" type="button" onclick="navigateTo('index.html')">
-            <icon-el src="assets/home.svg"></icon-el>
-            <span data-key="homepage" class="nav-data">Pagina principale</span>
-        </button>
-        <!-- Cambio lingua (a destra) -->
-        <button class="btn-navbar lang-button" type="button" id="cambio-lingua" onclick="changeLang()">
-            <span class="lang-toggle-data">IT</span>
-            <span class="lang-toggle">
-                <span class="lang-knob" id="lang-knob"></span>
-            </span>
-            <span class="lang-toggle-data">EN</span>
-        </button>
-    </nav>
     <!-- ======================================================================= -->
-    <!--                                 SIDEBAR                                 -->
+    <!--                  LAYOUT (navbar + sidebar, generato da layout.js)       -->
     <!-- ======================================================================= -->
-    <!-- Strato trasparente che permette di chiudere il menu cliccando fuori -->
-    <div class="clicker" onclick="closeMenu()"></div>
-    <!-- Menu laterale vero e proprio -->
-    <div class="sidebar" id="sidebar">
-        <!-- Chiudi il menu -->
-        <button class="sidebar-button" type="button" onclick="closeMenu()">
-            <icon-el src="assets/close.svg" class="large"></icon-el>
-            <span data-key="close_menu" class="side-data">Chiudi</span>
-        </button>
-        <!-- Homepage -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('index.html')">
-            <icon-el src="assets/home.svg" class="large"></icon-el>
-            <span data-key="homepage" class="side-data">Pagina principale</span>
-        </button>
-        <!-- About us -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('about-us.html')">
-            <icon-el src="assets/about-us.svg" class="large"></icon-el>
-            <span data-key="about" class="side-data">Il team</span>
-        </button>
-        <!-- Impostazioni -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('settings.html')">
-            <icon-el src="assets/settings.svg" class="large"></icon-el>
-            <span data-key="settings" class="side-data">Impostazioni</span>
-        </button>
-        <details>
-            <!-- Le varie pagine del file -->
-            <summary data-key="cerca_pagina" class="side-data">Cerca la pagina</summary>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('storia.html')">
-                <span class="side-detail" data-key="storia_summary">Storia</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('castello.html')">
-                <span class="side-detail" data-key="castello_summary">Il castello</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('luoghi.html')">
-                <span class="side-detail" data-key="luoghi_summary">Luoghi storici</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('personaggi.html')">
-                <span class="side-detail" data-key="personaggi_summary">Personaggi storici</span>
-            </button>
-        </details>
+    <div id="layout-root">
+        <noscript>
+            <nav class="noscript-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">Team</a>
+                <a href="storia.html">Storia</a>
+                <a href="castello.html">Castello</a>
+                <a href="luoghi.html">Luoghi</a>
+                <a href="personaggi.html">Personaggi</a>
+                <a href="settings.html">Impostazioni</a>
+            </nav>
+        </noscript>
     </div>
     <!-- ======================================================================= -->
     <!--                                CONTENUTO                                -->
@@ -115,12 +71,9 @@
     <script src="src/color_scheme.js" defer></script>
     <script src="src/text_size.js" defer></script>
     <script src="src/sidebar.js" defer></script>
+    <script src="src/layout.js" defer></script>
+    <script src="src/search.js" defer></script>
     <script src="src/homepage.js" defer></script>
     <script src="src/icon_manager.js" defer></script>
 </body>
-
-<!-- FIXME: I titoli quando faccio zoom salgono es escono dai relativi blocchi -->
-<!-- FIXME: Trasformare i font in formato .woff2 e le immagini in .webp con loading="lazy"
-    eccetto per la prima (Largest Contentful Paint)-->
-<!-- FIXME: Anzichè fare h1 {} h2{} fare h1, h2, ... h6 {} e lo stesso per p e span -->
 </html>

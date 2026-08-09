@@ -52,31 +52,31 @@
     --info:         hsl(217 34% 65%);
 }
 
-/* Fallback per chi non ha JavaScript: segue la preferenza di sistema */
-@media (prefers-color-scheme: light) {
+/* Fallback per chi non ha JavaScript: segue la preferenza di sistema (tema scuro) */
+@media (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
         /** BACKGROUND */
-        --bg-dark:      hsl(30 58% 88%);
-        --bg:           hsl(30 100% 94%);
-        --bg-light:     hsl(30 100% 99%);
+        --bg-dark:      hsl(18 100% 1%);
+        --bg:           hsl(25 93% 4%);
+        --bg-light:     hsl(31 65% 7%);
 
         /** TESTO */
-        --text:         hsl(17 100% 4%);
-        --text-muted:   hsl(32 47% 25%);
-        --highlight:    hsl(31 100% 97%);
+        --text:         hsl(31 100% 92%);
+        --text-muted:   hsl(31 39% 67%);
+        --highlight:    hsl(31 33% 36%);
         --text-light:   hsl(31 50% 80%);
 
         /** BORDI */
-        --border:       hsl(31 26% 47%);
-        --border-muted: hsl(31 31% 59%);
+        --border:       hsl(32 47% 25%);
+        --border-muted: hsl(34 84% 14%);
 
         /** COLORI INTERFACCIA */
-        --primary:      hsl(37 100% 17%);
-        --secondary:    hsl(206 82% 26%);
-        --danger:       hsl(9 25% 41%);
-        --warning:      hsl(51 29% 33%);
-        --success:      hsl(148 24% 35%);
-        --info:         hsl(217 26% 42%);
+        --primary:      hsl(31 62% 64%);
+        --secondary:    hsl(209 77% 71%);
+        --danger:       hsl(9 31% 65%);
+        --warning:      hsl(52 22% 56%);
+        --success:      hsl(147 21% 58%);
+        --info:         hsl(217 34% 65%);
     }
 }
 
@@ -145,14 +145,14 @@ body {
 
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2') format('truetype');
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff2') format('woff2');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Playfair Display';
-    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('truetype');
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2');
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
@@ -160,14 +160,14 @@ body {
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('truetype');
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('truetype');
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
     font-weight: 100 900;
     font-style: italic;
     font-display: swap;
@@ -249,6 +249,17 @@ span.nav-data {
 
 @media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     button.btn-navbar {
+        margin-right: var(--default-size);
+    }
+}
+/* Schermi molto stretti (telefoni): navbar solo icone, così il selettore
+   della lingua resta dentro lo schermo e non viene spinto fuori dal pulsante
+   di ricerca. I pulsanti hanno già aria-label per l'accessibilità. */
+@media (max-width: 520px) {
+    button.btn-navbar .nav-data {
+        display: none;
+    }
+    button.btn-navbar.lang-button {
         margin-right: var(--default-size);
     }
 }
@@ -640,6 +651,157 @@ summary.side-data {
 
 
 
+
+/* -------------------------------------------------------------------------- */
+/*                          NAVBAR FALLBACK (no-JS)                            */
+/* -------------------------------------------------------------------------- */
+.noscript-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--default-size);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: calc(var(--default-size) * 1.5);
+    background-color: var(--bg-dark);
+    border-bottom: 2px solid var(--border);
+}
+.noscript-nav a {
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--nav-font-size);
+    font-weight: 600;
+    text-decoration: none;
+    padding: var(--default-size) calc(var(--default-size) * 1.5);
+    border-radius: var(--default-size);
+}
+.noscript-nav a:hover {
+    background-color: var(--bg);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          PALETTE DI RICERCA (Ctrl+K)                       */
+/* -------------------------------------------------------------------------- */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15vh var(--default-size) 0;
+    background-color: hsl(0 0% 0% / 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.search-overlay.closed {
+    display: none;
+}
+.search-panel {
+    width: min(640px, 100%);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    border: 2px solid var(--border);
+    border-radius: calc(var(--default-size) * 2);
+    box-shadow: 0 24px 60px hsl(0 0% 0% / 0.35);
+    overflow: hidden;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--default-size) * 1.5);
+    padding: calc(var(--default-size) * 1.5) calc(var(--default-size) * 2);
+    border-bottom: 2px solid var(--border-muted);
+}
+.search-bar .icone-svg {
+    width: calc(var(--default-size) * 3);
+    height: calc(var(--default-size) * 3);
+    flex-shrink: 0;
+}
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(var(--nav-font-size) * 1.2);
+    color: var(--text);
+}
+.search-bar input::placeholder {
+    color: var(--text-muted);
+}
+.search-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: calc(var(--nav-font-size) * 1.6);
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 var(--default-size);
+}
+.search-close:hover {
+    color: var(--text);
+}
+#search-results {
+    list-style: none;
+    margin: 0;
+    padding: var(--default-size);
+    overflow-y: auto;
+}
+.search-result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 100%;
+    text-align: left;
+    padding: calc(var(--default-size) * 1.25) calc(var(--default-size) * 1.5);
+    border: none;
+    border-radius: calc(var(--default-size) * 1.25);
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.search-result:hover,
+.search-result.active {
+    background-color: var(--bg-dark);
+}
+.search-result-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: var(--nav-font-size);
+    color: var(--text);
+}
+.search-result-snippet {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(var(--nav-font-size) * 0.85);
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.search-empty {
+    padding: calc(var(--default-size) * 3);
+    text-align: center;
+    color: var(--text-muted);
+    font-family: 'Montserrat', sans-serif;
+}
+.search-hint {
+    margin: 0;
+    padding: calc(var(--default-size) * 1.25) calc(var(--default-size) * 2);
+    border-top: 2px solid var(--border-muted);
+    color: var(--text-muted);
+    font-size: calc(var(--nav-font-size) * 0.75);
+    font-family: 'Montserrat', sans-serif;
+}
 
 /*
     Fonts: https://ctrl-z.it/9-font-architettura-tavole-portfolio https://material-f/

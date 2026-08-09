@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Oliva Gessi</title>
+    <title data-key="titolo">Oliva Gessi</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vieni a scoprire il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari">
@@ -27,6 +27,10 @@
     <link rel="alternate" hreflang="x-default" href="https://oliva-gessi.vercel.app/index.html">
     <link rel="canonical" href="https://oliva-gessi.vercel.app/index.html">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fdf5ec">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#150d03">
     <!-- Vercel Speed Insights -->
     <script>
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -39,69 +43,21 @@
     <!-- ======================================================================= -->
     <!--                                 NAVBAR                                  -->
     <!-- ======================================================================= -->
-    <nav class="navbar">
-        <!-- Home -->
-        <button class="btn-navbar" type="button" onclick="toggleMenu()">
-            <icon-el src="assets/menu.svg"></icon-el>
-            <span data-key="home" class="nav-data">Menu</span>
-        </button>
-        <!-- About us-->
-        <button class="btn-navbar" type="button" onclick="navigateTo('about-us.html')">
-            <icon-el src="assets/about-us.svg"></icon-el>
-            <span data-key="about" class="nav-data">Il team</span>
-        </button>
-        <!-- Cambio lingua (a destra) -->
-        <button class="btn-navbar lang-button" type="button" id="cambio-lingua" onclick="changeLang()">
-            <span class="lang-toggle-data">IT</span>
-            <span class="lang-toggle">
-                <span class="lang-knob" id="lang-knob"></span>
-            </span>
-            <span class="lang-toggle-data">EN</span>
-        </button>
-    </nav>
     <!-- ======================================================================= -->
-    <!--                                 SIDEBAR                                 -->
+    <!--                  LAYOUT (navbar + sidebar, generato da layout.js)       -->
     <!-- ======================================================================= -->
-    <!-- Strato trasparente che permette di chiudere il menu cliccando fuori -->
-    <div class="clicker" onclick="closeMenu()"></div>
-    <!-- Menu laterale vero e proprio -->
-    <div class="sidebar" id="sidebar">
-        <!-- Chiudi il menu -->
-        <button class="sidebar-button" type="button" onclick="closeMenu()">
-            <icon-el src="assets/close.svg" class="large"></icon-el>
-            <span data-key="close_menu" class="side-data">Chiudi</span>
-        </button>
-        <!-- Homepage -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('index.html')">
-            <icon-el src="assets/home.svg" class="large"></icon-el>
-            <span data-key="homepage" class="side-data">Pagina principale</span>
-        </button>
-        <!-- About us -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('about-us.html')">
-            <icon-el src="assets/about-us.svg" class="large"></icon-el>
-            <span data-key="about" class="side-data">Il team</span>
-        </button>
-        <!-- Impostazioni -->
-        <button class="sidebar-button" type="button" onclick="navigateTo('settings.html')">
-            <icon-el src="assets/settings.svg" class="large"></icon-el>
-            <span data-key="settings" class="side-data">Impostazioni</span>
-        </button>
-        <details>
-            <!-- Le varie pagine del file -->
-            <summary data-key="cerca_pagina" class="side-data">Cerca la pagina</summary>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('storia.html')">
-                <span class="side-detail" data-key="storia_summary">Storia</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('castello.html')">
-                <span class="side-detail" data-key="castello_summary">Il castello</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('luoghi.html')">
-                <span class="side-detail" data-key="luoghi_summary">Luoghi storici</span>
-            </button>
-            <button class="sidebar-button-small" type="button" onclick="navigateTo('personaggi.html')">
-                <span class="side-detail" data-key="personaggi_summary">Personaggi storici</span>
-            </button>
-        </details>
+    <div id="layout-root">
+        <noscript>
+            <nav class="noscript-nav">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">Team</a>
+                <a href="storia.html">Storia</a>
+                <a href="castello.html">Castello</a>
+                <a href="luoghi.html">Luoghi</a>
+                <a href="personaggi.html">Personaggi</a>
+                <a href="settings.html">Impostazioni</a>
+            </nav>
+        </noscript>
     </div>
     <!-- ======================================================================= -->
     <!--                                CONTENUTO                                -->
@@ -120,7 +76,8 @@
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_1">Storia del comune</h1>
             <p class="testo-blocco" data-key="testo_1">
-                Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano, Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>
+                Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano.<br>
+                Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>
                 Il suo nome unico è l’unione di due parti, ognuna delle quali racconta un pezzo di storia: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>
                 La prima prova scritta proviene dal 972, quando l’imperatore Ottone I donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.
             </p>
@@ -135,7 +92,9 @@
           alt="Il castello" data-key="alt_img_castello" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('castello.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_2">Oliva Gessi</h1>
-            <p class="testo-blocco" data-key="testo_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus, lorem tincidunt finibus pellentesque, tellus ex porttitor purus, vel egestas erat metus et turpis. Nunc laoreet ante enim, vel elementum justo fringilla at. Fusce id ex non risus euismod auctor. In vitae accumsan nisi. Proin venenatis iaculis risus, a hendrerit nisl facilisis non. Nam convallis nibh et est lobortis auctor. Vestibulum neque nisl, finibus sed dapibus sit amet, varius sit amet ex. Nullam dapibus vehicula orci, id sodales libero volutpat vel. Vivamus nisi leo, mattis ut est convallis, pharetra ornare ipsum. Fusce elementum velit at massa mattis rutrum. Curabitur tincidunt consectetur nibh, in molestie urna ullamcorper sed. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p class="testo-blocco" data-key="testo_2">Il castello di Oliva Gessi è il cuore antico del borgo: le sue origini risalgono al Medioevo e già nei registri inquisitoriali del XIII secolo se ne trovano tracce legate a vicende oscure e affascinanti, come i processi a Ottone Villano.<br>
+                Tra il Seicento e l'Ottocento la famiglia Isimbardi trasformò la fortezza in una raffinata residenza signorile, simbolo del potere di una casata che guidò l'economia agricola del territorio fino al Novecento.<br>
+                Oggi il castello domina ancora il paese dalle colline dell'Oltrepò Pavese, testimone silenzioso di secoli di storia.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('castello.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
@@ -147,11 +106,11 @@
           alt="Vultò" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('luoghi.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_3">Luoghi storici</h1>
-            <p class="testo-blocco" data-key="testo_3">Tra le colline dell`Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.
-                Tra il Seicento e l`Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso.
-                Qui si intrecciano vicende come i casi inquisitoriali di Ottone Villano e il rogo di Benvenuta, accanto alla figura di Luigi Versiglia.
-                Il paese conserva simboli identitari come il Voltò, il giardino all`italiana, la chiesa di San Martino (riedificata nel 1682) e il teatro parrocchiale del 1926, cuore della vita comunitaria.
-                Intorno, le colline vitate e i terreni gessosi, sfruttati fin dall`età romana e valorizzati anche da Abramo De Benedetti, raccontano una tradizione millenaria.</p>
+            <p class="testo-blocco" data-key="testo_3">Tra le colline dell'Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>
+                Tra il Seicento e l'Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso.<br>
+                Qui si intrecciano vicende come i casi inquisitoriali di Ottone Villano e il rogo di Benvenuta, accanto alla figura di Luigi Versiglia.<br>
+                Il paese conserva simboli identitari come il Voltò, il giardino all'italiana, la chiesa di San Martino (riedificata nel 1682) e il teatro parrocchiale del 1926, cuore della vita comunitaria.<br>
+                Intorno, le colline vitate e i terreni gessosi, sfruttati fin dall'età romana e valorizzati anche da Abramo De Benedetti, raccontano una tradizione millenaria.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('luoghi.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
@@ -163,8 +122,8 @@
           alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('personaggi.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" data-key="title_4">Personaggi storici</h1>
-            <p class="testo-blocco" data-key="testo_4">Oliva Gessi affonda le sue origini nel X secolo con Ottone I di Sassonia, che dopo aver consolidato il potere imperiale e rafforzato il legame con la Chiesa, nel 972 donò il territorio alla nuora Teofano, segnandone la prima attestazione e l`ingresso nei beni ecclesiastici.
-                Nei secoli successivi il borgo passò sotto varie dominazioni, tra cui i Belcredi, influenti nell`Oltrepò Pavese grazie a incarichi politici e proprietà, e gli Isimbardi, che trasformarono il castello in residenza e svilupparono l`agricoltura fino alla loro estinzione nel Novecento.
+            <p class="testo-blocco" data-key="testo_4">Oliva Gessi affonda le sue origini nel X secolo con Ottone I di Sassonia, che dopo aver consolidato il potere imperiale e rafforzato il legame con la Chiesa, nel 972 donò il territorio alla nuora Teofano, segnandone la prima attestazione e l'ingresso nei beni ecclesiastici.<br>
+                Nei secoli successivi il borgo passò sotto varie dominazioni, tra cui i Belcredi, influenti nell'Oltrepò Pavese grazie a incarichi politici e proprietà, e gli Isimbardi, che trasformarono il castello in residenza e svilupparono l'agricoltura fino alla loro estinzione nel Novecento.<br>
                 Il paese diede i natali a Luigi Versiglia, martire in Cina nel 1930. Tra Otto e Novecento Abramo De Benedetti introdusse innovazioni, ma la sua esperienza si concluse con la morte del figlio nella Seconda guerra mondiale.
             </p>
             <button class="read-more-button" type="button" onclick="navigateTo('personaggi.html')" data-key="read_more">Leggi di più</button>
@@ -178,6 +137,8 @@
     <script src="src/color_scheme.js" defer></script>
     <script src="src/text_size.js" defer></script>
     <script src="src/sidebar.js" defer></script>
+    <script src="src/layout.js" defer></script>
+    <script src="src/search.js" defer></script>
     <script src="src/homepage.js" defer></script>
     <script src="src/icon_manager.js" defer></script>
 </body>

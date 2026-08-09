@@ -50,7 +50,6 @@ const ThemeManager = (() => {
      * Alterna tra modalità chiara e scura
      */
     function toggleLightDark() {
-        console.log('toggleLightDark called! Current:', currentColorScheme);
         changeColorScheme(currentColorScheme === 'dark' ? 'light' : 'dark');
     }
 
@@ -141,7 +140,6 @@ const ThemeManager = (() => {
      * Inizializza il sistema di gestione temi
      */
     function init() {
-        console.log('ThemeManager: Initializing...');
         let savedScheme = null;
         try {
             savedScheme = localStorage.getItem(STORAGE_KEY);
@@ -153,12 +151,7 @@ const ThemeManager = (() => {
             ? savedScheme
             : getBrowserColorScheme();
 
-        console.log('ThemeManager: Initial scheme:', initialScheme);
         changeColorScheme(initialScheme);
-
-        // Collega automaticamente il pulsante con id="theme-toggle" or "theme-toggle-btn"
-        bindToggleButton('#theme-toggle');
-        bindToggleButton('#theme-toggle-btn');
 
         // Segue i cambiamenti di sistema solo se l'utente non ha una preferenza salvata
         window.matchMedia?.('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -170,8 +163,6 @@ const ThemeManager = (() => {
                 console.warn('Errore nella gestione del cambio tema di sistema:', err);
             }
         });
-        
-        console.log('ThemeManager: Init complete. Current scheme:', currentColorScheme);
     }
 
     return {
