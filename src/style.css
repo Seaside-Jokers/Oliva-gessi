@@ -461,11 +461,13 @@ summary.side-data {
     overflow: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     text-align: justify;
     /* line-clamp aggiornato dinamicamente dal JS */
+}
+.testo-blocco.s {
+    font-size: calc(var(--nav-font-size) * 0.85);
 }
 
 .foto-blocco {
@@ -544,9 +546,8 @@ summary.side-data {
     min-height: 0;
     font-size: var(--nav-font-size);
     color: var(--text);
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     text-align: justify;
 }
 
@@ -801,6 +802,51 @@ summary.side-data {
     color: var(--text-muted);
     font-size: calc(var(--nav-font-size) * 0.75);
     font-family: 'Montserrat', sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                    LINK NEL TESTO (rimandi interni e glossario)            */
+/* -------------------------------------------------------------------------- */
+/* Link verso un'altra pagina del sito (es. il nome di un personaggio o luogo) */
+.link-interno {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, var(--secondary) 45%, transparent);
+    transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+.link-interno:hover,
+.link-interno:focus-visible {
+    text-decoration-color: var(--secondary);
+    color: color-mix(in srgb, var(--secondary) 80%, black);
+}
+
+/* Termine complesso: al passaggio/focus mostra una spiegazione (tooltip nativo
+   tramite l'attributo title), al click apre l'approfondimento su Wikipedia   */
+.link-glossario {
+    color: var(--text);
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: help;
+}
+.link-glossario:hover,
+.link-glossario:focus-visible {
+    color: var(--primary);
+    text-decoration-style: solid;
+}
+
+/* Variante senza link cliccabile: solo tooltip esplicativo (usata per termini
+   privi di una voce Wikipedia affidabile a cui rimandare) */
+span.link-glossario {
+    text-decoration-color: var(--border-muted);
+    outline: none;
+}
+span.link-glossario:hover,
+span.link-glossario:focus-visible {
+    text-decoration-color: var(--primary);
 }
 
 /*

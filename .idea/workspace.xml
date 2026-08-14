@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Sistemate le impostazioni e un problema con GSC" />
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Sistemate le impostazioni e un problema con GSC">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +138,7 @@
       <workItem from="1777395936102" duration="42000" />
       <workItem from="1777443482783" duration="1263000" />
       <workItem from="1777884932901" duration="4780000" />
-      <workItem from="1786226414960" duration="2300000" />
+      <workItem from="1786226414960" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />

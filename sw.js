@@ -7,7 +7,7 @@
 /*  Per aggiornare la cache in produzione, basta cambiare VERSION.            */
 /* -------------------------------------------------------------------------- */
 
-const VERSION = 'oliva-gessi-v1';
+const VERSION = 'oliva-gessi-v2';
 
 const CORE = [
     '/',
@@ -20,6 +20,13 @@ const CORE = [
     '/settings.html',
     '/manifest.webmanifest',
     '/src/style.css',
+    '/src/i18n/ui.js',
+    '/src/i18n/home.js',
+    '/src/i18n/castello.js',
+    '/src/i18n/luoghi.js',
+    '/src/i18n/personaggi.js',
+    '/src/i18n/about.js',
+    '/src/i18n/settings.js',
     '/src/database_testo.js',
     '/src/color_scheme.js',
     '/src/text_size.js',
