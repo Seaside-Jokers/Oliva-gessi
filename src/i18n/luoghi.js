@@ -10,39 +10,41 @@ window.T = Object.assign(window.T || {}, {
     luo_title_1: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
     luo_content_1: {
         it: "Con la sua struttura a pianta quadrilatera organizzata attorno a un cortile interno con cisterna, il castello " +
-            "vanta origini altomedievali. Citato già nei registri inquisitoriali del XIII secolo (Quaterni Rationum), " +
-            "appartenne alla famiglia Giorgi e poi ai Beccaria. Nel XVII secolo passò ai marchesi Isimbardi, che ne " +
-            "trasformarono la funzione da fortezza militare a residenza nobiliare.",
+            "vanta origini altomedievali. Citato già nei registri inquisitoriali del XIII secolo (<span class=\"link-glossario\" tabindex=\"0\" title=\"Registri contabili e amministrativi del Comune di Pavia, tra le fonti documentarie più antiche sul territorio\">Quaterni Rationum</span>), " +
+            "appartenne alla famiglia Giorgi e poi ai Beccaria. Nel XVII secolo passò ai marchesi <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a>, che ne " +
+            "trasformarono la funzione da fortezza militare a residenza nobiliare. Per una descrizione più approfondita, " +
+            "si veda la <a class=\"link-interno\" href=\"castello.html#cas_title_1\">pagina dedicata al castello</a>.",
         en: "With its quadrilateral structure organized around an internal courtyard with a cistern, the castle boasts " +
-            "Early Medieval origins. Cited as early as the 13th-century inquisitorial registers (Quaterni Rationum), it " +
+            "Early Medieval origins. Cited as early as the 13th-century inquisitorial registers (<span class=\"link-glossario\" tabindex=\"0\" title=\"Accounting and administrative registers of the Municipality of Pavia, among the oldest documentary sources on the area\">Quaterni Rationum</span>), it " +
             "belonged to the Giorgi family and later to the Beccarias. In the 17th century, it passed to the Marquises " +
-            "Isimbardi, who transformed its function from a military fortress into a noble residence.",
+            "<a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a>, who transformed its function from a military fortress into a noble residence. For a more in-depth " +
+            "description, see the <a class=\"link-interno\" href=\"castello.html#cas_title_1\">dedicated castle page</a>.",
     },
     luo_content_1_1: {
-        it: "<b>La Cappella Privata:</b> Ospita affreschi di pregio, tra cui una seicentesca finta pala d'altare " +
+        it: "<b>La <a class=\"link-interno\" href=\"castello.html#cas_title_3\">Cappella Privata</a>:</b> Ospita affreschi di pregio, tra cui una seicentesca finta pala d'altare " +
             "raffigurante la Madonna Nera, legata a un ex voto per la fine della peste.",
-        en: "<b>The Private Chapel:</b> Houses valuable frescoes, including a 17th-century faux altarpiece depicting the " +
+        en: "<b>The Private <a class=\"link-interno\" href=\"castello.html#cas_title_3\">Chapel</a>:</b> Houses valuable frescoes, including a 17th-century faux altarpiece depicting the " +
             "Black Madonna, linked to a votive offering (ex-voto) for the end of the plague.",
     },
     luo_content_1_2: {
-        it: "<b>Le Antiche Cantine:</b> Situate nei sotterranei, custodiscono vasche vinicole del 1908 integrate a due " +
+        it: "<b>Le Antiche <a class=\"link-interno\" href=\"castello.html#cas_title_4\">Cantine</a>:</b> Situate nei sotterranei, custodiscono vasche vinicole del 1908 integrate a due " +
             "piovane medievali, testimonianza di una tradizione enologica secolare.",
-        en: "<b>The Ancient Wine Cellars:</b> Located in the basements, they house 1908 wine vats integrated with two " +
+        en: "<b>The Ancient Wine <a class=\"link-interno\" href=\"castello.html#cas_title_4\">Cellars</a>:</b> Located in the basements, they house 1908 wine vats integrated with two " +
             "medieval rainwater cisterns, bearing witness to a centuries-old winemaking tradition.",
     },
     luo_content_1_3: {
-        it: "<b>Il Giardino all'Italiana:</b> Realizzato su un imponente terrapieno sostenuto da un muraglione e dall'arco " +
-            "noto come Vultò. Il giardino presenta siepi di bosso disposte a labirinto intorno a due secolari cedri del " +
+        it: "<b>Il <a class=\"link-interno\" href=\"castello.html#cas_title_2\">Giardino all'Italiana</a>:</b> Realizzato su un imponente terrapieno sostenuto da un muraglione e dall'arco " +
+            "noto come <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>. Il giardino presenta siepi di bosso disposte a labirinto intorno a due secolari cedri del " +
             "Libano.",
-        en: "<b>The Italian-Style Garden:</b> Built on an imposing embankment supported by a massive wall and the arch " +
-            "known as the Vultò. The garden features boxwood hedges arranged in a maze around two centuries-old Cedars of " +
+        en: "<b>The Italian-Style <a class=\"link-interno\" href=\"castello.html#cas_title_2\">Garden</a>:</b> Built on an imposing embankment supported by a massive wall and the arch " +
+            "known as the <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>. The garden features boxwood hedges arranged in a maze around two centuries-old Cedars of " +
             "Lebanon.",
     },
     luo_title_2: { it: "Il centro storico e la ricostruzione Isimbardi", en: "The historic center and the Isimbardi Reconstruction" },
     luo_content_2: {
-        it: "Nella prima metà dell'Ottocento, i marchesi Isimbardi riorganizzarono il borgo medievale applicando i criteri " +
+        it: "Nella prima metà dell'Ottocento, i marchesi <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a> <a class=\"link-interno\" href=\"storia.html#sto_title_4\">riorganizzarono il borgo medievale</a> applicando i criteri " +
             "funzionali e razionali dell'architettura rurale lombarda. Tra gli edifici più rappresentativi si notano:",
-        en: "In the first half of the 19th century, the Marquises Isimbardi reorganized the medieval village by applying " +
+        en: "In the first half of the 19th century, the Marquises <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a> <a class=\"link-interno\" href=\"storia.html#sto_title_4\">reorganized the medieval village</a> by applying " +
             "the functional and rational criteria of Lombard rural architecture. Among the most representative buildings:",
     },
     luo_content_2_1: { it: "<b>'Ca' del '32':</b> Casa natale di <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">San Luigi Versiglia</a>.", en: "<b>'Ca' del '32':</b> Birthplace of <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Saint Luigi Versiglia</a>." },
@@ -52,7 +54,7 @@ window.T = Object.assign(window.T || {}, {
         en: "<b>'Co dad là':</b> An example of a renovated farmhouse with wide semicircular arches, loggias, and Neo-Gothic " +
             "windows.",
     },
-    luo_content_2_3: { it: "<b>L'Antico Forno Comune:</b> Situato adiacente al Vultò, era il centro propulsore della vita comunitaria.", en: "<b>The Ancient Communal Oven:</b> Located adjacent to the Vultò, it was the driving heart of community life." },
+    luo_content_2_3: { it: "<b>L'Antico Forno Comune:</b> Situato adiacente al <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>, era il centro propulsore della vita comunitaria.", en: "<b>The Ancient Communal Oven:</b> Located adjacent to the <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>, it was the driving heart of community life." },
     luo_title_3: { it: "Chiesa parrocchiale di San Martino Vescovo", en: "Parish Church of Saint Martin the Bishop" },
     luo_content_3: {
         it: "Sorge su un rialzo nel cuore del paese e affonda le sue radici intorno all'anno Mille. L'edificio attuale è il " +
@@ -127,10 +129,10 @@ window.T = Object.assign(window.T || {}, {
     luo_content_8: {
         it: "Situato proprio di fronte al Teatro Parrocchiale, si erge un ulivo pluricentenario, un esemplare rarissimo per " +
             "le colline dell'Oltrepò Pavese. Secondo la tradizione popolare, la presenza di questo antico albero avrebbe " +
-            "dato origine al nome stesso del borgo di Oliva Gessi.",
+            "dato origine al <a class=\"link-interno\" href=\"storia.html#sto_title_1\">nome stesso del borgo</a> di Oliva Gessi.",
         en: "Standing right in front of the Parish Theater is a multi-centennial olive tree, an extremely rare specimen for " +
             "the hills of Oltrepò Pavese. According to local tradition, the presence of this ancient tree gave rise to the " +
-            "name of the village of Oliva Gessi itself.",
+            "<a class=\"link-interno\" href=\"storia.html#sto_title_1\">name of the village</a> of Oliva Gessi itself.",
     },
     luo_title_9: { it: "I terrazzamenti storici e i muretti a secco", en: "Historic Terraces and Dry-Stone Walls" },
     luo_content_9: {
@@ -145,9 +147,9 @@ window.T = Object.assign(window.T || {}, {
     },
     luo_title_10: { it: "Le antiche cave di gesso e il tesoro romano", en: "The Ancient Gypsum Quarries and the Roman Treasure" },
     luo_content_10: {
-        it: "Il borgo è storicamente legato all'estrazione della scagliola e del gesso, attività praticata fin dal Medioevo " +
+        it: "Il borgo è storicamente legato all'<a class=\"link-interno\" href=\"storia.html#sto_title_1\">estrazione della scagliola e del gesso</a>, attività praticata fin dal Medioevo " +
             "sul fianco della collina e rimasta attiva fino alla metà del Novecento nella vicina frazione Fornace.",
-        en: "The village is historically tied to the extraction of scagliola (plaster) and gypsum, an activity practiced on " +
+        en: "The village is historically tied to the <a class=\"link-interno\" href=\"storia.html#sto_title_1\">extraction of scagliola (plaster) and gypsum</a>, an activity practiced on " +
             "the hillside since the Middle Ages and remaining active until the mid-20th century in the nearby hamlet of " +
             "Fornace.",
     },

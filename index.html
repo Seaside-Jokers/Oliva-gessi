@@ -2,7 +2,9 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title data-key="titolo">Oliva Gessi</title>
+    <!-- Deve essere il PRIMO script: evita che i link perdano la lingua se cliccati prima che gli altri script (deferred) siano pronti -->
+    <script src="src/lang_guard.js"></script>
+    <title data-key="titolo">Vieni a conoscere Oliva Gessi!</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vieni a scoprire il bellissimo borgo di Oliva, con la sua una storia ricchissima e tradizioni molto particolari">
@@ -75,12 +77,7 @@
           alt="Oliva Gessi" class="foto-blocco" onclick="navigateTo('storia.html')" fetchpriority="high">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="title_1" data-key="title_1">Storia del comune</h1>
-            <p class="testo-blocco" data-key="testo_1">
-                Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano.<br>
-                Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>
-                Il suo nome unico è l’unione di due parti, ognuna delle quali racconta un pezzo di storia: Oliva, probabilmente dall’olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>
-                La prima prova scritta proviene dal 972, quando l’imperatore Ottone I donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia Isimbardi.
-            </p>
+            <p class="testo-blocco" data-key="testo_1">Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale al periodo romano o, secondo alcune testimonianze, perfino preromano.<br>Attraverso i secoli, il borgo ha vissuto stagioni storiche cruciali, forgiando tradizioni che sopravvivono ancora oggi.<br>Il suo nome unico è l'unione di due parti, ognuna delle quali racconta un pezzo di storia: Oliva, probabilmente dall'olivo secolare che si trova davanti alla parrocchia, e Gessi, dalle cave di gesso situate in prossimità del borgo.<br>La prima prova scritta proviene dal 972, quando l'imperatore <a class="link-interno" href="personaggi.html#pers_title_2">Ottone I</a> donò Oliva alla nuora, che a sua volta la cederà a un monastero. Nel periodo dei feudi il paese farà parte del dominio di Montalto, passando sotto le mani di varie famiglie, di cui ricordiamo in particolare la famiglia <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a>.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('storia.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
@@ -91,10 +88,8 @@
           sizes="(max-width: 721px) 100vw, (max-width: 1920px) 1200px, 1920px"
           alt="Il castello" data-key="alt_img_castello" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('castello.html')">
         <div class="container-testo-blocco">
-            <h1 class="titolo-blocco" id="title_2" data-key="title_2">Oliva Gessi</h1>
-            <p class="testo-blocco" data-key="testo_2">Il castello di Oliva Gessi è il cuore antico del borgo: le sue origini risalgono al Medioevo e già nei registri inquisitoriali del XIII secolo se ne trovano tracce legate a vicende oscure e affascinanti, come i processi a Ottone Vilano.<br>
-                Tra il Seicento e l'Ottocento la famiglia Isimbardi trasformò la fortezza in una raffinata residenza signorile, simbolo del potere di una casata che guidò l'economia agricola del territorio fino al Novecento.<br>
-                Oggi il castello domina ancora il paese dalle colline dell'Oltrepò Pavese, testimone silenzioso di secoli di storia.</p>
+            <h1 class="titolo-blocco" id="title_2" data-key="title_2">Il castello</h1>
+            <p class="testo-blocco" data-key="testo_2">Il castello di Oliva Gessi è il cuore antico del borgo: le sue origini risalgono al Medioevo e già nei registri inquisitoriali del XIII secolo se ne trovano tracce legate a vicende oscure e affascinanti, come i processi a <a class="link-interno" href="castello.html#cas_title_1">Ottone Vilano</a>.<br>Tra il Seicento e l'Ottocento la famiglia <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a> trasformò la fortezza in una raffinata residenza signorile, simbolo del potere di una casata che guidò l'economia agricola del territorio fino al Novecento.<br>Oggi il castello domina ancora il paese dalle colline dell'Oltrepò Pavese, testimone silenzioso di secoli di storia.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('castello.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
@@ -106,11 +101,7 @@
           alt="Vultò" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('luoghi.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="title_3" data-key="title_3">Luoghi storici</h1>
-            <p class="testo-blocco" data-key="testo_3">Tra le colline dell'Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>
-                Tra il Seicento e l'Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso.<br>
-                Qui si intrecciano vicende come i casi inquisitoriali di Ottone Vilano e il rogo di Benvenuta, accanto alla figura di Luigi Versiglia.<br>
-                Il paese conserva simboli identitari come il Voltò, il giardino all'italiana, la chiesa di San Martino (riedificata nel 1682) e il teatro parrocchiale del 1926, cuore della vita comunitaria.<br>
-                Intorno, le colline vitate e i terreni gessosi, sfruttati fin dall'età romana e valorizzati anche da Abramo De Benedetti, raccontano una tradizione millenaria.</p>
+            <p class="testo-blocco" data-key="testo_3">Tra le colline dell'Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>Tra il Seicento e l'Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso.<br>Qui si intrecciano vicende come i casi inquisitoriali di <a class="link-interno" href="castello.html#cas_title_1">Ottone Vilano</a> e il rogo di <a class="link-interno" href="personaggi.html#pers_title_7">Benvenuta</a>, accanto alla figura di <a class="link-interno" href="personaggi.html#pers_title_1">Luigi Versiglia</a>.<br>Il paese conserva simboli identitari come il <a class="link-interno" href="storia.html#sto_title_4">Voltò</a>, il <a class="link-interno" href="castello.html#cas_title_2">giardino all'italiana</a>, la <a class="link-interno" href="luoghi.html#luo_title_3">chiesa di San Martino</a> (riedificata nel 1682) e il <a class="link-interno" href="luoghi.html#luo_title_6">teatro parrocchiale</a> del 1926, cuore della vita comunitaria.<br>Intorno, le colline vitate e i terreni gessosi, sfruttati fin dall'età romana e valorizzati anche da <a class="link-interno" href="personaggi.html#pers_title_6">Abramo De Benedetti</a>, raccontano una tradizione millenaria.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('luoghi.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>
@@ -122,10 +113,7 @@
           alt="Foto placeholder del primo blocco" data-key="alt_img1" class="foto-blocco" loading="lazy" fetchpriority="auto" onclick="navigateTo('personaggi.html')">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="title_4" data-key="title_4">Personaggi storici</h1>
-            <p class="testo-blocco" data-key="testo_4">Oliva Gessi affonda le sue origini nel X secolo con Ottone I di Sassonia, che dopo aver consolidato il potere imperiale e rafforzato il legame con la Chiesa, nel 972 donò il territorio alla nuora Teofano, segnandone la prima attestazione e l'ingresso nei beni ecclesiastici.<br>
-                Nei secoli successivi il borgo passò sotto varie dominazioni, tra cui i Belcredi, influenti nell'Oltrepò Pavese grazie a incarichi politici e proprietà, e gli Isimbardi, che trasformarono il castello in residenza e svilupparono l'agricoltura fino alla loro estinzione nel Novecento.<br>
-                Il paese diede i natali a Luigi Versiglia, martire in Cina nel 1930. Tra Otto e Novecento Abramo De Benedetti introdusse innovazioni, ma la sua esperienza si concluse con la morte del figlio nella Seconda guerra mondiale.
-            </p>
+            <p class="testo-blocco" data-key="testo_4">Oliva Gessi affonda le sue origini nel X secolo con <a class="link-interno" href="personaggi.html#pers_title_2">Ottone I di Sassonia</a>, che dopo aver consolidato il potere imperiale e rafforzato il legame con la Chiesa, nel 972 donò il territorio alla nuora Teofano, segnandone la prima attestazione e l'ingresso nei beni ecclesiastici.<br>Nei secoli successivi il borgo passò sotto varie dominazioni, tra cui i <a class="link-interno" href="personaggi.html#pers_title_3">Belcredi</a>, influenti nell'Oltrepò Pavese grazie a incarichi politici e proprietà, e gli <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a>, che trasformarono il castello in residenza e svilupparono l'agricoltura fino alla loro estinzione nel Novecento.<br>Il paese diede i natali a <a class="link-interno" href="personaggi.html#pers_title_1">Luigi Versiglia</a>, martire in Cina nel 1930. Tra Otto e Novecento <a class="link-interno" href="personaggi.html#pers_title_6">Abramo De Benedetti</a> introdusse innovazioni, ma la sua esperienza si concluse con la morte del figlio nella Seconda guerra mondiale.</p>
             <button class="read-more-button" type="button" onclick="navigateTo('personaggi.html')" data-key="read_more">Leggi di più</button>
         </div>
     </article>

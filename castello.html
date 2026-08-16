@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <!-- Deve essere il PRIMO script: evita che i link perdano la lingua se cliccati prima che gli altri script (deferred) siano pronti -->
+    <script src="src/lang_guard.js"></script>
     <title data-key="title_castello">Il castello di Oliva Gessi</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +70,7 @@
         <!-- TODO: mettere le immagini -->
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="cas_title_1" data-key="cas_title_1">La storia del castello</h1>
-            <p class="testo-blocco" data-key="cas_content_1">Le origini del castello risalgono a prima del 998, quando l'imperatore Ottone III descrisse Oliva come una comunità nata intorno a una fortificazione. I documenti ufficiali lo citano però a fine Duecento nei registri dell'Inquisizione: qui si parla del rogo dei resti dell'eretico Ottone Vilano, sepolto nel castello, e della condanna di una donna di nome <a class="link-interno" href="personaggi.html#pers_title_7">Benvenuta</a>. Nel XIII secolo la struttura passò ai nobili Giorgi e poi ai Beccaria; l'ultima erede, Anna Francesca, lo portò infine in dote al marito Pietro Isimbardi. Oggi l'edificio ha una pianta quadrilatera irregolare attorno a un cortile. Nel Seicento il castello subì un totale rifacimento barocco, visibile ancora sul lato nord, con l'apertura della strada orientale e l'abbattimento delle vecchie mura difensive. Di quell'epoca medievale, nell'angolo a nord-est, sopravvive solo un'antica torre che conserva la porta carraia originale usata per entrare nel cortile.</p>
+            <p class="testo-blocco" data-key="cas_content_1">Le origini del castello risalgono a prima del 998, quando l'imperatore Ottone III descrisse Oliva come una comunità nata intorno a una fortificazione. I documenti ufficiali lo citano però a fine Duecento nei registri dell'Inquisizione: qui si parla del rogo dei resti dell'eretico Ottone Vilano, sepolto nel castello, e della condanna di una donna di nome <a class="link-interno" href="personaggi.html#pers_title_7">Benvenuta</a>. Nel XIII secolo la struttura passò ai nobili Giorgi e poi ai Beccaria; l'ultima erede, Anna Francesca, lo portò infine in dote al marito Pietro <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a>. Oggi l'edificio ha una pianta quadrilatera irregolare attorno a un cortile. Nel Seicento il castello subì un totale rifacimento barocco, visibile ancora sul lato nord, con l'apertura della strada orientale e l'abbattimento delle vecchie mura difensive. Di quell'epoca medievale, nell'angolo a nord-est, sopravvive solo un'antica torre che conserva la porta carraia originale usata per entrare nel cortile.</p>
         </div>
     </article>
     <article class="blocco">

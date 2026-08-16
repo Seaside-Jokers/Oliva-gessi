@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <!-- Deve essere il PRIMO script: evita che i link perdano la lingua se cliccati prima che gli altri script (deferred) siano pronti -->
+    <script src="src/lang_guard.js"></script>
     <title data-key="title_luoghi">I luoghi di Oliva Gessi</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,16 +69,16 @@
         <img>
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="luo_title_1" data-key="luo_title_1">Il castello di Oliva Gessi</h1>
-            <p class="testo-blocco" data-key="luo_content_1">Con la sua struttura a pianta quadrilatera organizzata attorno a un cortile interno con cisterna, il castello vanta origini altomedievali. Citato già nei registri inquisitoriali del XIII secolo (Quaterni Rationum), appartenne alla famiglia Giorgi e poi ai Beccaria. Nel XVII secolo passò ai marchesi Isimbardi, che ne trasformarono la funzione da fortezza militare a residenza nobiliare.</p>
+            <p class="testo-blocco" data-key="luo_content_1">Con la sua struttura a pianta quadrilatera organizzata attorno a un cortile interno con cisterna, il castello vanta origini altomedievali. Citato già nei registri inquisitoriali del XIII secolo (<span class="link-glossario" tabindex="0" title="Registri contabili e amministrativi del Comune di Pavia, tra le fonti documentarie più antiche sul territorio">Quaterni Rationum</span>), appartenne alla famiglia Giorgi e poi ai Beccaria. Nel XVII secolo passò ai marchesi <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a>, che ne trasformarono la funzione da fortezza militare a residenza nobiliare. Per una descrizione più approfondita, si veda la <a class="link-interno" href="castello.html#cas_title_1">pagina dedicata al castello</a>.</p>
             <ul>
                 <li>
-                    <p data-key="luo_content_1_1" class="testo-blocco s"><b>La Cappella Privata:</b> Ospita affreschi di pregio, tra cui una seicentesca finta pala d'altare raffigurante la Madonna Nera, legata a un ex voto per la fine della peste.</p>
+                    <p data-key="luo_content_1_1" class="testo-blocco s"><b>La <a class="link-interno" href="castello.html#cas_title_3">Cappella Privata</a>:</b> Ospita affreschi di pregio, tra cui una seicentesca finta pala d'altare raffigurante la Madonna Nera, legata a un ex voto per la fine della peste.</p>
                 </li>
                 <li>
-                    <p data-key="luo_content_1_2" class="testo-blocco s"><b>Le Antiche Cantine:</b> Situate nei sotterranei, custodiscono vasche vinicole del 1908 integrate a due piovane medievali, testimonianza di una tradizione enologica secolare.</p>
+                    <p data-key="luo_content_1_2" class="testo-blocco s"><b>Le Antiche <a class="link-interno" href="castello.html#cas_title_4">Cantine</a>:</b> Situate nei sotterranei, custodiscono vasche vinicole del 1908 integrate a due piovane medievali, testimonianza di una tradizione enologica secolare.</p>
                 </li>
                 <li>
-                    <p data-key="luo_content_1_3" class="testo-blocco s"><b>Il Giardino all'Italiana:</b> Realizzato su un imponente terrapieno sostenuto da un muraglione e dall'arco noto come Vultò. Il giardino presenta siepi di bosso disposte a labirinto intorno a due secolari cedri del Libano.</p>
+                    <p data-key="luo_content_1_3" class="testo-blocco s"><b>Il <a class="link-interno" href="castello.html#cas_title_2">Giardino all'Italiana</a>:</b> Realizzato su un imponente terrapieno sostenuto da un muraglione e dall'arco noto come <a class="link-interno" href="storia.html#sto_title_4">Vultò</a>. Il giardino presenta siepi di bosso disposte a labirinto intorno a due secolari cedri del Libano.</p>
                 </li>
             </ul>
         </div>
@@ -85,7 +87,7 @@
         <img>
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="luo_title_2" data-key="luo_title_2">Il centro storico e la ricostruzione Isimbardi</h1>
-            <p class="testo-blocco" data-key="luo_content_2">Nella prima metà dell'Ottocento, i marchesi Isimbardi riorganizzarono il borgo medievale applicando i criteri funzionali e razionali dell'architettura rurale lombarda. Tra gli edifici più rappresentativi si notano:</p>
+            <p class="testo-blocco" data-key="luo_content_2">Nella prima metà dell'Ottocento, i marchesi <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a> <a class="link-interno" href="storia.html#sto_title_4">riorganizzarono il borgo medievale</a> applicando i criteri funzionali e razionali dell'architettura rurale lombarda. Tra gli edifici più rappresentativi si notano:</p>
             <ul>
                 <li>
                     <p data-key="luo_content_2_1" class="testo-blocco s"><b>'Ca' del '32':</b> Casa natale di <a class="link-interno" href="personaggi.html#pers_title_1">San Luigi Versiglia</a>.</p>
@@ -94,7 +96,7 @@
                     <p data-key="luo_content_2_2" class="testo-blocco s"><b>Il 'Co dad là':</b> Esempio di cascina ristrutturata con ampie arcate a tutto sesto, logge e finestre neogotiche.</p>
                 </li>
                 <li>
-                    <p data-key="luo_content_2_3" class="testo-blocco s"><b>L'Antico Forno Comune:</b> Situato adiacente al Vultò, era il centro propulsore della vita comunitaria.</p>
+                    <p data-key="luo_content_2_3" class="testo-blocco s"><b>L'Antico Forno Comune:</b> Situato adiacente al <a class="link-interno" href="storia.html#sto_title_4">Vultò</a>, era il centro propulsore della vita comunitaria.</p>
                 </li>
             </ul>
         </div>
@@ -157,7 +159,7 @@
         <img>
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="luo_title_8" data-key="luo_title_8">L'ulivo centenario</h1>
-            <p class="testo-blocco" data-key="luo_content_8">Situato proprio di fronte al Teatro Parrocchiale, si erge un ulivo pluricentenario, un esemplare rarissimo per le colline dell'Oltrepò Pavese. Secondo la tradizione popolare, la presenza di questo antico albero avrebbe dato origine al nome stesso del borgo di Oliva Gessi.</p>
+            <p class="testo-blocco" data-key="luo_content_8">Situato proprio di fronte al Teatro Parrocchiale, si erge un ulivo pluricentenario, un esemplare rarissimo per le colline dell'Oltrepò Pavese. Secondo la tradizione popolare, la presenza di questo antico albero avrebbe dato origine al <a class="link-interno" href="storia.html#sto_title_1">nome stesso del borgo</a> di Oliva Gessi.</p>
         </div>
     </article>
     <article class="blocco">
@@ -171,7 +173,7 @@
         <img>
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="luo_title_10" data-key="luo_title_10">Le antiche cave di gesso e il tesoro romano</h1>
-            <p class="testo-blocco" data-key="luo_content_10">Il borgo è storicamente legato all'estrazione della scagliola e del gesso, attività praticata fin dal Medioevo sul fianco della collina e rimasta attiva fino alla metà del Novecento nella vicina frazione Fornace.</p>
+            <p class="testo-blocco" data-key="luo_content_10">Il borgo è storicamente legato all'<a class="link-interno" href="storia.html#sto_title_1">estrazione della scagliola e del gesso</a>, attività praticata fin dal Medioevo sul fianco della collina e rimasta attiva fino alla metà del Novecento nella vicina frazione Fornace.</p>
         </div>
     </article>
   </main>

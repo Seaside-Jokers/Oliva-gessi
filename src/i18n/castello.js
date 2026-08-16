@@ -15,7 +15,7 @@ window.T = Object.assign(window.T || {}, {
             "comunità nata intorno a una fortificazione. I documenti ufficiali lo citano però a fine Duecento nei registri " +
             "dell'Inquisizione: qui si parla del rogo dei resti dell'eretico Ottone Vilano, sepolto nel castello, e della " +
             "condanna di una donna di nome <a class=\"link-interno\" href=\"personaggi.html#pers_title_7\">Benvenuta</a>. Nel XIII secolo la struttura passò ai nobili Giorgi e poi ai " +
-            "Beccaria; l'ultima erede, Anna Francesca, lo portò infine in dote al marito Pietro Isimbardi. Oggi l'edificio " +
+            "Beccaria; l'ultima erede, Anna Francesca, lo portò infine in dote al marito Pietro <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a>. Oggi l'edificio " +
             "ha una pianta quadrilatera irregolare attorno a un cortile. Nel Seicento il castello subì un totale " +
             "rifacimento barocco, visibile ancora sul lato nord, con l'apertura della strada orientale e l'abbattimento " +
             "delle vecchie mura difensive. Di quell'epoca medievale, nell'angolo a nord-est, sopravvive solo un'antica " +
@@ -25,7 +25,7 @@ window.T = Object.assign(window.T || {}, {
             "Inquisition records, which discuss burning the remains of the heretic Ottone Vilano, buried in the castle, and " +
             "the condemnation of a woman named <a class=\"link-interno\" href=\"personaggi.html#pers_title_7\">Benvenuta</a>. In the 13th century, ownership passed to the Giorgi nobles and " +
             "later to the Beccaria family; the last heir, Anna Francesca, finally brought it as a dowry to her husband " +
-            "Pietro Isimbardi. Today, the building has an irregular quadrilateral layout around a courtyard. In the 17th " +
+            "Pietro <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a>. Today, the building has an irregular quadrilateral layout around a courtyard. In the 17th " +
             "century, the castle underwent a total Baroque renovation, still visible on the north side, which opened up the " +
             "eastern road and demolished the old defensive walls. From the medieval era, only an ancient tower survives in " +
             "the northeast corner, preserving the original carriage gate used to enter the courtyard.",

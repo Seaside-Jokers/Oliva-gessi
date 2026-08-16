@@ -100,6 +100,39 @@ const LanguageManager = (() => {
     }
 
     /**
+     * Riscrive tutti i link interni (navbar, testo, ecc.) affinché portino
+     * con sé la lingua scelta esplicitamente dall'utente. Senza questo passo,
+     * qualunque <a href="pagina.html"> nel sito farebbe perdere la preferenza
+     * di lingua al primo click, tornando alla lingua di default del browser.
+     * Se l'utente non ha scelto esplicitamente una lingua, i link restano
+     * "puliti" e continuano a seguire la lingua del browser sulla pagina di
+     * destinazione, coerentemente con navigateTo().
+     */
+    function syncInternalLinks() {
+        document.querySelectorAll('a[href]').forEach(a => {
+            const href = a.getAttribute('href');
+            if (!href) return;
+            // Ignora link esterni, ancore pure sulla stessa pagina, mailto/tel/javascript
+            if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(href)) return;
+            if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
+            if (href.startsWith('#')) return;
+
+            const hashIndex = href.indexOf('#');
+            let path = hashIndex === -1 ? href : href.slice(0, hashIndex);
+            const hash = hashIndex === -1 ? '' : href.slice(hashIndex);
+
+            // Solo pagine .html del sito (rimuove un'eventuale ?lang= già presente,
+            // per rendere l'operazione idempotente se richiamata più volte)
+            const queryIndex = path.indexOf('?');
+            if (queryIndex !== -1) path = path.slice(0, queryIndex);
+            if (!/\.html$/i.test(path)) return;
+
+            const newHref = hasExplicitLang() ? `${path}?lang=${state}${hash}` : `${path}${hash}`;
+            if (newHref !== href) a.setAttribute('href', newHref);
+        });
+    }
+
+    /**
      * Aggiorna la lingua dell'HTML, il titolo e tutti gli elementi [data-key].
      * Gli <input> con placeholder e le <img> ricevono il testo negli attributi.
      */
@@ -120,6 +153,8 @@ const LanguageManager = (() => {
                 el.innerHTML = testo;
             }
         });
+
+        syncInternalLinks();
 
         // Aggiorna visivamente il toggle
         const knob = document.getElementById('lang-knob');
