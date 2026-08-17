@@ -16,6 +16,7 @@ window.T = Object.assign(window.T || {}, {
     settings: { it: "Impostazioni", en: "Settings" },
     homepage: { it: "Pagina principale", en: "Main page" },
     read_more: { it: "Leggi di più...", en: "Read more..." },
+    leggi_tutto: { it: "Leggi tutto", en: "Read all" },
     storia_summary: { it: "Storia di Oliva", en: "History of Oliva" },
     castello_summary: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
     luoghi_summary: { it: "Luoghi storici", en: "Historical places" },

@@ -2,8 +2,6 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <!-- Deve essere il PRIMO script: evita che i link perdano la lingua se cliccati prima che gli altri script (deferred) siano pronti -->
-    <script src="src/lang_guard.js"></script>
     <title data-key="title_luoghi">I luoghi di Oliva Gessi</title>
     <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +18,6 @@
     <link rel="preload" href="fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="src/style.css">
     <!-- -->
-    <link rel="alternate" hreflang="it" href="https://oliva-gessi.vercel.app/luoghi.html?lang=it">
-    <link rel="alternate" hreflang="en" href="https://oliva-gessi.vercel.app/luoghi.html?lang=en">
-    <link rel="alternate" hreflang="x-default" href="https://oliva-gessi.vercel.app/luoghi.html">
     <link rel="canonical" href="https://oliva-gessi.vercel.app/luoghi.html">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <!-- PWA -->
@@ -190,12 +185,12 @@
     <script src="src/i18n/about.js" defer></script>
     <script src="src/i18n/settings.js" defer></script>
     <script src="src/database_testo.js" defer></script>
+    <script src="src/leggi_di_piu.js" defer></script>
     <script src="src/color_scheme.js" defer></script>
     <script src="src/text_size.js" defer></script>
     <script src="src/sidebar.js" defer></script>
     <script src="src/layout.js" defer></script>
     <script src="src/search.js" defer></script>
-    <script src="src/homepage.js" defer></script>
     <script src="src/icon_manager.js" defer></script>
 </body>
 </html>

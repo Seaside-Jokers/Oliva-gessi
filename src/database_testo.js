@@ -20,25 +20,33 @@ if (Object.keys(traduzioni).length === 0) {
 /* -------------------------------------------------------------------------- */
 
 const LanguageManager = (() => {
-    /** Fonte unica di verità: URL (?lang=), altrimenti la lingua del browser */
-    let state = getLangFromURL();
+    const validLangs = ['it', 'en'];
+    const STORAGE_KEY = 'user-lang';
 
-    function getLangFromURL() {
-        const lang = new URLSearchParams(window.location.search).get('lang');
-        return (lang === 'it' || lang === 'en') ? lang : getDefaultLang();
+    /** Lingua del browser, usata quando non c'è una preferenza salvata. */
+    function getBrowserLang() {
+        return navigator.language.startsWith('it') ? 'it' : 'en';
     }
 
-    function getDefaultLang() {
-        return navigator.language.startsWith("it") ? "it" : "en";
+    /** Preferenza salvata in localStorage, o null se non presente/valida. */
+    function getSavedLang() {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return validLangs.includes(saved) ? saved : null;
+        } catch (e) {
+            return null;
+        }
     }
+
+    /** Fonte unica di verità: localStorage, altrimenti la lingua del browser */
+    let state = getSavedLang() || getBrowserLang();
 
     /**
-     * True se l'utente ha scelto esplicitamente una lingua (presente in URL),
+     * True se l'utente ha scelto esplicitamente una lingua (salvata),
      * false se sta semplicemente seguendo la lingua del browser ("Default").
      */
     function hasExplicitLang() {
-        const lang = new URLSearchParams(window.location.search).get('lang');
-        return lang === 'it' || lang === 'en';
+        return getSavedLang() !== null;
     }
 
     /** True se la chiave ha un testo per la lingua corrente (anche vuoto). */
@@ -51,35 +59,38 @@ const LanguageManager = (() => {
         return traduzioni[key]?.[state] ?? key;
     }
 
-    function updateURLWithLang(lang) {
-        const params = new URLSearchParams(window.location.search);
-        params.set('lang', lang);
-        window.history.replaceState({ lang }, document.title, `${window.location.pathname}?${params}`);
+    function persistAndUpdate() {
+        try {
+            localStorage.setItem(STORAGE_KEY, state);
+        } catch (e) {
+            console.warn('Impossibile salvare le preferenze lingua:', e);
+        }
         aggiornaInterfaccia();
     }
 
     /**
-     * Rimuove la preferenza esplicita dall'URL e torna a seguire la lingua
+     * Rimuove la preferenza esplicita salvata e torna a seguire la lingua
      * del browser. Usata dal pulsante "Default" delle impostazioni.
      */
     function clearLangPreference() {
-        const params = new URLSearchParams(window.location.search);
-        params.delete('lang');
-        const query = params.toString();
-        window.history.replaceState({}, document.title, `${window.location.pathname}${query ? '?' + query : ''}`);
-        state = getDefaultLang();
+        try {
+            localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+            console.warn('Impossibile rimuovere le preferenze lingua:', e);
+        }
+        state = getBrowserLang();
         aggiornaInterfaccia();
     }
 
     /** Alterna tra italiano e inglese (usata dal toggle della navbar). */
     function changeLang() {
         state = state === "it" ? "en" : "it";
-        updateURLWithLang(state);
+        persistAndUpdate();
     }
 
     /**
      * Imposta la lingua direttamente senza fare toggle.
-     * Usata dalle impostazioni: fissa sempre una preferenza esplicita in URL,
+     * Usata dalle impostazioni: fissa sempre una preferenza esplicita salvata,
      * anche se il valore coincide con quello già mostrato.
      * @param {'it'|'en'} lang
      */
@@ -87,49 +98,17 @@ const LanguageManager = (() => {
         if (lang !== 'it' && lang !== 'en') return;
         if (state === lang && hasExplicitLang()) return;
         state = lang;
-        updateURLWithLang(state);
-    }
-
-    /** Naviga a una pagina (eventualmente con #ancora) conservando la lingua scelta in URL. */
-    function navigateTo(page) {
-        const hashIndex = page.indexOf('#');
-        const path = hashIndex === -1 ? page : page.slice(0, hashIndex);
-        const hash = hashIndex === -1 ? '' : page.slice(hashIndex);
-        const base = hasExplicitLang() ? `${path}?lang=${state}` : path;
-        location.href = `${base}${hash}`;
+        persistAndUpdate();
     }
 
     /**
-     * Riscrive tutti i link interni (navbar, testo, ecc.) affinché portino
-     * con sé la lingua scelta esplicitamente dall'utente. Senza questo passo,
-     * qualunque <a href="pagina.html"> nel sito farebbe perdere la preferenza
-     * di lingua al primo click, tornando alla lingua di default del browser.
-     * Se l'utente non ha scelto esplicitamente una lingua, i link restano
-     * "puliti" e continuano a seguire la lingua del browser sulla pagina di
-     * destinazione, coerentemente con navigateTo().
+     * Naviga a una pagina (eventualmente con #ancora). La lingua vive in
+     * localStorage, non nell'URL: non serve più aggiustare nulla, quindi
+     * un normale <a href="pagina.html"> funziona esattamente come questa
+     * funzione, senza differenze né race condition su nessuna pagina.
      */
-    function syncInternalLinks() {
-        document.querySelectorAll('a[href]').forEach(a => {
-            const href = a.getAttribute('href');
-            if (!href) return;
-            // Ignora link esterni, ancore pure sulla stessa pagina, mailto/tel/javascript
-            if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(href)) return;
-            if (/^(mailto:|tel:|javascript:)/i.test(href)) return;
-            if (href.startsWith('#')) return;
-
-            const hashIndex = href.indexOf('#');
-            let path = hashIndex === -1 ? href : href.slice(0, hashIndex);
-            const hash = hashIndex === -1 ? '' : href.slice(hashIndex);
-
-            // Solo pagine .html del sito (rimuove un'eventuale ?lang= già presente,
-            // per rendere l'operazione idempotente se richiamata più volte)
-            const queryIndex = path.indexOf('?');
-            if (queryIndex !== -1) path = path.slice(0, queryIndex);
-            if (!/\.html$/i.test(path)) return;
-
-            const newHref = hasExplicitLang() ? `${path}?lang=${state}${hash}` : `${path}${hash}`;
-            if (newHref !== href) a.setAttribute('href', newHref);
-        });
+    function navigateTo(page) {
+        location.href = page;
     }
 
     /**
@@ -153,8 +132,6 @@ const LanguageManager = (() => {
                 el.innerHTML = testo;
             }
         });
-
-        syncInternalLinks();
 
         // Aggiorna visivamente il toggle
         const knob = document.getElementById('lang-knob');

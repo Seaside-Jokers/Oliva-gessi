@@ -204,6 +204,12 @@ nav.navbar {
     background-color: var(--bg-dark);
     padding: 5px;
     border-bottom: 2px solid var(--border);
+    /* Senza z-index esplicito, elementi che creano un proprio stacking
+       context più giù nel DOM (es. mask-image sui testi troncati di
+       "leggi tutto") possono dipingersi sopra alla navbar, che smette di
+       sembrare un blocco solido. Stesso valore del fallback .noscript-nav,
+       e comunque sotto sidebar (1000) e ricerca (2000). */
+    z-index: 100;
 }
 .icone-svg {
     width: var(--nav-img-size);
@@ -454,17 +460,23 @@ summary.side-data {
     color: var(--text);
     font-family: 'Playfair Display', serif;
     flex-shrink: 0;
+    /* Questi titoli sono target di link con ancora (#sto_title_1 ecc.):
+       senza questo margine, il salto li porta esattamente al bordo
+       superiore dello schermo, sotto alla navbar fissa che li nasconde. */
+    scroll-margin-top: var(--nav-height);
 }
 .testo-blocco {
-    margin: 0 calc(var(--default-size));
+    /* Margine "da computer": su telefono viene sovrascritto più sotto
+       nella media query dedicata (e portato in negativo), quindi questo
+       valore si applica di fatto solo agli schermi larghi. */
+    margin: 0 calc(var(--default-size) * 2);
     flex: 1;
-    overflow: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
     text-align: justify;
-    /* line-clamp aggiornato dinamicamente dal JS */
+    /* Testo mostrato per intero, senza troncamento (vedi discussione: il
+       clamp dinamico via JS causava tagli errati su mobile ed è stato
+       rimosso ovunque). */
 }
 .testo-blocco.s {
     font-size: calc(var(--nav-font-size) * 0.85);
@@ -508,6 +520,22 @@ summary.side-data {
     transform: translateY(-2px);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                    "LEGGI DI PIÙ" (testi troppo lunghi)                    */
+/* -------------------------------------------------------------------------- */
+/*  Dissolvenza via mask invece che gradiente a colore fisso: funziona sia    */
+/*  sui blocchi con sfondo --bg-dark che su quelli "background: none" (che    */
+/*  lasciano trasparire --bg-light), e in entrambi i temi chiaro/scuro,       */
+/*  senza dover duplicare la regola per ogni combinazione.                    */
+.leggi-di-piu-collassato {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+}
+.leggi-di-piu-btn {
+    margin-top: calc(var(--default-size) * 1.5);
+}
+
 @media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     /* Valori per telefono */
     .blocco {
@@ -527,9 +555,15 @@ summary.side-data {
         height: auto;
         aspect-ratio: 16/9;
     }
-    .testo-blocco {
-        -webkit-line-clamp: 10;
-        line-clamp: 10;
+    /* Su telefono lo spazio orizzontale è già ridotto da .blocco e
+       .container-testo-blocco: il margine proprio del testo (in più
+       rispetto a quei padding) diventava eccessivo, tolto qui. Un margine
+       negativo lo fa poi sporgere oltre il padding del contenitore, che
+       resta invece invariato per il titolo (non deve toccare quello). */
+    .testo-blocco,
+    .testo-blocco-about {
+        margin-left: calc(var(--default-size) * -1);
+        margin-right: calc(var(--default-size) * -1);
     }
 }
 
@@ -540,14 +574,14 @@ summary.side-data {
 /* -------------------------------------------------------------------------- */
 
 .testo-blocco-about{
-    margin: 0 calc(var(--default-size));
+    /* Stesso ragionamento di .testo-blocco: nessuna regola mobile dedicata
+       per questa classe (about-us la eredita comunque dalla media query
+       condivisa più sotto), quindi qui vale solo da computer. */
+    margin: 0 calc(var(--default-size) * 2);
     flex: 1;
-    overflow: hidden;
     min-height: 0;
     font-size: var(--nav-font-size);
     color: var(--text);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
     text-align: justify;
 }
 
