@@ -1,1 +1,4 @@
 .history
+.vscode
+.assets/originals
+.node_modules

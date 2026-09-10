@@ -61,8 +61,11 @@
         <p class="testo-blocco" data-key="intestazione_contenuto_cas">Un viaggio nel tempo tra il giardino, la cantina storica e la cappella di un castello unico</p>
     </article>
     <article class="blocco">
-        <img>
-        <!-- TODO: mettere le immagini -->
+        <img 
+          src="assets/L-Versiglia.webp"
+          srcset="assets/L-Versiglia-s.webp 721w, assets/L-Versiglia.webp 1920w"
+          sizes="(max-width: 721px) 100vw, (max-width: 1920px) 1200px, 1920px"
+          alt="L-Versiglia" class="foto-blocco" onclick="navigateTo('storia.html')" fetchpriority="high">
         <div class="container-testo-blocco">
             <h1 class="titolo-blocco" id="cas_title_1" data-key="cas_title_1">La storia del castello</h1>
             <p class="testo-blocco" data-key="cas_content_1">Le origini del castello risalgono a prima del 998, quando l'imperatore Ottone III descrisse Oliva come una comunità nata intorno a una fortificazione. I documenti ufficiali lo citano però a fine Duecento nei registri dell'Inquisizione: qui si parla del rogo dei resti dell'eretico Ottone Vilano, sepolto nel castello, e della condanna di una donna di nome <a class="link-interno" href="personaggi.html#pers_title_7">Benvenuta</a>. Nel XIII secolo la struttura passò ai nobili Giorgi e poi ai Beccaria; l'ultima erede, Anna Francesca, lo portò infine in dote al marito Pietro <a class="link-interno" href="personaggi.html#pers_title_4">Isimbardi</a>. Oggi l'edificio ha una pianta quadrilatera irregolare attorno a un cortile. Nel Seicento il castello subì un totale rifacimento barocco, visibile ancora sul lato nord, con l'apertura della strada orientale e l'abbattimento delle vecchie mura difensive. Di quell'epoca medievale, nell'angolo a nord-est, sopravvive solo un'antica torre che conserva la porta carraia originale usata per entrare nel cortile.</p>

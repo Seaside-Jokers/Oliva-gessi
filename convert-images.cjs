@@ -54,7 +54,7 @@ const VARIANTS = [
 ];
 
 const EFFORT = 6; // 0-6, più alto = compressione migliore ma più lento
-const SOURCE_EXTENSIONS = [".jpg", ".jpeg"];
+const SOURCE_EXTENSIONS = [".jpg", ".jpeg", ".png"];
 
 // --------------------------------------------------------------
 
