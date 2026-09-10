@@ -7,7 +7,7 @@ class IconEl extends HTMLElement {
             if (!entries[0].isIntersecting) return;
             obs.disconnect();
             this.#load(src);
-        }, { rootMargin: '200px' }); // inizia a caricare 200px prima che sia visibile
+        }, { rootMargin: '200px' });
 
         observer.observe(this);
     }
