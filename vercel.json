@@ -1,4 +1,7 @@
 {
+  "buildCommand": "npx --yes -p sharp -- node convert-images.cjs",
+  "outputDirectory": ".",
+
   "headers": [
     {
       "source": "/sitemap.xml",

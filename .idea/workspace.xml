@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Sistemate le impostazioni e un problema con GSC">
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Sistemate le immagini e il sistema di compressione automatico">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Oliva-gessi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Oliva-gessi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +21,7 @@
         <option value="JSX File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -65,6 +68,8 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "22.16.0",
+    "javascript.nodejs.core.library.typings.version": "22.16.5",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/ACEAN5155875QD/WebstormProjects/Oliva-gessi",
@@ -139,6 +144,8 @@
       <workItem from="1777443482783" duration="1263000" />
       <workItem from="1777884932901" duration="4780000" />
       <workItem from="1786226414960" duration="2901000" />
+      <workItem from="1788374803047" duration="22000" />
+      <workItem from="1789033876163" duration="1648000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -204,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786228710625</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sistemate le immagini e il sistema di compressione automatico">
+      <option name="closed" value="true" />
+      <created>1789034910347</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1789034910347</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +244,7 @@
     <MESSAGE value="Uniti i rami locale e remoto" />
     <MESSAGE value="Rifatta la sitemap" />
     <MESSAGE value="Sistemate le impostazioni e un problema con GSC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sistemate le impostazioni e un problema con GSC" />
+    <MESSAGE value="Sistemate le immagini e il sistema di compressione automatico" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sistemate le immagini e il sistema di compressione automatico" />
   </component>
 </project>
