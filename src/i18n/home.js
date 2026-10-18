@@ -43,8 +43,10 @@ window.T = Object.assign(window.T || {}, {
             "agricultural economy until the 20th century.<br>Today the castle still overlooks the village from the hills of " +
             "Oltrepò Pavese, a silent witness to centuries of history.",
     },
-    alt_img_castello: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
-    alt_img1: { it: "Luigi Versiglia", en: "Luigi Versiglia" },
+    alt_img_castello: { it: "Veduta aerea del castello di Oliva Gessi", en: "Aerial view of the castle of Oliva Gessi" },
+    alt_img_oliva: { it: "Il borgo di Oliva Gessi", en: "The village of Oliva Gessi" },
+    alt_img_vulto: { it: "L'arco del Vultò, simbolo di Oliva Gessi", en: "The Vultò arch, symbol of Oliva Gessi" },
+    alt_img1: { it: "San Luigi Versiglia", en: "Saint Luigi Versiglia" },
     title_3: { it: "Luoghi storici", en: "Historical landmarks" },
     testo_3: {
         it: "Tra le colline dell'Oltrepò Pavese, Oliva Gessi è un borgo dalla storia estremamente ricca, nato attorno a un " +

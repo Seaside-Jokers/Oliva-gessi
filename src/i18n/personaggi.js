@@ -7,6 +7,11 @@
 /* -------------------------------------------------------------------------- */
 
 window.T = Object.assign(window.T || {}, {
+    alt_pers_versiglia: { it: "San Luigi Versiglia", en: "Saint Luigi Versiglia" },
+    alt_pers_ottone: { it: "Ottone I di Sassonia", en: "Otto I of Saxony" },
+    alt_pers_belcredi: { it: "Stemma della famiglia Belcredi", en: "Coat of arms of the Belcredi family" },
+    alt_pers_isimbardi: { it: "Stemma della famiglia Isimbardi", en: "Coat of arms of the Isimbardi family" },
+    alt_pers_rogo: { it: "Miniatura medievale di un rogo: un uomo legato tra le fiamme, mentre una folla assiste", en: "Medieval miniature of a burning at the stake: a man bound among the flames while a crowd looks on" },
     pers_title_1: { 
         it: "San Luigi Versiglia", 
         en: "Saint Luigi Versiglia" 

@@ -7,6 +7,14 @@
 /* -------------------------------------------------------------------------- */
 
 window.T = Object.assign(window.T || {}, {
+    alt_luo_centro: { it: "Il centro storico di Oliva Gessi", en: "The historic centre of Oliva Gessi" },
+    alt_luo_chiesa: { it: "La chiesa parrocchiale di San Martino Vescovo, vista dall'alto", en: "The parish church of San Martino Vescovo, seen from above" },
+    alt_luo_salita: { it: "La Salita dei Martiri", en: "The Salita dei Martiri" },
+    alt_luo_casa_versiglia: { it: "Casa natale di San Luigi Versiglia", en: "Birthplace of Saint Luigi Versiglia" },
+    alt_luo_teatro: { it: "Il teatro parrocchiale Maurizio Defilippi", en: "The Maurizio Defilippi parish theatre" },
+    alt_luo_reperti: { it: "Reperti del ripostiglio romano e resti paleontologici", en: "Finds from the Roman hoard and palaeontological remains" },
+    alt_luo_ulivo: { it: "L'ulivo centenario di Oliva Gessi", en: "The centuries-old olive tree of Oliva Gessi" },
+    alt_luo_cave: { it: "Le antiche cave di gesso", en: "The ancient gypsum quarries" },
     luo_title_1: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
     luo_content_1: {
         it: "Con la sua struttura a pianta quadrilatera organizzata attorno a un cortile interno con cisterna, il castello " +

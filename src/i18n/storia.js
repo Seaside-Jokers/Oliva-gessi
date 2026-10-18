@@ -7,6 +7,10 @@
 /* -------------------------------------------------------------------------- */
 
 window.T = Object.assign(window.T || {}, {
+    alt_storia_ulivo: { it: "L'ulivo secolare di Oliva Gessi", en: "The centuries-old olive tree of Oliva Gessi" },
+    alt_storia_documento: { it: "Documento di Ottone I del 972", en: "Document of Otto I from 972" },
+    alt_storia_belcredi: { it: "Stemma della famiglia Belcredi", en: "Coat of arms of the Belcredi family" },
+    alt_storia_isimbardi: { it: "Stemma della famiglia Isimbardi", en: "Coat of arms of the Isimbardi family" },
     sto_intestazione_titolo: {
         it: "Conosci la storia di Oliva Gessi",
         en: "Discover the history of Oliva Gessi"

@@ -594,14 +594,18 @@ summary.side-data {
 
 .immagine-cornice {
   border: 5px solid #ffffff;
-  aspect-ratio: 16/9;
+  /* Proporzione reale dell'immagine (niente 16/9 forzato con cover, che
+     tagliava le foto verticali): la dimensione è limitata in larghezza e
+     altezza, così una verticale non diventa enorme. */
+  aspect-ratio: auto;
   padding: 5px; 
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
+  max-width: 35%;
+  max-height: 60vh;
   height: auto;
-  width: 35%;
-  object-fit: cover;
+  width: auto;
+  object-fit: contain;
 }
 .orizzontale {
     gap: 15px;
@@ -618,11 +622,134 @@ summary.side-data {
 
 @media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     .immagine-cornice {
-        width: 100%;
+        max-width: 100%;
+        max-height: 50vh;
+        width: auto;
         height: auto;
     }
 }
 
+
+/* -------------------------------------------------------------------- */
+/*                 PAGINE DI CONTENUTO (storia, castello, ecc.)               */
+/* -------------------------------------------------------------------- */
+/*  Qui le foto NON riempiono più la riga: vengono rimpicciolite, tenute  */
+/*  nelle proporzioni originali (niente ritaglio) e fluttuano a sinistra   */
+/*  (blocchi dispari) o a destra (pari), così il testo scorre loro attorno.*/
+/*  L'homepage (index) non ha la classe .pagina-contenuto e resta invariata. */
+.pagina-contenuto .blocco {
+    display: flow-root;
+    /* Margine ai lati: le foto laterali non toccano il bordo della pagina. */
+    padding-left: calc(var(--default-size) * 6);
+    padding-right: calc(var(--default-size) * 6);
+}
+.pagina-contenuto .container-testo-blocco {
+    display: block;
+    overflow: visible;
+    padding: 0;
+}
+.pagina-contenuto .titolo-blocco {
+    text-align: center;
+    /* Il titolo si sistema a fianco della foto per intero, non solo sulla prima riga. */
+    display: flow-root;
+}
+.pagina-contenuto .foto-blocco {
+    float: left;
+    /* Il 30% della larghezza dello schermo; l'altezza segue la proporzione reale
+       (object-fit: contain: niente ritagli, anche se il limite in altezza scatta). */
+    width: 30vw;
+    max-width: 45%;
+    height: auto;
+    max-height: 70vh;
+    aspect-ratio: auto;
+    object-fit: contain;
+    margin: 0 calc(var(--default-size) * 3) calc(var(--default-size) * 1.5) 0;
+}
+.pagina-contenuto .blocco:nth-child(even) .foto-blocco {
+    float: right;
+    margin: 0 0 calc(var(--default-size) * 1.5) calc(var(--default-size) * 3);
+}
+.pagina-contenuto .testo-blocco {
+    margin: 0 calc(var(--default-size) * 2);
+}
+/* Da computer: foto, titolo, testo e pulsante formano un blocco unico, con la
+   foto a fianco di tutto il blocco (compresso). Dopo "Leggi tutto" (classe
+   .blocco-espanso) il testo torna a scorrere attorno alla foto (float). */
+@media (min-width: 1201px) and (min-aspect-ratio: 1/1) {
+    .pagina-contenuto .blocco {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .pagina-contenuto .blocco:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .pagina-contenuto .foto-blocco,
+    .pagina-contenuto .blocco:nth-child(even) .foto-blocco {
+        float: none;
+        flex: 0 0 auto;
+        margin: 0 calc(var(--default-size) * 3);
+    }
+    .pagina-contenuto .container-testo-blocco {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+    }
+    .pagina-contenuto .blocco.blocco-espanso {
+        display: flow-root;
+    }
+    .pagina-contenuto .blocco.blocco-espanso .container-testo-blocco {
+        display: block;
+    }
+    .pagina-contenuto .blocco.blocco-espanso .foto-blocco {
+        float: left;
+        margin: 0 calc(var(--default-size) * 3) calc(var(--default-size) * 1.5) 0;
+    }
+    .pagina-contenuto .blocco.blocco-espanso:nth-child(even) .foto-blocco {
+        float: right;
+        margin: 0 0 calc(var(--default-size) * 1.5) calc(var(--default-size) * 3);
+    }
+}
+
+@media (max-aspect-ratio: 1/1), (max-width: 1200px) {
+    /* Telefono, foto verticali: restano a fianco, più piccole, senza ritaglio. */
+    .pagina-contenuto .foto-blocco,
+    .pagina-contenuto .blocco:nth-child(even) .foto-blocco {
+        width: 30vw;
+        max-width: 45%;
+        max-height: 60vh;
+        margin: 0 calc(var(--default-size) * 2) calc(var(--default-size) * 1) 0;
+    }
+    .pagina-contenuto .blocco:nth-child(even) .foto-blocco {
+        margin: 0 0 calc(var(--default-size) * 1) calc(var(--default-size) * 2);
+    }
+    .pagina-contenuto .blocco {
+        padding-left: calc(var(--default-size) * 3);
+        padding-right: calc(var(--default-size) * 3);
+    }
+    /* Il titolo è un contesto di formattazione proprio: si sistema a fianco
+       della foto per intero, non solo sulla prima riga. */
+    .pagina-contenuto .titolo-blocco {
+        display: flow-root;
+    }
+    .pagina-contenuto .testo-blocco {
+        margin: 0;
+    }
+
+    /* Telefono, foto orizzontali: sopra il titolo, a piena larghezza utile,
+       nelle proporzioni originali (niente float, niente ritaglio). */
+    .pagina-contenuto .foto-blocco.foto-orizzontale,
+    .pagina-contenuto .blocco:nth-child(even) .foto-blocco.foto-orizzontale {
+        float: none;
+        display: block;
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+        max-height: 40vh;
+        margin: 0 auto calc(var(--default-size) * 1.5);
+    }
+}
 
 /* -------------------------------------------------------------------- */
 /*                              SETTINGS                                */

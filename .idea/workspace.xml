@@ -4,10 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Sistemate le immagini e il sistema di compressione automatico">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Oliva-gessi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Oliva-gessi.iml" afterDir="false" />
+    <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Aggiunta foto (tmp)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/originals/gesso.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/originals/giardino-castello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/originals/rogo-inquisizione.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/originals/san luigi versiglia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/originals/teatro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/castello.html" beforeDir="false" afterPath="$PROJECT_DIR$/castello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luoghi.html" beforeDir="false" afterPath="$PROJECT_DIR$/luoghi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personaggi.html" beforeDir="false" afterPath="$PROJECT_DIR$/personaggi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/castello.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/castello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/luoghi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/luoghi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/personaggi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/personaggi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/storia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/storia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leggi_di_piu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/leggi_di_piu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storia.html" beforeDir="false" afterPath="$PROJECT_DIR$/storia.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,37 +71,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "22.16.0",
-    "javascript.nodejs.core.library.typings.version": "22.16.5",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/ACEAN5155875QD/WebstormProjects/Oliva-gessi",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\ACEAN5155875QD\\WebstormProjects\\oliva-gessi\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.16.5&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACEAN5155875QD/WebstormProjects/Oliva-gessi&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ACEAN5155875QD\\WebstormProjects\\oliva-gessi\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -145,7 +161,9 @@
       <workItem from="1777884932901" duration="4780000" />
       <workItem from="1786226414960" duration="2901000" />
       <workItem from="1788374803047" duration="22000" />
-      <workItem from="1789033876163" duration="1648000" />
+      <workItem from="1789033876163" duration="2191000" />
+      <workItem from="1790696011712" duration="685000" />
+      <workItem from="1792354077606" duration="5493000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -219,7 +237,39 @@
       <option name="project" value="LOCAL" />
       <updated>1789034910347</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Sistemate le immagini e il sistema di compressione automatico">
+      <option name="closed" value="true" />
+      <created>1789038146270</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1789038146270</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge main">
+      <option name="closed" value="true" />
+      <created>1789038233591</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1789038233591</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Aggiunta foto (tmp)">
+      <option name="closed" value="true" />
+      <created>1792357377921</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1792357377921</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Aggiunta foto (tmp)">
+      <option name="closed" value="true" />
+      <created>1792357518174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1792357518174</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +294,10 @@
     <MESSAGE value="Uniti i rami locale e remoto" />
     <MESSAGE value="Rifatta la sitemap" />
     <MESSAGE value="Sistemate le impostazioni e un problema con GSC" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/Seaside-Jokers/Oliva-gessi&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/Oliva-gessi.iml&#10;#&#9;.idea/workspace.xml&#10;#&#9;convert-images.cjs" />
     <MESSAGE value="Sistemate le immagini e il sistema di compressione automatico" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sistemate le immagini e il sistema di compressione automatico" />
+    <MESSAGE value="Merge main" />
+    <MESSAGE value="Aggiunta foto (tmp)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta foto (tmp)" />
   </component>
 </project>
