@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d123270e-8a01-4d15-b17b-26f72c61197e" name="Changes" comment="Aggiunta foto (tmp)">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/originals/gesso.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/originals/giardino-castello.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/originals/rogo-inquisizione.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/originals/san luigi versiglia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/originals/teatro.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/castello.html" beforeDir="false" afterPath="$PROJECT_DIR$/castello.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/luoghi.html" beforeDir="false" afterPath="$PROJECT_DIR$/luoghi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personaggi.html" beforeDir="false" afterPath="$PROJECT_DIR$/personaggi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/castello.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/castello.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/luoghi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/luoghi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/personaggi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/personaggi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/storia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/storia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leggi_di_piu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/leggi_di_piu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storia.html" beforeDir="false" afterPath="$PROJECT_DIR$/storia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,7 @@
       <workItem from="1788374803047" duration="22000" />
       <workItem from="1789033876163" duration="2191000" />
       <workItem from="1790696011712" duration="685000" />
-      <workItem from="1792354077606" duration="5493000" />
+      <workItem from="1792354077606" duration="8546000" />
     </task>
     <task id="LOCAL-00001" summary="FIXME di efficintamento e miglioramento SEO">
       <option name="closed" value="true" />
@@ -269,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792357518174</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Aggiunta foto (tmp)">
+      <option name="closed" value="true" />
+      <created>1792359969035</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1792359969035</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

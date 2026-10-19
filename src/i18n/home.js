@@ -56,7 +56,7 @@ window.T = Object.assign(window.T || {}, {
             "castello già attestato nel Medioevo e citato nei registri inquisitoriali del XIII secolo.<br>Tra il Seicento e " +
             "l'Ottocento gli Isimbardi trasformarono il paese in un centro rurale armonioso.<br>Qui si intrecciano vicende " +
             "come i casi inquisitoriali di <a class=\"link-interno\" href=\"castello.html#cas_title_1\">Ottone Vilano</a> e il rogo di <a class=\"link-interno\" href=\"personaggi.html#pers_title_7\">Benvenuta</a>, accanto alla figura di <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Luigi " +
-            "Versiglia</a>.<br>Il paese conserva simboli identitari come il <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Voltò</a>, il <a class=\"link-interno\" href=\"castello.html#cas_title_2\">giardino all'italiana</a>, la <a class=\"link-interno\" href=\"luoghi.html#luo_title_3\">chiesa di San " +
+            "Versiglia</a>.<br>Il paese conserva simboli identitari come il <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>, il <a class=\"link-interno\" href=\"castello.html#cas_title_2\">giardino all'italiana</a>, la <a class=\"link-interno\" href=\"luoghi.html#luo_title_3\">chiesa di San " +
             "Martino</a> (riedificata nel 1682) e il <a class=\"link-interno\" href=\"luoghi.html#luo_title_6\">teatro parrocchiale</a> del 1926, cuore della vita comunitaria.<br>Intorno, le " +
             "colline vitate e i terreni gessosi, sfruttati fin dall'età romana e valorizzati anche da <a class=\"link-interno\" href=\"personaggi.html#pers_title_6\">Abramo De Benedetti</a>, " +
             "raccontano una tradizione millenaria.",
@@ -65,7 +65,7 @@ window.T = Object.assign(window.T || {}, {
             "the 17th and 19th centuries, the Isimbardi family turned the village into a harmonious rural center.<br>Tales " +
             "of dark events intertwine here, such as the inquisitorial cases of <a class=\"link-interno\" href=\"castello.html#cas_title_1\">Ottone Vilano</a> and the burning of " +
             "<a class=\"link-interno\" href=\"personaggi.html#pers_title_7\">Benvenuta</a>, alongside the figure of <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Luigi Versiglia</a>.<br>The village preserves iconic landmarks such as the " +
-            "<a class=\"link-interno\" href=\"storia.html#sto_title_4\">Voltò</a> archway, the <a class=\"link-interno\" href=\"castello.html#cas_title_2\">Italian-style garden</a>, the <a class=\"link-interno\" href=\"luoghi.html#luo_title_3\">Church of San Martino</a> (rebuilt in 1682) and the <a class=\"link-interno\" href=\"luoghi.html#luo_title_6\">parish theater</a> of " +
+            "<a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a> archway, the <a class=\"link-interno\" href=\"castello.html#cas_title_2\">Italian-style garden</a>, the <a class=\"link-interno\" href=\"luoghi.html#luo_title_3\">Church of San Martino</a> (rebuilt in 1682) and the <a class=\"link-interno\" href=\"luoghi.html#luo_title_6\">parish theater</a> of " +
             "1926, the heart of community life.<br>All around, the vine-covered hills and the gypsum-rich lands, exploited " +
             "since Roman times and enhanced by <a class=\"link-interno\" href=\"personaggi.html#pers_title_6\">Abramo De Benedetti</a>, tell a story of millenary tradition.",
     },

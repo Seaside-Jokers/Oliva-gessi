@@ -15,6 +15,7 @@ window.T = Object.assign(window.T || {}, {
     alt_luo_reperti: { it: "Reperti del ripostiglio romano e resti paleontologici", en: "Finds from the Roman hoard and palaeontological remains" },
     alt_luo_ulivo: { it: "L'ulivo centenario di Oliva Gessi", en: "The centuries-old olive tree of Oliva Gessi" },
     alt_luo_cave: { it: "Le antiche cave di gesso", en: "The ancient gypsum quarries" },
+    luo_intestazione_titolo: { it: "Luoghi storici", en: "Historic places" },
     luo_title_1: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
     luo_content_1: {
         it: "Con la sua struttura a pianta quadrilatera organizzata attorno a un cortile interno con cisterna, il castello " +
@@ -48,14 +49,14 @@ window.T = Object.assign(window.T || {}, {
             "known as the <a class=\"link-interno\" href=\"storia.html#sto_title_4\">Vultò</a>. The garden features boxwood hedges arranged in a maze around two centuries-old Cedars of " +
             "Lebanon.",
     },
-    luo_title_2: { it: "Il centro storico e la ricostruzione Isimbardi", en: "The historic center and the Isimbardi Reconstruction" },
+    luo_title_2: { it: "Il centro storico e la ricostruzione Isimbardi", en: "The historic center and the Isimbardi reconstruction" },
     luo_content_2: {
         it: "Nella prima metà dell'Ottocento, i marchesi <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a> <a class=\"link-interno\" href=\"storia.html#sto_title_4\">riorganizzarono il borgo medievale</a> applicando i criteri " +
             "funzionali e razionali dell'architettura rurale lombarda. Tra gli edifici più rappresentativi si notano:",
         en: "In the first half of the 19th century, the Marquises <a class=\"link-interno\" href=\"personaggi.html#pers_title_4\">Isimbardi</a> <a class=\"link-interno\" href=\"storia.html#sto_title_4\">reorganized the medieval village</a> by applying " +
             "the functional and rational criteria of Lombard rural architecture. Among the most representative buildings:",
     },
-    luo_content_2_1: { it: "<b>'Ca' del '32':</b> Casa natale di <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">San Luigi Versiglia</a>.", en: "<b>'Ca' del '32':</b> Birthplace of <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Saint Luigi Versiglia</a>." },
+    luo_content_2_1: { it: "<b>'Cà dal ‘32':</b> Casa natale di <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">San Luigi Versiglia</a>.", en: "<b>'Cà dal ‘32':</b> Birthplace of <a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Saint Luigi Versiglia</a>." },
     luo_content_2_2: {
         it: "<b>Il 'Co dad là':</b> Esempio di cascina ristrutturata con ampie arcate a tutto sesto, logge e finestre " +
             "neogotiche.",
@@ -87,12 +88,12 @@ window.T = Object.assign(window.T || {}, {
     },
     luo_title_4: { it: "La Salita dei Martiri", en: "The Ascent of the Martyrs" },
     luo_content_4: {
-        it: "Inaugurata nel 2005 e benedetta dal Cardinale Tarcisio Bertone, questa imponente scalinata collega la strada " +
+        it: "Inaugurata nel 2005 dal Cardinale Tarcisio Bertone, questa imponente scalinata collega la strada " +
             "principale al sagrato della Chiesa Parrocchiale. Concepita dal parroco don Vittorio Piuzzi come un cammino " +
             "spirituale e meditativo, la scalinata è arricchita da opere e targhe che ripercorrono il martirio di " +
             "<a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">San Luigi Versiglia</a> e San Callisto Caravario in Cina. Ogni anno, la sera del 5 giugno, è teatro di una suggestiva " +
             "processione.",
-        en: "Inaugurated in 2005 and blessed by Cardinal Tarcisio Bertone, this imposing staircase connects the main road " +
+        en: "Inaugurated in 2005 by Cardinal Tarcisio Bertone, this imposing staircase connects the main road " +
             "to the church square (sagrato). Conceived by the parish priest Father Vittorio Piuzzi as a spiritual and " +
             "meditative journey, the staircase is enriched with works and plaques tracing the martyrdom of " +
             "<a class=\"link-interno\" href=\"personaggi.html#pers_title_1\">Saint Luigi Versiglia</a> and Saint Callistus Caravario in China. Every year, on the evening of June 5th, it hosts an " +
@@ -153,7 +154,7 @@ window.T = Object.assign(window.T || {}, {
             "significance, they represent a vital environmental heritage for biodiversity and microclimate regulation for " +
             "local wines (such as Riesling Italico).",
     },
-    luo_title_10: { it: "Le antiche cave di gesso e il tesoro romano", en: "The Ancient Gypsum Quarries and the Roman Treasure" },
+    luo_title_10: { it: "Le antiche cave di gesso", en: "The Ancient Gypsum Quarries" },
     luo_content_10: {
         it: "Il borgo è storicamente legato all'<a class=\"link-interno\" href=\"storia.html#sto_title_1\">estrazione della scagliola e del gesso</a>, attività praticata fin dal Medioevo " +
             "sul fianco della collina e rimasta attiva fino alla metà del Novecento nella vicina frazione Fornace.",

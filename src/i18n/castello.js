@@ -8,7 +8,7 @@
 
 window.T = Object.assign(window.T || {}, {
     alt_cas_giardino: { it: "Il giardino del castello di Oliva Gessi", en: "The garden of the castle of Oliva Gessi" },
-    intestazione_titolo_cas: { it: "Il castello di Oliva Gessi.", en: "The castle of Oliva Gessi" },
+    intestazione_titolo_cas: { it: "Il castello di Oliva Gessi", en: "The castle of Oliva Gessi" },
     intestazione_contenuto_cas: { it: "Un viaggio nel tempo tra il giardino, la cantina storica e la cappella di un castello unico", en: "A journey through time between the garden, the historic cellar and the chapel of a unique castle" },
     cas_title_1: { it: "La storia del castello", en: "The castle's history" },
     cas_content_1: {

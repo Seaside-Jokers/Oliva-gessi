@@ -35,7 +35,6 @@ const CORE = [
     '/src/search.js',
     '/src/icon_manager.js',
     '/src/settings.js',
-    '/assets/icon.svg',
     '/assets/favicon.png'
 ];
 
