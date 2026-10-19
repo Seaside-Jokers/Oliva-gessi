@@ -9,6 +9,8 @@
 window.T = Object.assign(window.T || {}, {
     intestazione_titolo: { it: "Benvenuti a Oliva Gessi!", en: "Welcome to Oliva Gessi!" },
     intestazione_contenuto: { it: "Scoprite con noi Oliva Gessi, borgo suggestivo dalla sua storia millenaria e tradizioni uniche", en: "Discover with us the captivating village of Oliva Gessi, with its millenary history and unique traditions" },
+    doc_title: { it: "Guarda il documentario", en: "Watch the documentary" },
+    doc_caption: { it: "Oliva Gessi - Breve documentario (15 min)", en: "Oliva Gessi - Short documentary (15 min)" },
     title_1: { it: "Storia del comune", en: "History of the town" },
     testo_1: {
         it: "Oliva Gessi, piccolo paradiso sulle colline dell'Oltrepò Pavese, è un comune dalle radici antichissime: risale " +
