@@ -739,6 +739,16 @@ summary.side-data {
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+.video-wip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    border: 2px dashed currentColor;
+    box-shadow: none;
+    opacity: 0.8;
+}
 .video-documentario iframe {
     position: absolute;
     inset: 0;
