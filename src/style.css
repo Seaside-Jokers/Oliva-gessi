@@ -672,46 +672,6 @@ summary.side-data {
 .pagina-contenuto .testo-blocco {
     margin: 0 calc(var(--default-size) * 2);
 }
-/* Da computer: foto, titolo, testo e pulsante formano un blocco unico, con la
-   foto a fianco di tutto il blocco (compresso). Dopo "Leggi tutto" (classe
-   .blocco-espanso) il testo torna a scorrere attorno alla foto (float). */
-@media (min-width: 1201px) and (min-aspect-ratio: 1/1) {
-    .pagina-contenuto .blocco {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .pagina-contenuto .blocco:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-    .pagina-contenuto .foto-blocco,
-    .pagina-contenuto .blocco:nth-child(even) .foto-blocco {
-        float: none;
-        flex: 0 0 auto;
-        margin: 0 calc(var(--default-size) * 3);
-    }
-    .pagina-contenuto .container-testo-blocco {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-width: 0;
-    }
-    .pagina-contenuto .blocco.blocco-espanso {
-        display: flow-root;
-    }
-    .pagina-contenuto .blocco.blocco-espanso .container-testo-blocco {
-        display: block;
-    }
-    .pagina-contenuto .blocco.blocco-espanso .foto-blocco {
-        float: left;
-        margin: 0 calc(var(--default-size) * 3) calc(var(--default-size) * 1.5) 0;
-    }
-    .pagina-contenuto .blocco.blocco-espanso:nth-child(even) .foto-blocco {
-        float: right;
-        margin: 0 0 calc(var(--default-size) * 1.5) calc(var(--default-size) * 3);
-    }
-}
-
 @media (max-aspect-ratio: 1/1), (max-width: 1200px) {
     /* Telefono, foto verticali: restano a fianco, più piccole, senza ritaglio. */
     .pagina-contenuto .foto-blocco,
