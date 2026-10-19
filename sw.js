@@ -7,7 +7,7 @@
 /*  Per aggiornare la cache in produzione, basta cambiare VERSION.            */
 /* -------------------------------------------------------------------------- */
 
-const VERSION = 'oliva-gessi-v6';
+const VERSION = 'oliva-gessi-v7';
 
 const CORE = [
     '/',
