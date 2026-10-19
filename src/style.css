@@ -697,16 +697,16 @@ summary.side-data {
         margin: 0;
     }
 
-    /* Telefono, foto orizzontali: sopra il titolo, a piena larghezza utile,
-       nelle proporzioni originali (niente float, niente ritaglio). */
-    .pagina-contenuto .foto-blocco.foto-orizzontale,
-    .pagina-contenuto .blocco:nth-child(even) .foto-blocco.foto-orizzontale {
+    /* Telefono, tutte le foto: sopra il titolo e il testo, centrate, nelle
+       proporzioni originali (niente float, niente ritaglio). */
+    .pagina-contenuto .foto-blocco,
+    .pagina-contenuto .blocco:nth-child(even) .foto-blocco {
         float: none;
         display: block;
         width: auto;
         min-width: 0;
         max-width: 100%;
-        max-height: 40vh;
+        max-height: 60vh;
         margin: 0 auto calc(var(--default-size) * 1.5);
     }
 }
