@@ -11,7 +11,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/index.html</loc>
         <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
@@ -23,7 +23,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/about-us.html</loc>
         <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/team.webp</image:loc>
@@ -35,7 +35,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/storia.html</loc>
         <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/Oliva-gessi.webp</image:loc>
@@ -47,7 +47,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/castello.html</loc>
         <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/castello.webp</image:loc>
@@ -59,7 +59,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/luoghi.html</loc>
         <lastmod>2026-05-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/Vulto.webp</image:loc>
@@ -71,7 +71,7 @@
     <url>
         <loc>https://oliva-gessi.vercel.app/personaggi.html</loc>
         <lastmod>2026-04-27</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://oliva-gessi.vercel.app/assets/L-Versiglia.webp</image:loc>
